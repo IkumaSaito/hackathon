@@ -1,0 +1,83 @@
+.square_btn{
+    display: inline-block;
+   padding: 7px 20px;
+    border-radius: 25px;
+   text-decoration: none;
+   color: #FFF;
+   background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+   transition: .4s;
+   margin: 20px;
+}
+
+.square_btn:hover{
+   background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+   background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+.title{
+   text-align: center;
+   margin: 10px;
+   background-color: white;
+   padding: 20px;
+}
+
+.name{
+  font-weight: bold;
+  font-family: "Segoe Script";
+}
+
+.container-flud {
+    margin-top:140px;
+}
+
+.text{
+   font-family: "arial";
+}
+
+.copy{
+   font-family: "游明朝";
+}
+
+#left a {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ -ms-transform: translate(-50%,-50%);
+ -webkit-transform: translate(-50%,-50%);
+ transform: translate(-50%,-50%);
+
+ margin:0;
+ font-size: 20px;
+ border: solid white 2px; 
+ padding: 7px;
+ color: white;
+ text-decoration: none;
+ }
+
+#left a:hover{
+ background: rgba(255, 255, 255, 0.3);
+ }
+ 
+ 
+#right a {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ -ms-transform: translate(-50%,-50%);
+ -webkit-transform: translate(-50%,-50%);
+ transform: translate(-50%,-50%);
+
+ margin:0;
+ font-size: 20px;
+ border: solid white 2px; 
+ padding: 7px;
+ color: white;
+ background-color: rgba(50, 50, 50, 0.3);
+ font-weight: bold;
+ text-decoration: none;
+ }
+
+#right a:hover{
+ background: rgba(50, 50, 50, 0.6);
+ }
