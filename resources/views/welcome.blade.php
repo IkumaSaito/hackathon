@@ -40,8 +40,16 @@
        <br>
        <br>
        <div class="text">
-       <br>{!! link_to_route('signup.get', 'Signup') !!}
-       <br>{!! link_to_route('login', 'Login') !!}
+          <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
+                
+                
+          <br type="submit">  {!! link_to_route('login', 'Login',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
+       <!--    <div class="btn btn-primary btn-block btn-xs">-->
+       <!--<br>{!! link_to_route('signup.get', 'Signup') !!}-->
+       <!--    </div>-->
+       <!--    <div class="btn btn-primary btn-block btn-xs">-->
+       <!--<br>{!! link_to_route('login', 'Login') !!}-->
+       <!--    </div>  -->
        </div>
    </div>
    </div>
