@@ -1,4 +1,19 @@
+@extends('layouts.app')
+
+@section('content')
+
 <ul class="media-list">
+    <div class="col-xs-8">
+            
+            @if (Auth::id() == $user->id)
+                  {!! Form::open(['route' => 'posts.store']) !!}
+                      <div class="form-group">
+                          {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2']) !!}
+                          {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
+                      </div>
+                  {!! Form::close() !!}
+            @endif
+            
 @foreach ($posts as $post)
     <?php $user = $post->user; ?>
     <li class="media">
@@ -21,3 +36,4 @@
 @endforeach
 </ul>
 {!! $posts->render() !!}
+@endsection
