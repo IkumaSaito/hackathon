@@ -40,7 +40,7 @@ class PostsController extends Controller
     }
     public function destroy($id)
     {
-        $post = \App\post::find($id);
+        $post = \App\Post::find($id);
 
         if (\Auth::id() === $post->user_id) {
             $post->delete();
