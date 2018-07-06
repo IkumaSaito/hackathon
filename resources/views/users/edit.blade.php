@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>id: Update Your Information : {{ $user->name }} </h1>
+<h1>Hi {{ $user->name }}!! You Can Update Your Information </h1>
 
     {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'put']) !!}
 

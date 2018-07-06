@@ -36,7 +36,7 @@ class UsersController extends Controller
     {
         $user = user::find($id);
 
-        return view('user.edit', [
+        return view('users.edit', [
             'user' => $user,
         ]);
     }
