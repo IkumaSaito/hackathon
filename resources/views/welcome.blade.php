@@ -3,7 +3,9 @@
 
     @if (Auth::check())
         <?php $user = Auth::user(); ?>
-        {{ $user->name }}
+    
+aaa
+    
     @else
 <!DOCTYPE html>
 <html lang="ja">
