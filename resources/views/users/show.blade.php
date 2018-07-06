@@ -9,7 +9,7 @@
                 </div>
             </div>
         </aside>
-        {!! link_to_route('users.show', 'Profile edit', ['id' => Auth::id()]) !!}
+        {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()]) !!}
         <div class="col-xs-8">
             
             @if (Auth::id() == $user->id)
