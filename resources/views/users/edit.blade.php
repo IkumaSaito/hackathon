@@ -24,7 +24,7 @@
         {!! Form::label('intro', 'intro:') !!}
         {!! Form::text('intro') !!}
 
-        {!! Form::submit('Updagte') !!}
+        {!! Form::submit('Update') !!}
 
     {!! Form::close() !!}
 

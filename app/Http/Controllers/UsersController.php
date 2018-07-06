@@ -31,4 +31,27 @@ class UsersController extends Controller
 
         return view('users.show', $data);
     }
+    
+     public function edit($id)
+    {
+        $user = user::find($id);
+
+        return view('user.edit', [
+            'user' => $user,
+        ]);
+    }
+    
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->password = $request->password;
+        $user->gender = $request->gender;
+        $user->hobby = $request->hobby;
+        $user->language = $request->language;
+        $user->intro = $request->intro;
+        $user->save();
+
+        return redirect('/');
+    }
 }
