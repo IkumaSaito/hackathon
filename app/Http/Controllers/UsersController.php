@@ -8,19 +8,13 @@ use App\User;
 
 class UsersController extends Controller
 {
-    public function index()
+   public function index()
     {
-       $user = \Auth::user();
-        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-
-        $data = [
-            'user' => $user,
-            'posts' => $posts,
-        ];
-
-        $data += $this->counts($user);
-
-        return view('users.show', $data);
+        $users = User::paginate(10);
+        
+        return view('users.index', [
+            'users' => $users,
+        ]);
     }
     
     public function show($id)
@@ -64,16 +58,13 @@ class UsersController extends Controller
     public function upload(Request $request)
     {
        
-        // $this->validate($request, [
-        //     'file' => [
-        //         // 必須
-        //         'required',
-        //         // アップロードされたファイルであること
-        //         'file',
-        //         // 最小縦横120px 最大縦横400px
-        //         'dimensions:min_width=120,min_height=120,max_width=400,max_height=400',
-        //     ]
-        // ]);
+        $this->validate($request, [
+             'file' => [ 
+                'required','file',
+           // 最小縦横120px 最大縦横400px
+            'dimensions:min_width=120,min_height=120,max_width=400,max_height=400',
+        ]
+     ]);
 
         if ($request->file('file')->isValid([])) {
             
@@ -86,7 +77,7 @@ class UsersController extends Controller
             return redirect('/')->with('success', '保存しました。');
         } else {
             
-            return redirect('/')
+            return redirect()
                  ->back()
                  ->withInput()
                  ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
