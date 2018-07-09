@@ -57,6 +57,7 @@
 
     .under{
         border-bottom: solid 1px black;
+        width:100px;
         }
     
     .prof dt {
@@ -83,4 +84,5 @@
         float:right;
        margin-right: 10px;
     }
+ 　
  

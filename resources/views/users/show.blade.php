@@ -45,25 +45,22 @@ My Page
 
 <dl>
    <div class="under">
-   <dt>特技</dt>
+   <dt>gebder</dt>
    <dd>早起き</dd>
    </div>
    <div class="under">
-   <dt>趣味</dt>
+   <dt>hobby</dt>
    <dd>メイク</dd>
    </div>
    <div class="under">
-   <dt>好きな食べ物</dt>
+   <dt>language</dt>
    <dd>アイス、お肉</dd>
    </div>
     <div class="under">
-   <dt>好きな言葉</dt>
+   <dt>intro</dt>
    <dd>ありがとう</dd>
    </div>
-   <div class="under">
-   <dt>メッセージ</dt>
-   <dd>残りの日々と皆様と過ごせる時間を大切に、最後まで頑張ります！皆様を笑顔にできますように！</dd>
-   </div>
+
 </dl>
 </div>
 </div>
