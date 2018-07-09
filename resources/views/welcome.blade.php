@@ -1,12 +1,10 @@
-
-
-
-    @if (Auth::check())
+@if (Auth::check())
         <?php $user = Auth::user(); ?>
+
+@extends('users.show')    
+
     
-aaa
-    
-    @else
+@else
 <!DOCTYPE html>
 <html lang="ja">
    <head>
@@ -65,4 +63,4 @@ aaa
 
 </body>
 </html>
-    @endif
+@endif
