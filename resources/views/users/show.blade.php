@@ -8,8 +8,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!--<link rel="stylesheet" href="mypage3.css">-->
-  <link rel="stylesheet" href="{{ ('/css/mypage3.css') }}">
+   <link rel="stylesheet" href="css/mypage3.css">
 </head>
 
 <title>
@@ -45,7 +44,7 @@ My Page
 
 <dl>
    <div class="under">
-   <dt>gebder</dt>
+   <dt>gender</dt>
    <dd>早起き</dd>
    </div>
    <div class="under">
@@ -60,28 +59,40 @@ My Page
    <dt>intro</dt>
    <dd>ありがとう</dd>
    </div>
-
+   <!--<div class="under">-->
+   <!--<dt>メッセージ</dt>-->
+   <!--<dd>残りの日々と皆様と過ごせる時間を大切に、最後まで頑張ります！皆様を笑顔にできますように！</dd>-->
+   <!--</div>-->
 </dl>
 </div>
 </div>
 
 
 </div>
+
+   <div class="right">
+       {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
+       </div>
 </section>
 </div>
 
-       <div class="col-xs-8">
+    
+
+</body>
+</html>
+<!--</section>-->
+<!--</div>-->
+
+<!--       <div class="col-xs-8">-->
         <!--<aside class="col-md-offset-2 col-md-1 col-xs-offset-2 col-xs-3">-->
-       <div class="right">
-       {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
-       </div>
+
         <!--</aside>-->
  
-      </div>
-</body>
+<!--      </div>-->
+<!--</body>-->
 
 
-</html>
+<!--</html>-->
 
 
  @endsection
