@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+
 use App\User;
+
+use App\Post;
 
 class UsersController extends Controller
 {
@@ -20,11 +24,15 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-
+        // $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
+        // $posts = DB::table('posts')->paginate(10);
+        $posts = Post::orderBy('id','desc')->paginate(10);
+                 
+        $directmessages = $user->directmessages()->orderBy('created_at', 'desc')->paginate(10);
         $data = [
             'user' => $user,
             'posts' => $posts,
+            'directmessages' => $directmessages,
         ];
 
         $data += $this->counts($user);
