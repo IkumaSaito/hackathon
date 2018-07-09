@@ -1,6 +1,8 @@
 <ul class="media-list">
 @foreach ($posts as $post)
     <?php $user = $post->user; ?>
+    <div class="panel panel-primary">
+  <div class="panel-body">
     <li class="media">
         <div class="media-body">
             <div>
@@ -18,6 +20,8 @@
             </div>
         </div>
     </li>
+    </div>
+    </div>
 @endforeach
 </ul>
 {!! $posts->render() !!}
