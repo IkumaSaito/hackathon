@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="row">
+    <aside class="col-md-offset-2 col-md-8 col-xs-offset-2 col-xs-8">
 <ul class="media-list">
-    <div class="col-xs-8">
             
             @if (Auth::id() == $user->id)
                   {!! Form::open(['route' => 'posts.store']) !!}
