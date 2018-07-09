@@ -57,7 +57,6 @@
 
     .under{
         border-bottom: solid 1px black;
-        width:100px;
         }
     
     .prof dt {
@@ -73,16 +72,9 @@
         }
         
     dl dt {
-    font-weight: bold;
-    }
-    
-    .clearfix{
-        float:left;
-    }
-    
+        font-weight: bold;
+        }
+        
     .right{
-        float:right;
-       margin-right: 10px;
+        margin-left: 90%;
     }
- 　
- 
