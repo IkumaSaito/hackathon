@@ -14,9 +14,9 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
     Route::group(['prefix' => 'users/{id}'], function () {
-        // Route::get('directmessages', 'DirectmessagesController@index')->name('users.directmessages');
-        Route::get('directmessages', 'DirectmessagesController@directmessage')->name('users.directmessages');
+        Route::get('directmessages', 'DirectmessagesController@directmessages')->name('users.directmessages');
+        // Route::post('directmessages', 'DirectmessagesController@directmessages')->name('users.directmessages');
     });
     Route::resource('posts', 'PostsController', ['only' => ['store', 'destroy']]);
-    Route::resource('directmessages', 'DirectmessagesController', ['only' => ['index','store', 'destroy']]);
+    Route::resource('directmessages', 'DirectmessagesController', ['only' => ['index', 'store', 'destroy']]);
 });

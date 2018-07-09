@@ -34,18 +34,15 @@ class DirectmessagesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'user_id' => 'required',
-            'receiver_id' => 'required',
             'content' => 'required|max:191',
         ]);
         
         $request->user()->directmessages()->create([
-            'user_id' => \Auth::user(),
             'receiver_id' => $request->receiver_id,
             'content' => $request->content,
         ]);
         
-        echo "Your message had successfully sent.";
+        // echo "Your message had successfully sent.";
         return redirect()->back();
     }
     
@@ -60,17 +57,25 @@ class DirectmessagesController extends Controller
         return redirect()->back();
     }
     
-    public function directmessage($id)
+    public function directmessages(Request $request)
     {
+    //     print '<pre>';
+    // return print $request;
         $data = [];
         if (\Auth::check()) {
+            
             $user = \Auth::user();
-            $receiver = User::find($id); 
+            $id = $request->id;
+            $auth_id = \Auth::id();
             $directmessages = $user->directmessages()->orderBy('created_at', 'desc')->paginate(10);
-
+            // $dm = DB::table('Directmessages');
+            // $directmessages = 
+            //     ->where()
+            //     ->orderBy('created_at', 'desc')->paginate(10);
+                
             $data = [
                 'user' => $user,
-                'receiver' => $receiver,
+                'id' => $id,
                 'directmessages' => $directmessages,
             ];
             $data += $this->counts($user);

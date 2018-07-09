@@ -21,20 +21,20 @@
             </ul>
         <!--ここまで-->
             <!--ここからDM-->
-            @if (Auth::id() == $user->id)
+            
             <!--変数の確認-->
-                <?php echo $receiver->name . "への返信" . PHP_EOL; 
-                      echo $receiver->id . "への返信" . PHP_EOL; ?>
+                <?php echo $user->name . "が送り主(あってる)" . PHP_EOL; ?>
+                <?php echo $id . PHP_EOL; ?>
                 
-                  {!! Form::open(['route' => 'directmessages.store']) !!}
+                
+                {!! Form::open(['route' => 'directmessages.store']) !!}
                       <div class="form-group">
-                          <!--{!! Form::hidden('receiver_id', '$receiver->id') !!}-->
-                          {!! Form::textarea('receiver_id', old('receiver_id'), ['class' => 'form-control', 'rows' => '1']) !!}
+                          {!! Form::hidden('receiver_id', $id) !!}
                           {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '5']) !!}
-                          {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
+                          {!! Form::submit('Send', ['class' => 'btn btn-primary btn-block']) !!}
                       </div>
                   {!! Form::close() !!}
-            @endif
+                
             @if (count($directmessages) > 0)
                     @include('directmessages.directmessages', ['directmessages' => $directmessages])
             @endif
