@@ -24,11 +24,6 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'password' => 'required|string|min:6|confirmed',
-            'gender' => 'nullable|string',
-            'hobby' => 'nullable|string',
-            'job' => 'nullable|string',
-            'language' => 'nullable|string',
-            'intro' => 'nullable|string',
         ]);
     }
 
@@ -37,11 +32,6 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'password' => bcrypt($data['password']),
-            'gender' => $data['gender'],
-            'hobby' => $data['hobby'],
-            'job' => $data['job'],
-            'language' => $data['language'],
-            'intro' => $data['intro'],
         ]);
     }
 }
