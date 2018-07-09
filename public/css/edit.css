@@ -1,0 +1,15 @@
+.edit{
+  background: linear-gradient(-360deg, rgba(200,250,250,0.5), #FFFFFF);
+  padding: 20px;
+}
+
+.text{
+    text-align: center;
+}
+
+.title{
+    font-family: "century gothic";
+    color: #000044;
+    font-size: 3vmin;
+    font-weight: bold;
+}

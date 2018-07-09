@@ -1,32 +1,50 @@
 @extends('layouts.app')
 
 @section('content')
-
-<h1>Hi {{ $user->name }}!! You Can Update Your Information </h1>
-
+<title>Lunch Meter</title>
+<link rel="stylesheet" href="{{ asset('css/edit.css') }}">
+<body>
+    <div class="container">
+    <div class="row">
+    <div class="edit col-lg-offset-3 col-log-6 col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+        <div class="title">
+        <h1>Hi {{ $user->name }}!!<br> You Can Update Your Information</h1>
+        </div>
+        <br>
+        <br>
     {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'put']) !!}
-
-        {!! Form::label('name', 'name:') !!}
+    <div class="text">
+        {!! Form::label('name', 'name: ') !!}
         {!! Form::text('name') !!}
-        
-        {!! Form::label('password', 'password:') !!}
+        <br>
+        <br>
+        {!! Form::label('password', 'password: ') !!}
         {!! Form::text('password') !!}
-        
-        {!! Form::label('gender', 'gender:') !!}
+        <br>
+        <br>
+        {!! Form::label('gender', 'gender: ') !!}
         {!! Form::text('gender') !!}
-        
-        {!! Form::label('hobby', 'hobby:') !!}
+        <br>
+        <br>
+        {!! Form::label('hobby', 'hobby: ') !!}
         {!! Form::text('hobby') !!}
-        
-        {!! Form::label('language', 'language:') !!}
+        <br>
+        <br>
+        {!! Form::label('language', 'language: ') !!}
         {!! Form::text('language') !!}
-        
-        {!! Form::label('intro', 'intro:') !!}
-        {!! Form::text('intro') !!}
-
+        <br>
+        <br>
+       
+        {!! Form::label('intro', 'intro: ') !!}<br>
+        {!! Form::textarea('intro') !!}
+        <br>
+        <br>
         {!! Form::submit('Update') !!}
+        <br>
+        <br>
         
-       {!! Form::open(['url' => 'users/upload', 'method' => 'post', 'files' => true]) !!}
+        // 画像アップロード //
+        {!! Form::open(['url' => 'users/upload', 'method' => 'post', 'files' => true]) !!}
                     {{--成功時のメッセージ--}}
                     @if (session('success'))
                         <div class="alert alert-success">{{ session('success') }}</div>
@@ -55,6 +73,13 @@
                     <div class="form-group">
                         {!! Form::submit('アップロード', ['class' => 'btn btn-default']) !!} 
                     </div>
-                    {!! Form::close() !!}
-
+    {!! Form::close() !!}
+     </div>
+</div>
+</div>
+</div>
+</body>
 @endsection
+
+
+1 Comment

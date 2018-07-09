@@ -2,16 +2,15 @@
 
 @section('content')
     <div class="row">
-        <aside class="col-xs-4">
+        <aside class="col-md-offset-2 col-md-1 col-xs-offset-2 col-xs-3">
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading>
                     <h3 class="panel-title">{{ $user->name }}</h3>
                 </div>
             </div>
         </aside>
-        
         {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()]) !!}
-        <div class="col-xs-8">
+        <div class="col-md-offset-2 col-md-8 col-xs-offset-2 col-xs-8">
             
             @if (Auth::id() == $user->id)
                   {!! Form::open(['route' => 'posts.store']) !!}
@@ -27,6 +26,4 @@
         </div>
     </div>
 @endsection
-
-
 
