@@ -10,11 +10,17 @@ class UsersController extends Controller
 {
     public function index()
     {
-        $users = User::paginate(10);
-        
-        return view('users.index', [
-            'users' => $users,
-        ]);
+       $user = \Auth::user();
+        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
+
+        $data = [
+            'user' => $user,
+            'posts' => $posts,
+        ];
+
+        $data += $this->counts($user);
+
+        return view('users.show', $data);
     }
     
     public function show($id)
