@@ -98,7 +98,4 @@ My Page
  @endsection
 
         
-     
-
-
- 
+   
