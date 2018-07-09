@@ -52,13 +52,11 @@
         display: inline-block;
         width: 250px;
         vertical-align: top;
-        float:left;
         }
 
 
     .under{
         border-bottom: solid 1px black;
-        max-width:500px;
         }
     
     .prof dt {
@@ -83,6 +81,6 @@
     
     .right{
         float:right;
-        margin-right:100px;
+       margin-right: 10px;
     }
  

@@ -1,24 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-<<<<<<< HEAD
-        <aside class="col-xs-4">
-            <!--<div class="panel panel-default">-->
-                <!--<div class="panel-heading">-->
-                 
-                <!--</div>-->
-            <!--</div>-->
-        </aside>
-        
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!--<link rel="stylesheet" href="css/mypage3.css">-->
-   <link rel="stylesheet" href="{{ asset('/css/mypage3.css') }}">
+   <!--<link rel="stylesheet" href="mypage3.css">-->
+  <link rel="stylesheet" href="{{ ('/css/mypage3.css') }}">
 </head>
 
 <title>
@@ -44,7 +35,7 @@ My Page
 
 
 <div class="clearfix">
-<figure class="main-img"><img src="images/NGT.jpg" width="300" height="400" >
+<figure class="main-img"><img alt="宮島 亜弥" src="http://img.futureartist.net/ngt48/profile/miyajima_aya.jpg" width="300" height="400" >
 </figure>
 
 
@@ -54,22 +45,25 @@ My Page
 
 <dl>
    <div class="under">
-   <dt>gender</dt>
+   <dt>特技</dt>
    <dd>早起き</dd>
    </div>
    <div class="under">
-   <dt>hobby</dt>
+   <dt>趣味</dt>
    <dd>メイク</dd>
    </div>
    <div class="under">
-   <dt>language</dt>
+   <dt>好きな食べ物</dt>
    <dd>アイス、お肉</dd>
    </div>
     <div class="under">
-   <dt>intro</dt>
-   <dd>ありがとうzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzsssssssssssssssssssccccccccccccdddddddddddd</dd>
+   <dt>好きな言葉</dt>
+   <dd>ありがとう</dd>
    </div>
-
+   <div class="under">
+   <dt>メッセージ</dt>
+   <dd>残りの日々と皆様と過ごせる時間を大切に、最後まで頑張ります！皆様を笑顔にできますように！</dd>
+   </div>
 </dl>
 </div>
 </div>
@@ -79,36 +73,24 @@ My Page
 </section>
 </div>
 
+       <div class="col-xs-8">
+        <!--<aside class="col-md-offset-2 col-md-1 col-xs-offset-2 col-xs-3">-->
+       <div class="right">
+       {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
+       </div>
+        <!--</aside>-->
+ 
+      </div>
 </body>
+
+
 </html>
+
+
+ @endsection
+
         
      
-<!--        <div class="col-xs-8">-->
-<!--=======-->
-<!--        <aside class="col-md-offset-2 col-md-1 col-xs-offset-2 col-xs-3">-->
-<!--            <div class="panel panel-default">-->
-<!--                <div class="panel-heading>-->
-<!--                    <h3 class="panel-title">{{ $user->name }}</h3>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </aside>-->
-<!--        {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()]) !!}-->
-<!--        <div class="col-md-offset-2 col-md-8 col-xs-offset-2 col-xs-8">-->
-<!-->>>>>>> b5822625760e470e94cdd60df3d1c8f1710e9feb-->
-            
-  
-<!--        </div>-->
-        
-<!--    </div>-->
-    
 
-<!--      <div class="right">-->
-<!--        {!! link_to_route('users.edit', 'Profile edit',['button type' => 'submit'],['class' => 'btn btn-default']) !!}-->
-<!--    </div>-->
-<!--<<<<<<< HEAD-->
-       <!--{!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['button type' => 'submit'],['class' => 'btn btn-default']) !!}-->
-<!--@endsection-->
-<!--=======-->
-<!--@endsection-->
 
->>>>>>> b5822625760e470e94cdd60df3d1c8f1710e9feb
+ 
