@@ -8,7 +8,7 @@
     <div class="row">
     <div class="edit col-lg-offset-3 col-log-6 col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
         <div class="title">
-        <h1>Hi {{ $user->name }}!!<br> You Can Update Your Information</h1>
+        <h1>Hi {{ $user->name }}!!<br> You Can Update Your Information.</h1>
         </div>
         <br>
         <br>
@@ -16,10 +16,6 @@
     <div class="text">
         {!! Form::label('name', 'name: ') !!}
         {!! Form::text('name') !!}
-        <br>
-        <br>
-        {!! Form::label('password', 'password: ') !!}
-        {!! Form::text('password') !!}
         <br>
         <br>
         {!! Form::label('gender', 'gender: ') !!}
@@ -39,18 +35,21 @@
         {!! Form::textarea('intro') !!}
         <br>
         <br>
-        {!! Form::submit('Update') !!}
+        {!! Form::submit('Info Update') !!}
         <br>
         <br>
-  {!! Form::close() !!}      
-        {!! Form::open(['url' => 'users/upload', 'method' => 'post', 'files' => true]) !!}
-        {!! Form::label('file', 'Avater Upload', ['class' => 'control-label']) !!}
-                    {{--成功時のメッセージ--}}
-                    @if (session('success'))
-                        <div class="alert alert-success">{{ session('success') }}</div>
-                    @endif
+  {!! Form::close() !!}   
+  
+    {!! Form::open(['url' => 'users/upload', 'method' => 'post', 'files' => true]) !!}
+    {!! Form::label('file', 'Avater Upload', ['class' => 'control-label']) !!}
+        (min=120×120px, max=400×400px)
+        
+             {{--成功時のメッセージ--}}
+                @if (session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
                     {{-- エラーメッセージ --}}
-                    @if ($errors->any())
+                @if ($errors->any())
                         <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
@@ -58,18 +57,19 @@
                             @endforeach
                         </ul>
                         </div>
-                    @endif
+                @endif
+        
+        
+         <div class="form-group">
+                @if ($user->avatar_filename)
+                    <p>
+                        <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                    </p>
+                @endif
+            {!! Form::file('file') !!}
+         </div>
                     
-                    <div class="form-group">
-                        @if ($user->avatar_filename)
-                            <p>
-                                <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
-                            </p>
-                        @endif
-                        {!! Form::file('file') !!}
-                    </div>
-                    
-                    <div class="form-group">
+                       <div class="form-group">
                         {!! Form::submit('Avater Upload') !!} 
                     </div>
     {!! Form::close() !!}
@@ -79,6 +79,3 @@
 </div>
 </body>
 @endsection
-
-
-1 Comment

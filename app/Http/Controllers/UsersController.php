@@ -54,7 +54,6 @@ class UsersController extends Controller
     {
         $user = User::find($id);
         $user->name = $request->name;
-        $user->password = $request->password;
         $user->gender = $request->gender;
         $user->hobby = $request->hobby;
         $user->language = $request->language;
@@ -83,7 +82,9 @@ class UsersController extends Controller
             $user->avatar_filename = basename($filename);
             $user->save();
 
-            return redirect('/')->with('success', '保存しました。');
+            return redirect()
+                 ->back()
+                 ->with('success', 'Upload succeed。');
         } else {
             
             return redirect()
