@@ -1,8 +1,6 @@
 @if (Auth::check())
         <?php $user = Auth::user(); ?>
 
-@extends('users.show')    
-
     
 @else
 <!DOCTYPE html>
