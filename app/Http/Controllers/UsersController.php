@@ -77,10 +77,10 @@ class UsersController extends Controller
             $user->avatar_filename = basename($filename);
             $user->save();
 
-            return redirect('/edit')->with('success', '保存しました。');
+            return redirect('/')->with('success', '保存しました。');
         } else {
             
-            return redirect('/edit')
+            return redirect('/')
                  ->back()
                  ->withInput()
                  ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
