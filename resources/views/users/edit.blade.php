@@ -43,8 +43,8 @@
         <br>
         <br>
   {!! Form::close() !!}      
-        // 画像アップロード //
         {!! Form::open(['url' => 'users/upload', 'method' => 'post', 'files' => true]) !!}
+        {!! Form::label('file', 'Avater Upload', ['class' => 'control-label']) !!}
                     {{--成功時のメッセージ--}}
                     @if (session('success'))
                         <div class="alert alert-success">{{ session('success') }}</div>
@@ -66,12 +66,11 @@
                                 <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                             </p>
                         @endif
-                        {!! Form::label('file', '画像アップロード', ['class' => 'control-label']) !!}
                         {!! Form::file('file') !!}
                     </div>
                     
                     <div class="form-group">
-                        {!! Form::submit('Avater Upload', ['class' => 'btn btn-default']) !!} 
+                        {!! Form::submit('Avater Upload') !!} 
                     </div>
     {!! Form::close() !!}
      </div>
