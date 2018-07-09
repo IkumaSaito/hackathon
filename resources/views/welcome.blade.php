@@ -1,6 +1,7 @@
 @if (Auth::check())
         <?php $user = Auth::user(); ?>
 
+
     
 @else
 <!DOCTYPE html>
