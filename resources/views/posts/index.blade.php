@@ -19,8 +19,7 @@
      <div class="panel panel-primary">
   <div class="panel-body">
     <li class="media">
-        <div class="media-body">
-            <div>
+        <div class="media-body">zz
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $post->created_at }}</span>
             </div>
             <div>
@@ -35,9 +34,9 @@
             </div>
         </div>
     </li>
+@endforea
     </div>
     </div>
-@endforeach
 </ul>
 {!! $posts->render() !!}
 @endsection
