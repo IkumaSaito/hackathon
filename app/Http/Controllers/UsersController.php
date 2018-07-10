@@ -12,21 +12,23 @@ use App\Post;
 
 class UsersController extends Controller
 {
-    public function index()
+   public function index()
     {
     if (\Auth::check()){
         $user = \Auth::user();
         $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-        
+
         $data = [
             'user' => $user,
             'posts' => $posts,
         ];
+
         
         $data += $this->counts($user);
             return view('users.show', $data);
         } else {
             return view('welcome');
+
         }
     }
     
@@ -49,9 +51,11 @@ class UsersController extends Controller
     }
 
 
+
     public function edit($id)
     {
         $user = user::find($id);
+
         return view('users.edit', [
             'user' => $user,
         ]);
@@ -75,8 +79,11 @@ class UsersController extends Controller
         $user->language = $request->language;
         $user->intro = $request->intro;
         $user->save();
+
+
         return redirect('/');
     }
+
     
     public function upload(Request $request)
     {
@@ -92,6 +99,7 @@ class UsersController extends Controller
             $user = User::find(auth()->id());
             $user->avatar_filename = basename($filename);
             $user->save();
+
             return redirect()
                  ->back()
                  ->with('success', 'Upload succeed');
@@ -102,6 +110,6 @@ class UsersController extends Controller
                  ->withInput()
                  ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
         }
-    }   
-        }
-        
+    }
+}
+

@@ -1,6 +1,5 @@
 <?php
 
-// Route::get('/', 'PostsController@index');わたしの
 Route::get('/', 'UsersController@index');
 
 // user registration
