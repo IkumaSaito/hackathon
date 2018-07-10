@@ -18,7 +18,6 @@ My Page
 
 <body>
 
-<div class="contents">
 
 
 
@@ -76,6 +75,9 @@ My Page
    <div class="right">
        {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
        </div>
+       
+     <br>
+     <br>
 </section>
 </div>
 
