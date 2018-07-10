@@ -10,7 +10,7 @@
             <div class="media-body">
                 <div>
                     <?php echo $auth_id; ?>
-                    {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $directmessage->created_at }}</span>
+                        {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $directmessage->created_at }}</span>
                     <?php echo $id; ?> 
                 </div>
                 <div>

@@ -65,12 +65,13 @@ class DirectmessagesController extends Controller
     // return print $request;
         $data = [];
         if (\Auth::check()) {
-            
-            $user = \Auth::user();
                 $auth_id = \Auth::id(); //user_id
                 $id = $request->id;     //receiver_id
-                    $directmessages = $user->directmessages()->where('receiver_id', $id)->orderBy('created_at', 'desc')->paginate(10);
-            
+                    $user = \Auth::user();
+                    // $directmessages = $user->directmessages()->where('receiver_id', $id)->orderBy('created_at', 'desc')->paginate(10);
+                    $directmessages = Directmessage::where('user_id', $auth_id)->where('receiver_id', $id)
+                                        ->orwhere('user_id', $id)->where('receiver_id', $auth_id)->orderBy('created_at', 'desc')->paginate(10);
+
             $data = [
                 'user' => $user,
                 'id' => $id,
