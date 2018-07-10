@@ -2,6 +2,7 @@
 
 @section('content')
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -17,9 +18,6 @@ My Page
 
 
 <body>
-
-<div class="contents col-md-offset-3 col-md-6">
-
 
 
 <header>
@@ -39,7 +37,7 @@ My Page
 
 
 <div class="prof">
-<h2 style="font-size: 2.3125rem; line-height: 1.4;" data-idx="0">{{ $user->name }}</h2>
+<h3 style="font-size: 2.3125rem; line-height: 1.4;" data-idx="0">{{ $user->name }}</h3>
  
 
 <dl>
@@ -59,10 +57,7 @@ My Page
    <dt>intro</dt>
    <td>{{ $user->intro }}</td>
    </div>
-   <!--<div class="under">-->
-   <!--<dt>メッセージ</dt>-->
-   <!--<dd>残りの日々と皆様と過ごせる時間を大切に、最後まで頑張ります！皆様を笑顔にできますように！</dd>-->
-   <!--</div>-->
+
 </dl>
 
 
@@ -79,26 +74,20 @@ My Page
 </section>
 </div>
 
-    
-
-</body>
-</html>
-<!--</section>-->
-<!--</div>-->
-
-<!--       <div class="col-xs-8">-->
+       <!--<div class="col-xs-8">-->
         <!--<aside class="col-md-offset-2 col-md-1 col-xs-offset-2 col-xs-3">-->
-
+       <!--<div class="right">-->
+       <!--{!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}-->
+       <!--</div>-->
         <!--</aside>-->
  
-<!--      </div>-->
-<!--</body>-->
-
-
-<!--</html>-->
+      <!--</div>-->
 
 
  @endsection
 
         
-   
+     
+
+
+ 
