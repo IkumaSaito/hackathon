@@ -2,7 +2,7 @@
 
 @section('content')
 
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,6 +15,7 @@
 <title>
 My Page
 </title>
+
 
 
 <body>
