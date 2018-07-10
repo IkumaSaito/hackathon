@@ -34,7 +34,7 @@ My Page
 
 
 <div class="clearfix">
-<figure class="main-img"><img alt="宮島 亜弥" src="http://img.futureartist.net/ngt48/profile/miyajima_aya.jpg" width="300" height="400" >
+<figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
 </figure>
 
 
