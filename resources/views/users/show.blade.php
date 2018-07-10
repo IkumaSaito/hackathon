@@ -18,6 +18,7 @@ My Page
 
 <body>
 
+<div class="contents col-md-offset-3 col-md-6">
 
 
 
@@ -75,9 +76,6 @@ My Page
    <div class="right">
        {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
        </div>
-       
-     <br>
-     <br>
 </section>
 </div>
 
