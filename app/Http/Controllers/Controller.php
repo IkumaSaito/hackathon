@@ -13,9 +13,11 @@ class Controller extends BaseController
 
     public function counts($user) {
         $count_posts = $user->posts()->count();
+        $count_directmessages = $user->directmessages()->count();
 
         return [
             'count_posts' => $count_posts,
+            'count_directmessages' => $count_directmessages,
         ];
     }
 }
