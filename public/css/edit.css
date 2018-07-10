@@ -13,3 +13,8 @@
     font-size: 3vmin;
     font-weight: bold;
 }
+
+.main-img img{
+    width: auto;
+    height: 200px;
+    }

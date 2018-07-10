@@ -80,8 +80,6 @@ class UsersController extends Controller
         $this->validate($request, [
              'file' => [ 
                 'required','file',
-           // 最小縦横120px 最大縦横400px
-            'dimensions:min_width=120,min_height=120,max_width=400,max_height=400',
         ]
      ]);
 
