@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UsersController@index');
 
 // user registration
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
@@ -17,4 +15,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show','update','edit']]);
     Route::post('users/upload', 'UsersController@upload');
     Route::resource('posts', 'PostsController', ['only' => ['store', 'destroy','index']]);
+
 });

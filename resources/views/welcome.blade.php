@@ -1,12 +1,9 @@
-
-
-
-    @if (Auth::check())
+@if (Auth::check())
         <?php $user = Auth::user(); ?>
+
+
     
-aaa
-    
-    @else
+@else
 <!DOCTYPE html>
 <html lang="ja">
    <head>
@@ -33,7 +30,7 @@ aaa
 <div class="row">
    <div class="col-md-5" id="left">
        <img class="img-responsive" src="images/welcome.jpg">
-       <a href="紹介ページへのリンク" class="btn">What is Lunch Meter</a>
+         <br type="submit">  {!! link_to_route('signup.get', 'What is Lunch Meter',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
    </div>
    
    <div class="col-md-2">
@@ -58,11 +55,11 @@ aaa
    
    <div class="col-md-5" id="right">
    <img class="img-responsive" src="images/welcome1.jpg">
-   <a href="紹介ページへのリンク" class="btn">ランチメーターとは</a>
+       <br type="submit">  {!! link_to_route('signup.get', 'ランチミーターとは',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
    </div>
 </div>
 </div>
 
 </body>
 </html>
-    @endif
+@endif

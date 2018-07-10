@@ -1,8 +1,8 @@
 .title{
    text-align: center;
    margin: 10px;
+   margin-bottom: 20px;
    background-color: white;
-   padding: 20px;
 }
 
 .name{
@@ -12,6 +12,7 @@
 
 .container-flud {
     margin-top:140px;
+    max-width:99%;
 }
 
 .text{
@@ -30,6 +31,7 @@
  -webkit-transform: translate(-50%,-50%);
  transform: translate(-50%,-50%);
 
+ background-color: rgba(255,255,255,0.3);
  margin:0;
  font-size: 20px;
  border: solid white 2px; 
@@ -39,7 +41,7 @@
  }
 
 #left a:hover{
- background: rgba(255, 255, 255, 0.3);
+ background: rgba(255, 255, 255, 0.6);
  }
  
  
@@ -63,4 +65,13 @@
 
 #right a:hover{
  background: rgba(50, 50, 50, 0.6);
+ }
+ 
+ #right{
+ padding-left:0px;
+ padding-right:0px;
+ }
+ 
+ #left{
+ padding-right: 0px;
  }
