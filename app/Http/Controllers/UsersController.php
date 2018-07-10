@@ -14,29 +14,94 @@ class UsersController extends Controller
 {
     public function index()
     {
-        $users = User::paginate(10);
+    if (\Auth::check()){
+        $user = \Auth::user();
+        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
         
-        return view('users.index', [
-            'users' => $users,
-        ]);
-    }
-    
-    public function show($id)
-    {
-        $user = User::find($id);
-        // $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-        // $posts = DB::table('posts')->paginate(10);
-        $posts = Post::orderBy('id','desc')->paginate(10);
-                 
-        $directmessages = $user->directmessages()->orderBy('created_at', 'desc')->paginate(10);
         $data = [
             'user' => $user,
             'posts' => $posts,
-            'directmessages' => $directmessages,
+        ];
+        
+        $data += $this->counts($user);
+            return view('users.show', $data);
+        } else {
+            return view('welcome');
+        }
+    }
+    
+
+
+//以下使われていない
+    public function show($id)
+    {
+        $user = User::find($id);
+        $posts = Post::orderBy('id','desc')->paginate(10);
+                 
+        $data = [
+            'user' => $user,
+            'posts' => $posts,
         ];
 
         $data += $this->counts($user);
 
         return view('users.show', $data);
     }
-}
+
+
+    public function edit($id)
+    {
+        $user = user::find($id);
+        return view('users.edit', [
+            'user' => $user,
+        ]);
+    }
+    
+    public function update(Request $request, $id)
+    {
+        
+        $this->validate($request, [
+            'name' => 'required|max:191', 
+            'gender' =>'max:191',
+            'hobby' => 'max:191',
+            'language' => 'max:191',
+            'intro' => 'max:191',
+        ]);
+        
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->gender = $request->gender;
+        $user->hobby = $request->hobby;
+        $user->language = $request->language;
+        $user->intro = $request->intro;
+        $user->save();
+        return redirect('/');
+    }
+    
+    public function upload(Request $request)
+    {
+       
+        $this->validate($request, [
+             'file' => [ 
+                'required','file',
+                ]
+            ]);
+        if ($request->file('file')->isValid([])) {
+            
+            $filename = $request->file->store('public/avatar');
+            $user = User::find(auth()->id());
+            $user->avatar_filename = basename($filename);
+            $user->save();
+            return redirect()
+                 ->back()
+                 ->with('success', 'Upload succeed');
+        } else {
+            
+            return redirect()
+                 ->back()
+                 ->withInput()
+                 ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
+        }
+    }   
+        }
+        

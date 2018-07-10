@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Controllers;
 
+use App\Post;
+
 class PostsController extends Controller
 {
      public function index()
@@ -15,14 +17,14 @@ class PostsController extends Controller
         $data = [];
         if (\Auth::check()) {
             $user = \Auth::user();
-            $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
+            $posts = Post::orderBy('id','desc')->paginate(10);
 
             $data = [
                 'user' => $user,
                 'posts' => $posts,
             ];
             $data += $this->counts($user);
-            return view('users.show', $data);
+            return view('posts.index', $data);
         }else {
             return view('welcome');
         }

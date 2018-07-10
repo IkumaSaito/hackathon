@@ -84,5 +84,14 @@ class DirectmessagesController extends Controller
             return view('welcome');
         }
     }
+    
+    public function users()
+    {
+        if (\Auth::check()) {   
+            return view('directmessages.users');
+        }else {
+            return view('welcome');
+        }
+    }
 
 }
