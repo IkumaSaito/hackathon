@@ -54,12 +54,11 @@ class UsersController extends Controller
     {
         
         $this->validate($request, [
-            'name' => 'required|max:191',   // add
-            // 'content' => 'required|max:191',
-            'gender' => 'required|max:191',
-            'hobby' => 'required|max:191',
-            'language' => 'required|max:191',
-            'intro' => 'required|max:191',
+            'name' => 'required|max:191', 
+            'gender' =>'max:191',
+            'hobby' => 'max:191',
+            'language' => 'max:191',
+            'intro' => 'max:191',
 
         ]);
         
@@ -74,24 +73,6 @@ class UsersController extends Controller
         return redirect('/');
     }
 
-    
-//         public function update(Request $request, $id)
-//     {
-//         $this->validate($request, [
-//             'title' => 'required|max:191',   // add
-//             'content' => 'required|max:191',
-//         ]);
-
-
-//         $message = Message::find($id);
-//         $message->title = $request->title;    // add
-//         $message->content = $request->content;
-//         $message->save();
-
-
-//         return redirect('/');
-
-// }
     
     public function upload(Request $request)
     {
@@ -114,7 +95,7 @@ class UsersController extends Controller
 
             return redirect()
                  ->back()
-                 ->with('success', 'Upload succeed。');
+                 ->with('success', 'Upload succeed');
         } else {
             
             return redirect()
