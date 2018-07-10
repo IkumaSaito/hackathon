@@ -52,6 +52,7 @@
         display: inline-block;
         width: 250px;
         vertical-align: top;
+        margin-top:30px;
         }
 
 
@@ -77,4 +78,10 @@
         
     .right{
         margin-left: 90%;
+        
+    }
+    
+    h2{
+        color:#eee;
+        background:#111;
     }
