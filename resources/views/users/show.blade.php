@@ -18,7 +18,7 @@ My Page
 
 <body>
 
-<div class="contents">
+<div class="contents col-md-offset-3 col-md-6">
 
 
 
