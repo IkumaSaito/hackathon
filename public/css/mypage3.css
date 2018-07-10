@@ -78,10 +78,15 @@
         
     .right{
         margin-left: 90%;
-        
     }
     
     h2{
         color:#eee;
         background:#8888;
+    }
+    
+    
+    .main-img img{
+    width: auto;
+    height: 200px;
     }
