@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="css/mypage3.css">
+    <link rel="stylesheet" href="css/mypage3.css">
 </head>
 
 <title>
@@ -24,7 +24,7 @@ My Page
 
 <header>
 <h2 class="name">
-ニックネーム
+{{ $user->name }}
 </h2>
 </header>
 
@@ -39,31 +39,34 @@ My Page
 
 
 <div class="prof">
-<h2 style="font-size: 2.3125rem; line-height: 1.4;" data-idx="0">ニックネーム</h2>
-
+<h2 style="font-size: 2.3125rem; line-height: 1.4;" data-idx="0">{{ $user->name }}</h2>
+ 
 
 <dl>
    <div class="under">
    <dt>gender</dt>
-   <dd>早起き</dd>
+   <td>{{ $user->gender }}</td>
    </div>
    <div class="under">
    <dt>hobby</dt>
-   <dd>メイク</dd>
+   <td>{{ $user->hobby }}</td>
    </div>
    <div class="under">
    <dt>language</dt>
-   <dd>アイス、お肉</dd>
+   <td>{{ $user->language }}</td>
    </div>
     <div class="under">
    <dt>intro</dt>
-   <dd>ありがとう</dd>
+   <td>{{ $user->intro }}</td>
    </div>
    <!--<div class="under">-->
    <!--<dt>メッセージ</dt>-->
    <!--<dd>残りの日々と皆様と過ごせる時間を大切に、最後まで頑張ります！皆様を笑顔にできますように！</dd>-->
    <!--</div>-->
 </dl>
+
+
+
 </div>
 </div>
 

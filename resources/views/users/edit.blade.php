@@ -12,10 +12,12 @@
         </div>
         <br>
         <br>
+        
+            
     {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'put']) !!}
     <div class="text">
         {!! Form::label('name', 'name: ') !!}
-        {!! Form::text('name') !!}
+        {!! Form::text('name',null, ['class' => 'form-control'])!!}
         <br>
         <br>
         {!! Form::label('password', 'password: ') !!}
@@ -23,20 +25,20 @@
         <br>
         <br>
         {!! Form::label('gender', 'gender: ') !!}
-        {!! Form::text('gender') !!}
+        {!! Form::text('gender',null, ['class' => 'form-control']) !!}
         <br>
         <br>
         {!! Form::label('hobby', 'hobby: ') !!}
-        {!! Form::text('hobby') !!}
+        {!! Form::text('hobby',null, ['class' => 'form-control']) !!}
         <br>
         <br>
         {!! Form::label('language', 'language: ') !!}
-        {!! Form::text('language') !!}
+        {!! Form::text('language',null, ['class' => 'form-control']) !!}
         <br>
         <br>
        
         {!! Form::label('intro', 'intro: ') !!}<br>
-        {!! Form::textarea('intro') !!}
+        {!! Form::textarea('intro',null, ['class' => 'form-control']) !!}
         <br>
         <br>
         {!! Form::submit('Update') !!}
