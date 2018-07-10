@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+
 use App\User;
+
+use App\Post;
 
 class UsersController extends Controller
 {
@@ -19,18 +23,23 @@ class UsersController extends Controller
             'posts' => $posts,
         ];
 
+        
         $data += $this->counts($user);
-        return view('users.show', $data);
-        }else{
-        return view('welcome');
+            return view('users.show', $data);
+        } else {
+            return view('welcome');
+
         }
     }
     
+
+
+//以下使われていない
     public function show($id)
     {
         $user = User::find($id);
-        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-
+        $posts = Post::orderBy('id','desc')->paginate(10);
+                 
         $data = [
             'user' => $user,
             'posts' => $posts,
@@ -40,8 +49,10 @@ class UsersController extends Controller
 
         return view('users.show', $data);
     }
-    
-     public function edit($id)
+
+
+
+    public function edit($id)
     {
         $user = user::find($id);
 
@@ -59,7 +70,6 @@ class UsersController extends Controller
             'hobby' => 'max:191',
             'language' => 'max:191',
             'intro' => 'max:191',
-
         ]);
         
         $user = User::find($id);
@@ -69,6 +79,7 @@ class UsersController extends Controller
         $user->language = $request->language;
         $user->intro = $request->intro;
         $user->save();
+
 
         return redirect('/');
     }
@@ -80,13 +91,11 @@ class UsersController extends Controller
         $this->validate($request, [
              'file' => [ 
                 'required','file',
-        ]
-     ]);
-
+                ]
+            ]);
         if ($request->file('file')->isValid([])) {
             
             $filename = $request->file->store('public/avatar');
-
             $user = User::find(auth()->id());
             $user->avatar_filename = basename($filename);
             $user->save();
@@ -103,3 +112,4 @@ class UsersController extends Controller
         }
     }
 }
+
