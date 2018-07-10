@@ -41,6 +41,7 @@
         <br>
         <br>
   {!! Form::close() !!}   
+
   
     {!! Form::open(['url' => 'users/upload', 'method' => 'post', 'files' => true]) !!}
     {!! Form::label('file', 'Avater Upload', ['class' => 'control-label']) !!}

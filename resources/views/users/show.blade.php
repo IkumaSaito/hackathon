@@ -8,8 +8,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/mypage3.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/mypage3.css">
 </head>
 
 <title>
@@ -59,6 +59,7 @@ My Page
    <td>{{ $user->intro }}</td>
    </div>
 
+
 </dl>
 
 
@@ -67,11 +68,18 @@ My Page
 </div>
 
 
+
 </div>
 
    <div class="right">
        {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
        </div>
+       
+       
+       
+
+
+
 </section>
 </div>
 
