@@ -1,4 +1,5 @@
 <ul class="media-list">
+<link rel="stylesheet" href="{{ asset('css/directmessages.css') }}">
 @foreach ($directmessages as $directmessage)
         <?php $user = $directmessage->user; ?>
         <?php $id = $directmessage->receiver_id; ?>
@@ -6,7 +7,8 @@
         
         <li class="media">
             <div class="media-left">
-                <img class="media-object img-rounded" src="{{ Gravatar::src($user->name, 50) }}" alt="">
+                <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                </figure>
             </div>
             <div class="media-body">
                 <div>
