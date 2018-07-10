@@ -22,10 +22,10 @@
         <!--ここまで-->
             <!--ここからDM-->
             
-            <!--変数の確認-->
-                <?php echo $user->name . "が送り主(あってる)" . PHP_EOL; ?>
-                <?php echo $id . PHP_EOL; ?>
-                
+            <!--デバッグ用変数の確認-->
+                <?php echo "To(user_id): " . $id . PHP_EOL; ?>
+                <?php echo "From: " . $user->name . PHP_EOL; ?>
+                <?php echo "id" . $user->id . PHP_EOL; ?>
                 
                 {!! Form::open(['route' => 'directmessages.store']) !!}
                       <div class="form-group">

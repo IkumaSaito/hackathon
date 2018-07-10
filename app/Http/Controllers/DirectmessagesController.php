@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 
 use App\User;
 
+use App\Directmessage;
+
 class DirectmessagesController extends Controller
 {
     public function index($id)
@@ -65,18 +67,15 @@ class DirectmessagesController extends Controller
         if (\Auth::check()) {
             
             $user = \Auth::user();
-            $id = $request->id;
-            $auth_id = \Auth::id();
-            $directmessages = $user->directmessages()->orderBy('created_at', 'desc')->paginate(10);
-            // $dm = DB::table('Directmessages');
-            // $directmessages = 
-            //     ->where()
-            //     ->orderBy('created_at', 'desc')->paginate(10);
-                
+                $auth_id = \Auth::id(); //user_id
+                $id = $request->id;     //receiver_id
+                    $directmessages = $user->directmessages()->where('receiver_id', $id)->orderBy('created_at', 'desc')->paginate(10);
+            
             $data = [
                 'user' => $user,
                 'id' => $id,
                 'directmessages' => $directmessages,
+                'auth_id' => $auth_id,
             ];
             $data += $this->counts($user);
             
