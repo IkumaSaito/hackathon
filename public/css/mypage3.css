@@ -1,0 +1,92 @@
+ /*外側の赤線*/
+    .contact {
+        background: #FFF;
+        padding: 0;
+        margin: 0;
+        border: #777777 4px solid;
+        border-radius: 5px;
+        box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        }
+      
+    
+     body {
+        padding: 0px;
+        margin: 0 auto;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.2;
+        position: relative;
+        cursor: normal;
+        overflow-x: hidden;
+        background-color: #FFF;
+        }
+        
+    
+    /*名前部分の赤い線*/
+    .contents header {
+        margin-bottom: 0.5rem;
+        padding: 0 0.7rem;
+        background: #888888;
+        height: 100%
+        }
+
+
+    .prof{
+        float: right;
+        width:70%;
+        text-align: left;
+        display: inline-block;
+        width: calc(100% - 400px);
+        margin-left: 30px;
+        }
+
+
+    .ngt48-member {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        }
+    
+    .main-img {
+        display: inline-block;
+        width: 250px;
+        vertical-align: top;
+        margin-top:30px;
+        }
+
+
+    .under{
+        border-bottom: solid 1px black;
+        }
+    
+    .prof dt {
+        display: inline-block;
+        width: 180px;
+        padding: 8px;
+        font-size: 1rem;
+        }
+
+
+    .name{
+        color: #FFFFFF;
+        }
+        
+    dl dt {
+        font-weight: bold;
+        }
+        
+    .right{
+        margin-left: 90%;
+    }
+    
+    h2{
+        color:#eee;
+        background:#8888;
+    }
+    
+    
+    .main-img img{
+    width: auto;
+    height: 200px;
+    }

@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <aside class="col-md-offset-2 col-md-8 col-xs-offset-2 col-xs-8">
-<ul class="media-list">
+        <ul class="media-list">
             
             @if (Auth::id() == $user->id)
                   {!! Form::open(['route' => 'posts.store']) !!}
@@ -18,6 +18,6 @@
                 @include('posts.posts', ['posts' => $posts])
             @endif
             
-</ul>
+        </ul>
 {!! $posts->render() !!}
 @endsection
