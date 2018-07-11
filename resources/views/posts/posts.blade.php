@@ -21,7 +21,7 @@
                 </div>
                     <!--ここからDM機能、ボタン追加お願いします-->
                     @if (Auth::id() != $post->user_id)
-                        {!! link_to_route('users.directmessages', "DM", ['id' => $post->user_id]) !!}
+                        {!! link_to_route('users.directmessages', "DM", ['id' => $post->user_id],['class' => 'btn btn-default btn-xs']) !!}
                     @endif
                 </div>
             </li>
