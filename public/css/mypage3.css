@@ -1,6 +1,6 @@
-/*外側の赤線*/
+/*外側の線*/
 
-    .contact {
+    .main {
         background: #FFF;
         padding: 0;
         margin: 0;
@@ -24,8 +24,8 @@
         }
         
     
-    /*名前部分の赤い線*/
-    .contents header {
+/*名前部分の線*/
+    .main header {
         margin-bottom: 0.5rem;
         padding: 0 0.7rem;
         background: #888888;
@@ -34,12 +34,12 @@
 
 
     .prof{
-        float: right;
-        width:70%;
-        text-align: left;
-        display: inline-block;
-        width: calc(100% - 400px);
-        margin-left: 30px;
+        /*float: right;*/
+        /*width:70%;*/
+        /*text-align: left;*/
+        /*display: inline-block;*/
+        /*width: calc(100% - 400px);*/
+        /*margin-left: 30px;*/
         }
 
 
@@ -71,6 +71,7 @@
 
     .name{
         color: #FFFFFF;
+        /*margin-left: 10%;*/
         }
         
     dl dt {
@@ -81,7 +82,7 @@
         margin-left: 90%;
     }
     
-    h2{
+    h1{
         color:#eee;
         background:#8888;
     }
@@ -93,3 +94,15 @@
 
     }
 
+
+    .row div {
+        padding: 1em;
+        background: #FFF;
+        /*padding: 0;*/
+        margin: 0;
+        /*border: #777777 4px solid;*/
+        /*border-radius: 5px;*/
+        /*box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.2);*/
+        height: 100%;
+        text-align: left;
+            }
