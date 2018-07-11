@@ -6,7 +6,7 @@
 
 .loginbox{
  position: fixed;
- top: 25%;
+ top: 20%;
   color: Black;
   font-size: 18px;
   font-family: "corbel";
@@ -20,7 +20,8 @@
 
 @media screen and (max-width: 480px) {
     .loginbox {
-        margin-top: 0px;
+        margin-top: -60px;
+        padding-left: 35px;
     }
 }
 
