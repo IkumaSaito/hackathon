@@ -39,7 +39,7 @@ My Page
 
 <div class="prof">
 <h3 style="font-size: 2.3125rem; line-height: 1.4;" data-idx="0">{{ $user->name }}</h3>
- 
+          
 
 <dl>
    <div class="under">
