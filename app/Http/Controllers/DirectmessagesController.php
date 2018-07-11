@@ -70,7 +70,7 @@ class DirectmessagesController extends Controller
                     $user = \Auth::user();
                     // $directmessages = $user->directmessages()->where('receiver_id', $id)->orderBy('created_at', 'desc')->paginate(10);
                     $directmessages = Directmessage::where('user_id', $auth_id)->where('receiver_id', $id)
-                                        ->orwhere('user_id', $id)->where('receiver_id', $auth_id)->orderBy('created_at', 'desc')->paginate(10);
+                                        ->orWhere('user_id', $id)->where('receiver_id', $auth_id)->orderBy('created_at', 'desc')->paginate(10);
 
             $data = [
                 'user' => $user,
@@ -85,11 +85,20 @@ class DirectmessagesController extends Controller
             return view('welcome');
         }
     }
-    
+    // 作り中
     public function users()
     {
+        $data = [];
         if (\Auth::check()) {   
-            return view('directmessages.users');
+            $user = \Auth::user();
+            $auth_id = \Auth::id();
+            // $senders = $user->directmessages()->where('receiver_id', $auth_id)->orderBy('created_at', 'desc')->paginate(10);
+            $data = [
+                'user' => $user,
+                // 'senders' => $senders,
+                ];
+                $data += $this->counts($user);
+            return view('directmessages.users', $data);
         }else {
             return view('welcome');
         }
