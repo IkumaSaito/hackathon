@@ -4,6 +4,7 @@
     <div class="row">
         <aside class="col-xs-4">
             <div class="panel panel-default">
+
             </div>
         </aside>
         <!--ここからタブ-->

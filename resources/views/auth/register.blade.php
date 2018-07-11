@@ -24,31 +24,6 @@
                     {!! Form::label('password_confirmation', 'Confirmation') !!}
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
-                <!--任意-->
-                <div class="form-group">
-                    {!! Form::label('gender', 'Gender') !!}
-                    {!! Form::text('gender', old('gender'), ['class' => 'form-control']) !!}
-                </div>
-                
-                <div class="form-group">
-                    {!! Form::label('hobby', 'Hobby') !!}
-                    {!! Form::text('hobby', old('hobby'), ['class' => 'form-control']) !!}
-                </div>
-                
-                <div class="form-group">
-                    {!! Form::label('job', 'Job') !!}
-                    {!! Form::text('job', old('job'), ['class' => 'form-control']) !!}
-                </div>
-                
-                <div class="form-group">
-                    {!! Form::label('language', 'Language') !!}
-                    {!! Form::text('language', old('language'), ['class' => 'form-control']) !!}
-                </div>
-                
-                <div class="form-group">
-                    {!! Form::label('intro', 'Intro') !!}
-                    {!! Form::text('intro', old('intro'), ['class' => 'form-control']) !!}
-                </div>
 
                 {!! Form::submit('Sign up', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}

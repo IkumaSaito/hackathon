@@ -14,7 +14,7 @@ class PostsController extends Controller
 {
      public function index()
     {
-        $data = [];
+         $data = [];
         if (\Auth::check()) {
             $user = \Auth::user();
             $posts = Post::orderBy('id','desc')->paginate(10);
@@ -24,7 +24,9 @@ class PostsController extends Controller
                 'posts' => $posts,
             ];
             $data += $this->counts($user);
-            return view('posts.index', $data);
+
+        return view('posts.index', $data);
+
         }else {
             return view('welcome');
         }
@@ -43,7 +45,7 @@ class PostsController extends Controller
     }
     public function destroy($id)
     {
-        $post = \App\post::find($id);
+        $post = \App\Post::find($id);
 
         if (\Auth::id() === $post->user_id) {
             $post->delete();
