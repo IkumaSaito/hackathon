@@ -10,7 +10,8 @@
         <!--ここからタブ-->
         <div class="col-xs-8">
             <ul class="nav nav-tabs nav-justified">
-                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Direct Message <span class="badge">{{ $count_posts }}</span></a></li>
+                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Direct Message 
+                <!--<span class="badge">{{ $count_posts }}</span></a></li>-->
             </ul>
         <!--ここまで-->
             <!--ここからDM-->

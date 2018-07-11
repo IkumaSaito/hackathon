@@ -2,6 +2,11 @@
 
 @section('content')
 
-ここがDMユーザーリストになる予定です！！！
+    <?php echo $user->name . "さんのDM受信リスト" . PHP_EOL; ?>
+    
+   
+    
+
+    ここがDMユーザーリストになる予定です！！！
 
 @endsection
