@@ -34,7 +34,6 @@ class UsersController extends Controller
     
 
 
-//以下使われていない
     public function show($id)
     {
         $user = User::find($id);

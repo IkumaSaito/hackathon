@@ -2,24 +2,11 @@
 
 @section('content')
 
-ここがDMユーザーリストになる予定です！！！
+    <?php echo $user->name . "さんのDM受信リスト" . PHP_EOL; ?>
+    
+   
+    
 
-<!--@if (count($users) > 0)-->
-<!--    <ul class="media-list">-->
-<!--        @foreach ($users as $user)-->
-<!--            <li class="media">-->
-<!--                <div class="media-body">-->
-<!--                    <div>-->
-<!--                        {{ $user->name }}-->
-<!--                    </div>-->
-<!--                    <div>-->
-<!--                        <p>{!! link_to_route('users.show', 'View profile', ['id' => $user->id]) !!}</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--        @endforeach-->
-<!--    </ul>-->
-<!--{!! $users->render() !!}-->
-<!--@endif-->
+    ここがDMユーザーリストになる予定です！！！
 
 @endsection
