@@ -10,27 +10,29 @@
     	<meta charset="UTF-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>My Page</title>
+        
         <link rel="stylesheet" href="css/mypage3.css">
+    
     </head>
 
-    <title>
-        My Page
-    </title>
-
+    
     <body>
-        <header>
-            <h2 class="name">
-                {{ $user->name }}
-            </h2>
-        </header>
+        <h1 class="name">
+            {{ $user->name }}
+        </h1>
 
-        <section class="contact">
+        <section class="main">
+            
             <div class="ngt48-member">
             <div class="clearfix">
-                <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
-                </figure>
-            <div class="prof">
-                <h3 style="font-size: 2.3125rem; line-height: 1.4;" data-idx="0">{{ $user->name }}</h3>
+                
+                <div class="row">
+                <div class="col-md-6"><figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                </figure></div>
+                <div class="col-md-6"><div class="prof">
+                <h2 style="font-size: 3rem; line-height: 1.4;" data-idx="0">{{ $user->name }}</h2>
                     <dl>
                         <div class="under">
                            <dt>gender</dt>
@@ -49,17 +51,21 @@
                                 <td>{{ $user->intro }}</td>
                         </div>
                     </dl>
-                </div>
             </div>
-        </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            
             <div class="right">
                 <!--@if (Auth::id() == $user->id)-->
                 {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
                 <!--@endif-->
             </div>
         </section>
-    </div>
+
+    </body>
 
 
+    
 @endsection
-

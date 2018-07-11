@@ -19,7 +19,6 @@
 
 
 <body>
- @include('commons.navbar')
  @include('commons.error_messages')
     <div class="bg">
         <img class="img-responsive" src="/images/bg0.jpg">
@@ -45,7 +44,7 @@
         </div>
             
         <div class="col-md-offset-9 col-md-3 col-sm-offset-6 col-sm-6 col-xs-offset-1 col-xs-10">
-                {!! Form::submit('Log in', ['class' => 'btn btn-primary btn-block btn-sm']) !!}
+                {!! Form::submit('Log in', ['class' => 'btn btn-info btn-block btn-sm']) !!}
             {!! Form::close() !!}
 
             <p>New user?<br> {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
