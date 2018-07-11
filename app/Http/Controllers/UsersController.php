@@ -33,10 +33,9 @@ class UsersController extends Controller
     }
     
 
-
-//以下使われていない
     public function show($id)
     {
+         if (\Auth::check()){    
         $user = User::find($id);
         $posts = Post::orderBy('id','desc')->paginate(10);
                  
@@ -46,20 +45,27 @@ class UsersController extends Controller
         ];
 
         $data += $this->counts($user);
-
+        
         return view('users.show', $data);
+     } else {
+        return view('/');
+            }
     }
-
 
 
     public function edit($id)
     {
         $user = user::find($id);
+        
+        if (\Auth::id() === $user->id){ 
 
         return view('users.edit', [
             'user' => $user,
         ]);
     }
+        return redirect('/');
+    }
+    
     
     public function update(Request $request, $id)
     {
