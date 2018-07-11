@@ -31,7 +31,7 @@
                 <div class="col-md-6"><figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                 </figure></div>
                 <div class="col-md-6"><div class="prof">
-                <h2 style="font-size: 2.3125rem; line-height: 1.4;" data-idx="0">{{ $user->name }}</h2>
+                <h2 style="font-size: 3rem; line-height: 1.4;" data-idx="0">{{ $user->name }}</h2>
                     <dl>
                         <div class="under">
                            <dt>gender</dt>
@@ -46,7 +46,7 @@
                                 <td>{{ $user->language }}</td>
                         </div>
                         <div class="under">
-                            <dt>intro</dt><br>
+                            <dt>intro</dt>
                                 <td>{{ $user->intro }}</td>
                         </div>
                     </dl>
