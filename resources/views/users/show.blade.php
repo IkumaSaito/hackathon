@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="ja">
+
     <head>
     	<meta charset="UTF-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,7 @@
     
     </head>
 
-    
+
     <body>
         <h1 class="name">
             {{ $user->name }}
@@ -55,15 +56,26 @@
             </div>
             </div>
             </div>
-            
+                    
             <div class="right">
-                <!--@if (Auth::id() == $user->id)-->
-                {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
-                <!--@endif-->
+                @if (Auth::id() == $user->id)
+                        {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
+                @endif
+            
+                
+                @if (Auth::id() != $user->id)
+                        {!! link_to_route('users.directmessages', "DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
+                @endif
+ 
+    
             </div>
+            
+   
+            
         </section>
-        
+
     </body>
+
 
     
 @endsection
