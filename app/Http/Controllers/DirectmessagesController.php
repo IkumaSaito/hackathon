@@ -92,19 +92,8 @@ class DirectmessagesController extends Controller
             $auth_id = \Auth::id();
             
             $sender_ids = Directmessage::where('receiver_id', $auth_id)->pluck('user_id')->all();
-            // return $sender_ids;
-            //[2, 3]--->arrayであることに注意！
             
-            // $senders = User::where('id', $sender_ids)->pluck('name')->all();
-            $senders = User::whereIn('id', $sender_ids)->pluck('name')->all();
-            
-            // return $senders;
-            //[test2, test3]
-            
-                
-                // foreach ($sender_ids as $sender_id) {
-                //             $senders = User::find($sender_id);    
-                // }
+            $senders = User::whereIn('id', $sender_ids)->get();
             
             $data = [
                 'user' => $user,

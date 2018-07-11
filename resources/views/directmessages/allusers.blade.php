@@ -1,15 +1,17 @@
-@if (count($users) > 0)
+@if (count($senders) > 0)
 <ul class="media-list">
-@foreach ($users as $user)
+@foreach ($senders as $key => $sender)
     <li class="media">
         <div class="media-body">
             <div>
-                {{ $user->name }}
+                
+                {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}
+                
             </div>
         </div>
     </li>
 @endforeach
 </ul>
-{!! $users->render() !!}
+
 
 @endif
