@@ -68,7 +68,7 @@
                 @if ($user->avatar_filename)
                     <p>
 
-                        <figure class="main-img"><img src="{{ secure_asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                        <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                         </figure>
 
                     </p>
