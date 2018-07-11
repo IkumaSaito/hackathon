@@ -62,10 +62,10 @@
         }
     
     .prof dt {
-        display: inline-block;
+        /*display: inline-block;*/
         width: 180px;
-        padding: 8px;
-        font-size: 1rem;
+        padding: 10px;
+        font-size: 2rem;
         }
 
 
@@ -79,7 +79,7 @@
         }
         
     .right{
-        margin-left: 90%;
+        margin-left: 75%;
     }
     
     h1{
