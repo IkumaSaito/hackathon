@@ -52,7 +52,9 @@
             </div>
         </div>
             <div class="right">
+                <!--@if (Auth::id() == $user->id)-->
                 {!! link_to_route('users.edit', 'Profile edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
+                <!--@endif-->
             </div>
         </section>
     </div>
