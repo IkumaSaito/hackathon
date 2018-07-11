@@ -1,0 +1,30 @@
+.bg{
+    
+ max-width: 100%; 
+  position: relative;
+}
+
+.loginbox{
+ position: fixed;
+ top: 20%;
+  color: Black;
+  font-size: 18px;
+  font-family: "corbel";
+  background-color: rgba(250,250,250,0.8);
+  padding: 30px;
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .loginbox {
+        margin-top: -60px;
+        padding-left: 35px;
+    }
+}
+
+p{
+    text-align:center;
+}
