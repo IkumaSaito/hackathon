@@ -41,10 +41,12 @@
         <br>
         <br>
   {!! Form::close() !!}   
+
+
   
     {!! Form::open(['url' => 'users/upload', 'method' => 'post', 'files' => true]) !!}
     {!! Form::label('file', 'Avater Upload', ['class' => 'control-label']) !!}
-        (min=120×120px, max=400×400px)
+
         
              {{--成功時のメッセージ--}}
                 @if (session('success'))
@@ -65,7 +67,10 @@
          <div class="form-group">
                 @if ($user->avatar_filename)
                     <p>
-                        <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+
+                        <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                        </figure>
+
                     </p>
                 @endif
             {!! Form::file('file') !!}
@@ -80,4 +85,6 @@
 </div>
 </div>
 </body>
+
 @endsection
+

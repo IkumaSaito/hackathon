@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+
 use App\User;
+
+use App\Post;
 
 class UsersController extends Controller
 {
@@ -19,48 +23,59 @@ class UsersController extends Controller
             'posts' => $posts,
         ];
 
+        
         $data += $this->counts($user);
-        return view('users.show', $data);
-        }else{
-        return view('welcome');
+            return view('users.show', $data);
+        } else {
+            return view('welcome');
+
         }
     }
     
+
     public function show($id)
     {
+         if (\Auth::check()){    
         $user = User::find($id);
-        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-
+        $posts = Post::orderBy('id','desc')->paginate(10);
+                 
         $data = [
             'user' => $user,
             'posts' => $posts,
         ];
 
         $data += $this->counts($user);
-
+        
         return view('users.show', $data);
+     } else {
+        return view('/');
+            }
     }
-    
-     public function edit($id)
+
+
+    public function edit($id)
     {
         $user = user::find($id);
+        
+        if (\Auth::id() === $user->id){ 
 
         return view('users.edit', [
             'user' => $user,
         ]);
     }
+        return redirect('/');
+    }
+    
     
     public function update(Request $request, $id)
     {
         
         $this->validate($request, [
-            'name' => 'required|max:191',   // add
-            // 'content' => 'required|max:191',
-            'gender' => 'required|max:191',
-            'hobby' => 'required|max:191',
-            'language' => 'required|max:191',
-            'intro' => 'required|max:191',
-
+            'name' => 'required|max:191', 
+            'gender' =>'max:191',
+            'hobby' => 'max:191',
+            'language' => 'max:191',
+            'intro' => 'max:191',
         ]);
         
         $user = User::find($id);
@@ -71,27 +86,10 @@ class UsersController extends Controller
         $user->intro = $request->intro;
         $user->save();
 
+
         return redirect('/');
     }
 
-    
-//         public function update(Request $request, $id)
-//     {
-//         $this->validate($request, [
-//             'title' => 'required|max:191',   // add
-//             'content' => 'required|max:191',
-//         ]);
-
-
-//         $message = Message::find($id);
-//         $message->title = $request->title;    // add
-//         $message->content = $request->content;
-//         $message->save();
-
-
-//         return redirect('/');
-
-// }
     
     public function upload(Request $request)
     {
@@ -99,22 +97,18 @@ class UsersController extends Controller
         $this->validate($request, [
              'file' => [ 
                 'required','file',
-           // 最小縦横120px 最大縦横400px
-            'dimensions:min_width=120,min_height=120,max_width=400,max_height=400',
-        ]
-     ]);
-
+                ]
+            ]);
         if ($request->file('file')->isValid([])) {
             
             $filename = $request->file->store('public/avatar');
-
             $user = User::find(auth()->id());
             $user->avatar_filename = basename($filename);
             $user->save();
 
             return redirect()
                  ->back()
-                 ->with('success', 'Upload succeed。');
+                 ->with('success', 'Upload succeed');
         } else {
             
             return redirect()
@@ -124,3 +118,4 @@ class UsersController extends Controller
         }
     }
 }
+
