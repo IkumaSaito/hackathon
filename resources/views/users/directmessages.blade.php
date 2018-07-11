@@ -4,19 +4,13 @@
     <div class="row">
         <aside class="col-xs-4">
             <div class="panel panel-default">
-                <!--送り主ユーザーは$user。紛らわしいので非表示-->
-                <!--<div class="panel-heading">-->
-                <!--    <h3 class="panel-title">{{ $user->name }}</h3>-->
-                <!--</div>-->
-                <!--<div class="panel-body">-->
-                <!--</div>-->
+
             </div>
         </aside>
         <!--ここからタブ-->
         <div class="col-xs-8">
             <ul class="nav nav-tabs nav-justified">
                 <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Direct Message <span class="badge">{{ $count_posts }}</span></a></li>
-                <!--<li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.directmessages', ['id' => $user->id]) }}">DM <span class="badge">{{ $count_directmessages }}</span></a></li>-->
             </ul>
         <!--ここまで-->
             <!--ここからDM-->
