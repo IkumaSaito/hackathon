@@ -26,6 +26,7 @@
     <div class="row">
         <div class="signup col-xs-offset-3 col-xs-6">
 
+
             <div class="sign">
                  <div class="text-center">
                     <h1>Sign up</h1>
@@ -52,6 +53,7 @@
                 {!! Form::close() !!}
                 </div>
             </div>
+
         </div>
 </div>  
 </body>

@@ -33,6 +33,7 @@ class UsersController extends Controller
     }
     
 
+
     public function show($id)
     {
          if (\Auth::check()){    
@@ -53,9 +54,11 @@ class UsersController extends Controller
     }
 
 
+
     public function edit($id)
     {
         $user = user::find($id);
+
         
         if (\Auth::id() === $user->id){ 
 
