@@ -18,7 +18,7 @@
 </head>
 
 
-<body>y
+<body>
  @include('commons.error_messages')
     <div class="bg">
         <img class="img-responsive" src="/images/bg0.jpg">
