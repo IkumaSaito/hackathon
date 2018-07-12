@@ -36,7 +36,7 @@
                 
                 <!--編集ボタン-->
                 @if (Auth::id() == $user->id)
-                        {!! link_to_route('users.edit', '...', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
+                        {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
                 @endif
                 </h2>
 
