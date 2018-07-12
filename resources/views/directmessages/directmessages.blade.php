@@ -7,6 +7,8 @@
         
         <li class="media">
             <div class="media-left">
+
+
                 <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                 </figure>
             </div>

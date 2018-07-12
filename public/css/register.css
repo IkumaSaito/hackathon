@@ -1,0 +1,43 @@
+.bg{
+  max-width: 100%; 
+  position: relative;
+}
+
+.signup{
+ position: fixed;
+ top: 20%;
+  color: Black;
+  font-family: "corbel";
+  background-color: rgba(250,250,250,0.8);
+  padding: 30px;
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .signup {
+        margin-top: -60px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    img.img-responsive {
+        width: 100%;
+        height: 667px;
+        object-fit: cover;
+        object-position: 0% 0%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    img.img-responsive {
+        width: 100%;
+        height: 735px;
+        object-fit: cover;
+        object-position: 0% 0%;
+    }
+}
+
+p{
+    text-align:center;
+}
+
