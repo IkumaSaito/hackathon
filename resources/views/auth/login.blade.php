@@ -18,7 +18,7 @@
 </head>
 
 
-<body>
+<body>y
  @include('commons.error_messages')
     <div class="bg">
         <img class="img-responsive" src="/images/bg0.jpg">
@@ -26,11 +26,11 @@
 
 <div class="row">
     <div class="loginbox col-xs-offset-3 col-xs-6">
+    <div class="text-center">
+        <h1>Log in</h1>
+    </div>
 
         <div class="login">
-        <div class="text-center">
-            <h1>Log in</h1>
-        </div>
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">
                     {!! Form::label('name', 'Name') !!}
