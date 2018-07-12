@@ -14,6 +14,7 @@ class CreateDirectmessages extends Migration
             $table->integer('receiver_id')->unsigned()->index();
             $table->string('content');
             $table->timestamps();
+            $table->boolean('seen')->default(false);
             
             // Foreign key constraint
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
