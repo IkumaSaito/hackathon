@@ -20,17 +20,17 @@
         position: relative;
         cursor: normal;
         overflow-x: hidden;
-        background-color: #FFF;
+        background-color: #FFF0F5;
         }
         
     
 /*名前部分の線*/
-    .main header {
-        margin-bottom: 0.5rem;
-        padding: 0 0.7rem;
-        background: #888888;
-        height: 100%
-        }
+    /*.main header {*/
+    /*    margin-bottom: 0.5rem;*/
+    /*    padding: 0 0.7rem;*/
+    /*    background: #111111;*/
+    /*    height: 100%*/
+    /*    }*/
 
 
     .prof{
@@ -70,8 +70,8 @@
 
 
     .name{
-        color: #FFFFFF;
-        /*margin-left: 10%;*/
+        color: #330000;
+        text-indent: 0.5in; 
         }
         
     dl dt {
@@ -83,8 +83,8 @@
     }
     
     h1{
-        color:#eee;
-        background:#8888;
+        /*color:#eee;*/
+        background:#CCCCCC;
     }
     
     
