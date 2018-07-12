@@ -15,6 +15,13 @@
     max-width:99%;
 }
 
+@media screen and (max-width: 480px) {
+    .container-flud {
+        margin-top: 0px;
+    }
+}
+
+
 .text{
    font-family: "arial";
 }
