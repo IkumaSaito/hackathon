@@ -16,11 +16,11 @@
         margin: 0 auto;
         font-weight: normal;
         font-style: normal;
-        line-height: 1.2;
+        line-height: 1;
         position: relative;
         cursor: normal;
         overflow-x: hidden;
-        background-color: #FFF0F5;
+        background-color: #FFFAFA;
         }
         
     
@@ -64,13 +64,13 @@
     .prof dt {
         /*display: inline-block;*/
         width: 180px;
-        padding: 10px;
-        font-size: 2rem;
+        padding: 8px;
+        font-size: 1.5rem;
         }
 
 
     .name{
-        color: #330000;
+        color: #111111;
         text-indent: 0.5in; 
         }
         
