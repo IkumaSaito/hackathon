@@ -13,18 +13,22 @@
 }
 
 .btn-danger{
- background:#FF367F;
- color: white;
- font-family: "bookman old";
- padding: 2px 10px;
- border-radius: 25px;
- font-weight: bold;
+    background:#FF367F;
+    color: white;
+    font-family: "bookman old";
+    padding: 2px 10px;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
 .btn-danger:hover{
     background:linear-gradient(-180deg, #FFFF99 ,#FFABCE);
 }
 
-.row div.panel{
-padding:0px;  
+.media-body{
+    padding: 10px;
+}
+
+.btn{
+     float: right;
 }
