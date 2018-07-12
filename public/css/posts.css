@@ -24,3 +24,7 @@
 .btn-danger:hover{
     background:linear-gradient(-180deg, #FFFF99 ,#FFABCE);
 }
+
+.row div.panel{
+padding:0px;  
+}
