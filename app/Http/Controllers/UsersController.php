@@ -33,6 +33,7 @@ class UsersController extends Controller
     }
     
 
+
     public function show($id)
     {
          if (\Auth::check()){    
