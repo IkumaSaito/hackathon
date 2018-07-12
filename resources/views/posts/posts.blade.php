@@ -1,3 +1,5 @@
+@extends('layouts.app')
+
 <!DOCTYPE html>
 <html lang="ja">
    <head>
@@ -19,6 +21,9 @@
 <ul class="media-list">
 @foreach ($posts as $post)
     <?php $user = $post->user; ?>
+    
+    <br>
+    
     <div class="panel panel-primary">
         
             <li class="media">
@@ -39,7 +44,7 @@
                 </div>
                     <!--ここからDM機能、ボタン追加お願いします-->
                     @if (Auth::id() != $post->user_id)
-                        {!! link_to_route('users.directmessages', "DM", ['id' => $post->user_id],['class' => 'btn btn-default btn-xs']) !!}
+                        {!! link_to_route('users.directmessages', "Send Message", ['id' => $post->user_id],['class' => 'btn btn-info btn-xs']) !!}
                     @endif
                 </div>
             </li>
