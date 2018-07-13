@@ -19,9 +19,9 @@
             <!--ここからDM-->
             
             <!--デバッグ用変数の確認-->
-                <?php echo "To(user_id): " . $id . PHP_EOL; ?>
-                <?php echo "From: " . $user->name . PHP_EOL; ?>
-                <?php echo "id" . $user->id . PHP_EOL; ?>
+                <!--<?php echo "To(user_id): " . $id . PHP_EOL; ?>-->
+                <!--<?php echo "From: " . $user->name . PHP_EOL; ?>-->
+                <!--<?php echo "id" . $user->id . PHP_EOL; ?>-->
             <!--ここまで    -->
             <!--ここから入力フォーム-->
                 {!! Form::open(['route' => 'directmessages.store']) !!}

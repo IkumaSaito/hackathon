@@ -14,9 +14,9 @@
             </div>
             <div class="media-body">
                 <div>
-                    <?php echo $auth_id; ?>
+                    <!--<?php echo $auth_id; ?>-->
                         {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $directmessage->created_at }}</span>
-                    <?php echo $id; ?> 
+                    <!--<?php echo $id; ?> -->
                 </div>
                 <div>
                     <p>{!! nl2br(e($directmessage->content)) !!}</p>
