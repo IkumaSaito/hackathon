@@ -1,28 +1,29 @@
-.btn-info {
-    background:#000099;
+.btn-success {
+ 
     color:white;
     outline-color: white;
-    font-family: "bookman old";
+    /*font-family: "century gothic";*/
     padding: 2px 10px;
 	border-radius: 25px;
 	font-weight: bold;
+	background-color:#33CC99;
 }
 
-.btn-info:hover{
-    background:linear-gradient(-180deg, #86fde8, #acb6e5);
+.btn-success:hover{
+    background:#CBFFD3;
 }
 
 .btn-danger{
-    background:#FF367F;
+    background-color:#FF6666;
     color: white;
-    font-family: "bookman old";
+    /*font-family: "century gothic";*/
     padding: 2px 10px;
     border-radius: 25px;
     font-weight: bold;
 }
 
 .btn-danger:hover{
-    background:linear-gradient(-180deg, #FFFF99 ,#FFABCE);
+    background:#FF97C2;
 }
 
 .media-body{

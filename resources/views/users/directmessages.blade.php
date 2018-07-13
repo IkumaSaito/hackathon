@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <aside class="col-xs-4">
+        <aside class="col-xs-3">
             <div class="panel panel-default">
 
 <!--これでユーザーリストを呼び出してます-->
@@ -19,9 +19,10 @@
             <!--ここからDM-->
             
             <!--デバッグ用変数の確認-->
-                <?php echo "To(user_id): " . $id . PHP_EOL; ?>
-                <?php echo "From: " . $user->name . PHP_EOL; ?>
-                <?php echo "id" . $user->id . PHP_EOL; ?>
+                <!--<?php echo "To(user_id): " . $id . PHP_EOL; ?>-->
+                <!--<?php echo "From: " . $user->name . PHP_EOL; ?>-->
+                <!--<?php echo "id" . $user->id . PHP_EOL; ?>-->
+                <?php echo $to_user->name . "さんへのメッセージを作成" . PHP_EOL; ?>
             <!--ここまで    -->
             <!--ここから入力フォーム-->
                 {!! Form::open(['route' => 'directmessages.store']) !!}

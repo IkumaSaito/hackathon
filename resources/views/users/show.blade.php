@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -21,20 +20,26 @@
         <div class="profile">
             <h1 class="name">
                 {{ $user->name }}
+            <!--<div class="logo"</div>-->
+            <!--<img class="logo" src="/images/logo.jpg"> -->
+            <!--</div>-->
             </h1>
 
         <section class="main">
             
             <div class="ngt48-member">
             <div class="clearfix">
-                
+
                 <div class="row">
                 <div class="col-md-6"><figure class="main-img">
                 <img src='{{ file_exists('storage/avatar/') ? asset('storage/avatar/' . $user->avatar_filename) : Gravatar::src($user->email, 500) }}' class="img-circle" alt="avatar"/>
                 </figure>
                 <!--avatat\r編集ボタン-->
-                 <div id="avatarbtn">
+
+                    <div id="avatarbtn">
+
                         {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                    </div>
                 </div>
                 </div>
                 
@@ -43,7 +48,7 @@
                 
                 <!--編集ボタン-->
                 @if (Auth::id() == $user->id)
-                        {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                        {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-info btn-sm']) !!}
                 @endif
                 </h2>
 
@@ -65,7 +70,7 @@
                                 <td>{{ $user->intro }}</td>
                         </div>
                     </dl>
-            </div>
+                </div>
             </div>
             </div>
             </div>
@@ -85,13 +90,12 @@
     
             </div>
             
-   
+              
             
         </section>
 
-  
 
-</div>
+    </div>
 </div>
 </body>  
 @endsection

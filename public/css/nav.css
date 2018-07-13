@@ -1,0 +1,12 @@
+.navbar-default{
+    background-color:#DDDDDD;
+}
+
+.number{
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #000;
+}
+

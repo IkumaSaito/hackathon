@@ -5,6 +5,12 @@
         <?php $id = $directmessage->receiver_id; ?>
         <?php $auth_id = $directmessage->user_id; ?>
         
+    <?php if (Auth::id() == $directmessage->user_id): ?>
+        <div class="sent">
+    <?php  else:  ?>
+        <div class="received">
+    <?php endif; ?>        
+        
         <li class="media">
             <div class="media-left">
 
@@ -14,9 +20,11 @@
             </div>
             <div class="media-body">
                 <div>
-                    <?php echo $auth_id; ?>
+                    
+                    <!--<?php echo $auth_id; ?>-->
                         {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $directmessage->created_at }}</span>
-                    <?php echo $id; ?> 
+                    <!--<?php echo $id; ?> -->
+                    
                 </div>
                 <div>
                     <p>{!! nl2br(e($directmessage->content)) !!}</p>
@@ -27,6 +35,7 @@
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                         {!! Form::close() !!}
                     @endif
+                </div>
                 </div>
             </div>
         </li>
