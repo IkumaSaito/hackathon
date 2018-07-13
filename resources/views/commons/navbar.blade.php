@@ -21,7 +21,6 @@
                                 <li>{!! link_to_route('users.show', 'My profile', ['id' => Auth::id()]) !!}</li>
                                 <li>{!! link_to_route('posts.index', 'Timeline') !!}</li>
 
-                                <!--つくり中-->
                                 <li>{!! link_to_route('directmessages.users', 'Direct Massage', ['id' => Auth::id()]) !!}</li>
 
                                 <li role="separator" class="divider"></li>

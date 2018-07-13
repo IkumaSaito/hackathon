@@ -1,13 +1,13 @@
 @if (count($senders) > 0)
-<ul class="media-list">
+<ul>
 @foreach ($senders as $key => $sender)
-    <li class="media">
+    <li>
         <div class="media-body">
             <div>
-                
 
-               <br> {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}
-                
+                {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}
+                <?php echo count($unseens->where('user_id', $sender->id)); ?>        
+
             </div>
         </div>
     </li>
@@ -15,4 +15,8 @@
 </ul>
 
 
+
 @endif
+
+<!--sendersは送ったユーザー-->
+<!--unseensは未読DM-->
