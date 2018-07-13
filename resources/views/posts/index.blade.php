@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-    <aside class="col-md-offset-2 col-md-8 col-xs-offset-2 col-xs-8">
+    <aside class="col-md-offset-4 col-md-4 col-xs-offset-2 col-xs-8">
 
         <ul class="media-list">
 
