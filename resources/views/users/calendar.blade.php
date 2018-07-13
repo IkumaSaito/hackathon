@@ -72,8 +72,8 @@ for ($i = 1; $i < $last_day + 1; $i++) {
  
         <td>
         <?php $cnt++; ?>
-        <?php echo $value['day']; ?>
- 
+        <?php echo $value['day'] . PHP_EOL; ?>
+            
         </td>
  
     <?php if ($cnt == 7): ?>
