@@ -16,12 +16,12 @@
         <link rel="stylesheet" href="{{asset('css/mypage3.css') }}">
     
     </head>
-
-
-    <body>
-        <h1 class="name">
-            {{ $user->name }}
-        </h1>
+<body>
+    <div class="content">
+        <div class="profile">
+            <h1 class="name">
+                {{ $user->name }}
+            </h1>
 
         <section class="main">
             
@@ -31,12 +31,12 @@
                 <div class="row">
                 <div class="col-md-6"><figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                 </figure></div>
-                <div class="col-md-6"><div class="prof">
+                <div class="prof col-md-6">
                 <h2 style="font-size: 3rem; line-height: 1.4;" data-idx="0">{{ $user->name }}
                 
                 <!--編集ボタン-->
                 @if (Auth::id() == $user->id)
-                        {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-default']) !!}
+                        {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
                 @endif
                 </h2>
 
@@ -82,8 +82,9 @@
             
         </section>
 
-    </body>
+  
 
-
-    
+</div>
+</div>
+</body>  
 @endsection
