@@ -113,17 +113,12 @@ class DirectmessagesController extends Controller
                 $unseens = Directmessage::where('receiver_id', $auth_id)
                             ->where('seen', 0)->get();
  
-            // すべてのユーザーからの未読になっている
-            // $unseen = Directmessage::where('receiver_id', $auth_id)->where('seen', 0)->get();
-                // $num_unseens = $unseens->count();
-            
             $data = [
                 'user' => $user,
                 'auth_id' => $auth_id,
                 'sender_ids' => $sender_ids,
                 'senders' => $senders,
                 'unseens' => $unseens,
-                // 'num_unseens' => $num_unseens,
                 ];
                 
                 $data += $this->counts($user);
