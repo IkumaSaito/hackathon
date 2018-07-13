@@ -35,7 +35,9 @@
                 <div class="col-md-6"><figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                 </figure>
                 <!--avatat\r編集ボタン-->
+                    <div id="avatarbtn">
                         {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                    </div>
                 </div>
                 
                 <div class="prof col-md-6">
