@@ -82,8 +82,6 @@ class DirectmessagesController extends Controller
                     $senders = User::whereIn('id', $sender_ids)->get();
                     $unseens = Directmessage::where('user_id', $id)->where('receiver_id', $auth_id)
                             ->where('seen', 0)->get();
-                   
-                            
             $data = [
                 'user' => $user,
                 'id' => $id,
