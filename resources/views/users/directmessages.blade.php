@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <aside class="col-xs-4">
+        <aside class="col-xs-3">
             <div class="panel panel-default">
 
 <!--これでユーザーリストを呼び出してます-->

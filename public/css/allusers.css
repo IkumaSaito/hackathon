@@ -1,0 +1,27 @@
+ul {
+  list-style: none;
+  text-align:center;
+  padding:0px;
+}
+
+.aside{
+    padding-top:20px;
+}
+
+.title:after{
+      content: "";
+        display: block;
+        height: 8px;
+        background: linear-gradient(to right,#003366, transparent);
+}
+
+.title{
+   font-size: 4vmin;
+    margin:30px;
+    font-family:"century gothic";
+    margin-bottom:0px;
+}
+
+.panel{
+    margin-left:15px;
+}
