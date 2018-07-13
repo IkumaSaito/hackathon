@@ -66,14 +66,13 @@ class DirectmessagesController extends Controller
         if (\Auth::check()) {
                 $auth_id = \Auth::id(); //user_id
                 $id = $request->id;     //receiver_id
-                // 未読メッセージ
-                $unseen_dm = Directmessage::where('receiver_id', $auth_id)
+                $a = Directmessage::where('receiver_id', $auth_id)
                             ->where('user_id', $id)
                             ->where('seen', 0)->get();
-                    // 未読を既読にする        
-                    foreach ($unseen_dm as $seen_dm) {
-                        $unseen_dm->seen = 1;
-                        $seen_dm->save();
+                            
+                    foreach ($a as $b) {
+                        $b->seen = 1;
+                        $b->save();
                     }
                 
                     $user = \Auth::user();
