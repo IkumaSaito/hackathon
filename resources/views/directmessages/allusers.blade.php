@@ -7,8 +7,12 @@
     <li>
         <div class="media-body">
             <div>
+
                 {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}  :
                 <?php echo count($unseens->where('user_id', $sender->id)); ?>件    
+
+
+   
             </div>
         </div>
     </li>

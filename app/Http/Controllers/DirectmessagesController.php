@@ -1,15 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Controllers\Controller;
-
 use App\User;
-
 use App\Directmessage;
-
 class DirectmessagesController extends Controller
 {
 //使われてない？
@@ -20,7 +14,6 @@ class DirectmessagesController extends Controller
             $user = \Auth::user();
             $receiver = User::find($id); 
             $directmessages = $user->directmessages()->orderBy('created_at', 'desc')->paginate(10);
-
             $data = [
                 'user' => $user,
                 'receiver' => $receiver,
@@ -52,11 +45,9 @@ class DirectmessagesController extends Controller
     public function destroy($id)
     {
         $directmessage = \App\Directmessage::find($id);
-
         if (\Auth::id() === $directmessage->user_id) {
             $directmessage->delete();
         }
-
         return redirect()->back();
     }
     
@@ -82,6 +73,8 @@ class DirectmessagesController extends Controller
                     $senders = User::whereIn('id', $sender_ids)->get();
                     $unseens = Directmessage::where('user_id', $id)->where('receiver_id', $auth_id)
                             ->where('seen', 0)->get();
+                $to_user = User::find($id);
+            
             $data = [
                 'user' => $user,
                 'id' => $id,
@@ -90,6 +83,7 @@ class DirectmessagesController extends Controller
                 'sender_ids' => $sender_ids,
                 'senders' => $senders,
                 'unseens' => $unseens,
+                'to_user' => $to_user,
             ];
             $data += $this->counts($user);
             
@@ -124,5 +118,4 @@ class DirectmessagesController extends Controller
             return view('welcome');
         }
     }
-
 }

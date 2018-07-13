@@ -22,6 +22,7 @@
                 <!--<?php echo "To(user_id): " . $id . PHP_EOL; ?>-->
                 <!--<?php echo "From: " . $user->name . PHP_EOL; ?>-->
                 <!--<?php echo "id" . $user->id . PHP_EOL; ?>-->
+                <?php echo $to_user->name . "さんへのメッセージを作成" . PHP_EOL; ?>
             <!--ここまで    -->
             <!--ここから入力フォーム-->
                 {!! Form::open(['route' => 'directmessages.store']) !!}

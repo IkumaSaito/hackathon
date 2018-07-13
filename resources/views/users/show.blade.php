@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -67,7 +66,7 @@
                                 <td>{{ $user->intro }}</td>
                         </div>
                     </dl>
-            </div>
+                </div>
             </div>
             </div>
             </div>
@@ -91,9 +90,8 @@
             
         </section>
 
-  
 
-</div>
+    </div>
 </div>
 </body>  
 @endsection
