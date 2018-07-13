@@ -82,6 +82,8 @@ class DirectmessagesController extends Controller
                     $senders = User::whereIn('id', $sender_ids)->get();
                     $unseens = Directmessage::where('user_id', $id)->where('receiver_id', $auth_id)
                             ->where('seen', 0)->get();
+                $to_user = User::find($id);
+            
             $data = [
                 'user' => $user,
                 'id' => $id,
@@ -90,6 +92,7 @@ class DirectmessagesController extends Controller
                 'sender_ids' => $sender_ids,
                 'senders' => $senders,
                 'unseens' => $unseens,
+                'to_user' => $to_user,
             ];
             $data += $this->counts($user);
             

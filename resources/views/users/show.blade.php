@@ -65,7 +65,7 @@
                                 <td>{{ $user->intro }}</td>
                         </div>
                     </dl>
-            </div>
+                </div>
             </div>
             </div>
             </div>
@@ -89,9 +89,9 @@
             
         </section>
 
-  
+    @include('users.calendar')
 
-</div>
+    </div>
 </div>
 </body>  
 @endsection
