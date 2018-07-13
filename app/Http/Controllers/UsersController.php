@@ -91,6 +91,18 @@ class UsersController extends Controller
         return redirect('/');
     }
 
+    public function avataredit($id)
+    {
+        $user = user::find($id);
+        
+        if (\Auth::id() === $user->id){ 
+
+        return view('users.avataredit', [
+            'user' => $user,
+        ]);
+    }
+        return redirect('/');
+    }
     
     public function upload(Request $request)
     {
@@ -107,9 +119,7 @@ class UsersController extends Controller
             $user->avatar_filename = basename($filename);
             $user->save();
 
-            return redirect()
-                 ->back()
-                 ->with('success', 'Upload succeed');
+            return redirect('/');
         } else {
             
             return redirect()

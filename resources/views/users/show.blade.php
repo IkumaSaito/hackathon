@@ -30,7 +30,11 @@
                 
                 <div class="row">
                 <div class="col-md-6"><figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
-                </figure></div>
+                </figure>
+                <!--avatat\r編集ボタン-->
+                        {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                </div>
+                
                 <div class="prof col-md-6">
                 <h2 style="font-size: 3rem; line-height: 1.4;" data-idx="0">{{ $user->name }}
                 
