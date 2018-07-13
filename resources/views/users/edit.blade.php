@@ -15,22 +15,23 @@
     {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'put']) !!}
     <div class="text">
         <div class="first col-md-6">
+            <br>
             {!! Form::label('name', 'name: ') !!}
             {!! Form::text('name',null, ['class' => 'form-control'])!!}
-            <br>
             <br>
             {!! Form::label('gender', 'gender: ') !!}
             {!! Form::text('gender',null, ['class' => 'form-control']) !!}
         </div>
-        
+        <br>
         <div class="second col-md-6">
             {!! Form::label('hobby', 'hobby: ') !!}
             {!! Form::text('hobby',null, ['class' => 'form-control']) !!}
         
-            <br>
+            
             <br>
             {!! Form::label('language', 'language: ') !!}
             {!! Form::text('language',null, ['class' => 'form-control']) !!}
+            
             <br>
             <br>
         </div>
