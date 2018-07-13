@@ -1,5 +1,5 @@
-.btn-info {
-    background:#000099;
+.btn-success {
+ 
     color:white;
     outline-color: white;
     font-family: "bookman old";
@@ -8,12 +8,12 @@
 	font-weight: bold;
 }
 
-.btn-info:hover{
-    background:linear-gradient(-180deg, #86fde8, #acb6e5);
+.btn-success:hover{
+    background:#CBFFD3;
 }
 
 .btn-danger{
-    background:#FF367F;
+
     color: white;
     font-family: "bookman old";
     padding: 2px 10px;
@@ -22,7 +22,7 @@
 }
 
 .btn-danger:hover{
-    background:linear-gradient(-180deg, #FFFF99 ,#FFABCE);
+    background:#FF97C2;
 }
 
 .media-body{
