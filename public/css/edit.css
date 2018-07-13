@@ -20,3 +20,13 @@
 
  }
 
+h1{
+        position: relative;
+        padding: .3em;
+}
+h1:after {
+        content: "";
+        display: block;
+        height: 8px;
+        background: linear-gradient(to right,#003366, transparent);
+}
