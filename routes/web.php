@@ -12,7 +12,8 @@ Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'update', 'edit']]);
+    Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'update', 'edit',]]);
+    Route::get('users/{id}/avataredit', 'UsersController@avataredit')->name('users.avataredit');
     Route::post('users/upload', 'UsersController@upload');
     Route::group(['prefix' => 'users/{id}'], function () {
         Route::get('directmessages', 'DirectmessagesController@directmessages')->name('users.directmessages');
