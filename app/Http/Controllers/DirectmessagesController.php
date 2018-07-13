@@ -1,15 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Controllers\Controller;
-
 use App\User;
-
 use App\Directmessage;
-
 class DirectmessagesController extends Controller
 {
 //使われてない？
@@ -20,7 +14,6 @@ class DirectmessagesController extends Controller
             $user = \Auth::user();
             $receiver = User::find($id); 
             $directmessages = $user->directmessages()->orderBy('created_at', 'desc')->paginate(10);
-
             $data = [
                 'user' => $user,
                 'receiver' => $receiver,
@@ -52,11 +45,9 @@ class DirectmessagesController extends Controller
     public function destroy($id)
     {
         $directmessage = \App\Directmessage::find($id);
-
         if (\Auth::id() === $directmessage->user_id) {
             $directmessage->delete();
         }
-
         return redirect()->back();
     }
     
@@ -66,13 +57,25 @@ class DirectmessagesController extends Controller
         if (\Auth::check()) {
                 $auth_id = \Auth::id(); //user_id
                 $id = $request->id;     //receiver_id
+                // 未読メッセージ
+                $unseen_dm = Directmessage::where('receiver_id', $auth_id)
+                            ->where('user_id', $id)
+                            ->where('seen', 0)->get();
+                    // 未読を既読にする        
+                    foreach ($unseen_dm as $seen_dm) {
+                        $unseen_dm->seen = 1;
+                        $seen_dm->save();
+                    }
+                
                     $user = \Auth::user();
                     $directmessages = Directmessage::where('user_id', $auth_id)->where('receiver_id', $id)
                                         ->orWhere('user_id', $id)->where('receiver_id', $auth_id)->orderBy('created_at', 'desc')->paginate(10);
                 $sender_ids = Directmessage::where('receiver_id', $auth_id)->pluck('user_id')->all();
-            
-                $senders = User::whereIn('id', $sender_ids)->get();
-
+                    $senders = User::whereIn('id', $sender_ids)->get();
+                    $unseens = Directmessage::where('user_id', $id)->where('receiver_id', $auth_id)
+                            ->where('seen', 0)->get();
+                   
+                            
             $data = [
                 'user' => $user,
                 'id' => $id,
@@ -80,6 +83,7 @@ class DirectmessagesController extends Controller
                 'auth_id' => $auth_id,
                 'sender_ids' => $sender_ids,
                 'senders' => $senders,
+                'unseens' => $unseens,
             ];
             $data += $this->counts($user);
             
@@ -95,7 +99,6 @@ class DirectmessagesController extends Controller
         if (\Auth::check()) {   
             $user = \Auth::user();
             $auth_id = \Auth::id();
-            
             $sender_ids = Directmessage::where('receiver_id', $auth_id)->pluck('user_id')->all();
                 $senders = User::whereIn('id', $sender_ids)->get();
                 $unseens = Directmessage::where('receiver_id', $auth_id)
@@ -108,11 +111,11 @@ class DirectmessagesController extends Controller
                 'senders' => $senders,
                 'unseens' => $unseens,
                 ];
+                
                 $data += $this->counts($user);
             return view('directmessages.users', $data);
         }else {
             return view('welcome');
         }
     }
-
 }
