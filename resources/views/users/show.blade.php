@@ -28,10 +28,13 @@
             </h1>
 
 
+
             <h2 class="main">
             
                 <div class="ngt48-member">
                 <!--<div class="clearfix">-->
+
+               
 
                     <div class="row">
                         <div class="col-md-6">
@@ -76,6 +79,7 @@
                         </div>
                     </div>
             
+
             
                     
                     <div class="right">
