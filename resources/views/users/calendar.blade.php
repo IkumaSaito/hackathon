@@ -72,14 +72,7 @@ for ($i = 1; $i < $last_day + 1; $i++) {
  
         <td>
         <?php $cnt++; ?>
-        <?php echo $value['day'] . PHP_EOL; ?><br>
-        <?php if ( 1<= $value && $value<=31 ) {
-            echo "11:00-12:00" . PHP_EOL;
-        } else {
-            break;
-        }
-         
-             ?>
+        <?php echo $value['day'] . PHP_EOL; ?>
             
         </td>
  

@@ -89,7 +89,6 @@
             
         </section>
 
-    @include('users.calendar')
 
     </div>
 </div>
