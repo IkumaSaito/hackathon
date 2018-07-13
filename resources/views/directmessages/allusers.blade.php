@@ -5,7 +5,8 @@
         <div class="media-body">
             <div>
                 
-                {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}
+
+               <br> {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}
                 
             </div>
         </div>
