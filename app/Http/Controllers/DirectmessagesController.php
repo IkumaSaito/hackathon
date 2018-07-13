@@ -1,15 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Controllers\Controller;
-
 use App\User;
-
 use App\Directmessage;
-
 class DirectmessagesController extends Controller
 {
 //使われてない？
@@ -20,7 +14,6 @@ class DirectmessagesController extends Controller
             $user = \Auth::user();
             $receiver = User::find($id); 
             $directmessages = $user->directmessages()->orderBy('created_at', 'desc')->paginate(10);
-
             $data = [
                 'user' => $user,
                 'receiver' => $receiver,
@@ -52,11 +45,9 @@ class DirectmessagesController extends Controller
     public function destroy($id)
     {
         $directmessage = \App\Directmessage::find($id);
-
         if (\Auth::id() === $directmessage->user_id) {
             $directmessage->delete();
         }
-
         return redirect()->back();
     }
     
@@ -127,5 +118,4 @@ class DirectmessagesController extends Controller
             return view('welcome');
         }
     }
-
 }
