@@ -22,7 +22,10 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::resource('posts', 'PostsController', ['only' => ['index', 'store', 'destroy']]);
     Route::resource('directmessages', 'DirectmessagesController', ['only' => ['index', 'store', 'destroy']]);
+
+    
 });
 
 
+Route::get('intro', 'UsersController@intro')->name('users.intro');
     
