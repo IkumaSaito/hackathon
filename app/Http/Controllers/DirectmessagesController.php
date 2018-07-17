@@ -80,7 +80,7 @@ class DirectmessagesController extends Controller
                                         ->orWhere('user_id', $id)->where('receiver_id', $auth_id)->orderBy('created_at', 'desc')->paginate(10);
                 $sender_ids = Directmessage::where('receiver_id', $auth_id)->pluck('user_id')->all();
                     $senders = User::whereIn('id', $sender_ids)->get();
-                    $unseens = Directmessage::where('user_id', $id)->where('receiver_id', $auth_id)
+                    $unseens = Directmessage::where('receiver_id', $auth_id)
                             ->where('seen', 0)->get();
             $data = [
                 'user' => $user,

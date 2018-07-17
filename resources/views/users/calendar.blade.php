@@ -3,7 +3,11 @@
 // 現在の年月を取得
 $year = date('Y');
 $month = date('n');
- 
+$day = date('d');
+
+//週の最初の日を取得（日曜日）
+$first_day = date('w', mktime(0, 0, 0, date('m'), 1, date('y')));
+
 // 月末日を取得
 $last_day = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
  
@@ -54,16 +58,17 @@ for ($i = 1; $i < $last_day + 1; $i++) {
 
 <?php echo $year; ?>年<?php echo $month; ?>月のカレンダー
 <br>
+<?php echo $first_day; ?>
 <br>
 <table>
     <tr>
-        <th>日</th>
-        <th>月</th>
-        <th>火</th>
-        <th>水</th>
-        <th>木</th>
-        <th>金</th>
-        <th>土</th>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
     </tr>
  
     <tr>
@@ -72,8 +77,14 @@ for ($i = 1; $i < $last_day + 1; $i++) {
  
         <td>
         <?php $cnt++; ?>
-        <?php echo $value['day']; ?>
- 
+        <h4><?php if ($value) 
+            echo $value['day']; ?><br></h4>
+        
+        <?php if ($value['day'] > 0): ?>
+            11:00-12:00<br>
+            12:00-13:00<br>
+            13:00-14:00
+        <?php endif; ?>
         </td>
  
     <?php if ($cnt == 7): ?>
