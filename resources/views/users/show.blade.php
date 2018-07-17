@@ -28,6 +28,7 @@
             <div class="ngt48-member">
             <div class="clearfix">
                 
+                <!--Avatar-->
                 <div class="row">
                 <div class="col-md-6"><figure class="main-img">
                 @if(file_exists('storage/avatar/'.Auth::user()->avatar_filename))
