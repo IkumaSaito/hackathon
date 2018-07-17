@@ -31,7 +31,7 @@
 <div class="row">
    <div class="col-md-5" id="left">
        <img class="img-responsive" src="images/welcome.jpg">
-         <br type="submit">  {!! link_to_route('signup.get', 'What is Lunch Meter',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
+         <br type="submit">  {!! link_to_route('users.intro', 'What is Lunch Meter',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
    </div>
    
    <div class="col-md-2">
