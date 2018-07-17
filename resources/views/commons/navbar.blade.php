@@ -14,14 +14,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
-
+                        <?php
+                            $unseens = \App\Directmessage::where('receiver_id', \auth::id())
+                                            ->where('seen', 0)->get();
+                            $dms = count($unseens);
+    
+                        ?>
                         <li class="dropdown">
 
                            
                                 <li>{!! link_to_route('users.show', 'My profile', ['id' => Auth::id()]) !!}</li>
                                 <li>{!! link_to_route('posts.index', 'Timeline') !!}</li>
 
-                                <li>{!! link_to_route('directmessages.users', 'Direct Message', ['id' => Auth::id()]) !!}</li>
+                                <li><a href="{{route('directmessages.users', ['id' => Auth::id()])}}">Direct Message {{ $dms > 0 ? '(' . $dms . ')' : '' }} </a></li>
 
                                 <li role="separator" class="divider"></li>
                                 <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
