@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE html>
 <html lang="utf-8">
     <head>
         <meta charset="utf-8">
-        <title>ハッカソン</title>
+        <title>hackathon</title>
         <!--Lunch menter-->
         <link href="https://fonts.googleapis.com/css?family=Arvo|Galada|Lobster|Londrina+Outline|Pacifico|Playfair+Display|Roboto|Sigmar+One|Varela+Round" rel="stylesheet">
         <!--consept-->
@@ -28,29 +30,27 @@
         <link rel="stylesheet" href="css/hakason15.css">
     </head>
     
-      @include('commons.navbar')
-        @include('commons.error_messages')
+      
       
     <body>
         <div class="container-fluied">
             <div class='row'>
-                <div class= "col-md-12 col-xs-12">
-                   <div class='header animated finite	zoomIn'>
-                    <!--　LUNCH MEETER-->
-        
+                <div class="top">
                     <div class ="a">
-                        <!--<div class='concept'>concept</div>-->
-                        <!-- <p class="c">-コンセプト-</p>-->
+                        <div class='concept'>
+                        
                         <div class="senpai">What is LUNCH MEETER?</div>
-                        <p1 class='message'>
-Don’t you feel a little lonely having lunch alone and wanna ask someone to have lunch with you?
-Don’t you wanna learn a foreign language from a native or experience cross-cultural exchange?
- If your answers are “YES”,
-you can make these wishes come true with this app “LUNCH MEETER”!!!.
-We offer you unknown language and new chance!!</p1>
+                            <div class='message'>
+                                <p>Don’t you feel a little lonely having lunch alone and wanna ask someone to have lunch with you?</p>
+                                <p>Don’t you wanna learn a foreign language from a native or experience cross-cultural exchange?</p>
+                                <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
+                                <p>We offer you unknown language and new chance!!</p>
+                            </div>
                         </div>
                     </div>
+
                  </div>
+                    <img class="img-responsive" src="images/top.jpg"> 
             </div>
 
             <h1 class="container_h1">LunchMeeter's point</h1>
@@ -79,16 +79,14 @@ We offer you unknown language and new chance!!</p1>
                        
                </div>
                <div class="col-md-6">
-                       <img src="images/hakason3.jpg" class="img-circle_lm" 
-                alt="Cinque Terre" width="100%">
+                       <img src="images/hakason3.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
             </div>
             
             
             <div class="row">
                <div class="col-md-4 col-sm-offset-2">
-                       <img src="images/hakason4.jpg" class="img-circle_lm" 
-                alt="Cinque Terre" width="100%">
+                       <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
                        <p>③You can talk with forigners<br>
@@ -111,23 +109,20 @@ We offer you unknown language and new chance!!</p1>
             
             </div>
             
-            
-          
-
-
-   
+ 
    
     <div class="row">
         <div class="col-md-3 col-sm-offset-1">
                 
-                <img src="images/image1.jpg" width="300px" height="500px">
+                <img src="images/image1.jpg" width="240px" height="500px">
+                <br>
                First of all, 
                <br>let's register.
                 </div>
         
                 →
         <div class="col-md-3">
-            <img src="images/image1.jpg" width="300px" height="500px">
+            <img src="images/image1.jpg" width="240px" height="500px"><br>
                   Create your profile.
              </div>
         
@@ -135,7 +130,7 @@ We offer you unknown language and new chance!!</p1>
         →
         <div class="col-md-3">
  
-           <img src="images/image1.jpg"width="300px" height="500px">
+           <img src="images/image1.jpg"width="240px" height="500px"><br>
                 Find and send a message.
          </div>
         
@@ -146,9 +141,8 @@ We offer you unknown language and new chance!!</p1>
     </div>
             
             <div class=buttom>
-            <button type=
-            "button" class="btn btn-info btn-lg buttom">Sign up now</button>
-            </div>
+             <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-info']) !!}</br>
+                
             
         </footer>
     </body>
