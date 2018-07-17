@@ -37,6 +37,8 @@
                           {!! Form::submit('Send', ['class' => 'btn btn-primary btn-block']) !!}
                       </div>
                   {!! Form::close() !!}
+                  <br>
+                  <br>
             <!--ここまで-->
             <!--ここからDM呼び出し-->
             @if (count($directmessages) > 0)

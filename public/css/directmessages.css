@@ -94,3 +94,7 @@
   content: "";
   display: block;
 }
+
+.btn{
+     float: right;
+}
