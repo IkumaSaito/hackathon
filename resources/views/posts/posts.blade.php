@@ -7,7 +7,7 @@
     <?php $user = $post->user; ?>
     <br>
     <br>
-    <div class="panel panel-primary">
+    <div class="panel panel-info">
         
             <li class="media">
                 <div class="media-body">
@@ -29,7 +29,7 @@
                 </div>
                     <!--ここからDM機能、ボタン追加お願いします-->
                     @if (Auth::id() != $post->user_id)
-                        {!! link_to_route('users.directmessages', "Send Message", ['id' => $post->user_id],['class' => 'btn btn-info btn-xs']) !!}
+                        {!! link_to_route('users.directmessages', "Send Message", ['id' => $post->user_id],['class' => 'btn btn-success btn-xs']) !!}
                     @endif
                 </div>
             </li>

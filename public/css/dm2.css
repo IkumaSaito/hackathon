@@ -1,0 +1,23 @@
+h1:after {
+        content: "";
+        display: block;
+        height: 8px;
+        background: linear-gradient(to right,#003366, transparent);
+}
+
+h1:first-letter {
+        font-size: 1.5em;
+        color:#003366;
+}
+    
+.btn-danger{
+        background-color:#FF5192;
+        color: white;
+        padding: 2px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+}
+
+.btn-danger:hover{
+        background:#FF97C2;
+}
