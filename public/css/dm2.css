@@ -21,3 +21,8 @@ h1:first-letter {
 .btn-danger:hover{
         background:#FF97C2;
 }
+
+textarea {
+ width: 100%;
+ resize: none;
+}

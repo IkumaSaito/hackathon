@@ -38,3 +38,8 @@
  max-height:50px;
  max-width:50px;
 }
+
+textarea {
+ width: 100%;
+ resize: none;
+}
