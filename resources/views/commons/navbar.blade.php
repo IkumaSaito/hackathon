@@ -26,7 +26,7 @@
                                 <li>{!! link_to_route('users.show', 'My profile', ['id' => Auth::id()]) !!}</li>
                                 <li>{!! link_to_route('posts.index', 'Timeline') !!}</li>
 
-                                <li><a href="{{route('directmessages.users', ['id' => Auth::id()])}}">Direct Message {{ $dms > 0 ? ($dms) : '' }}</a></li>
+                                <li><a href="{{route('directmessages.users', ['id' => Auth::id()])}}">Direct Message {{ $dms > 0 ? '(' . $dms . ')' : '' }} </a></li>
 
                                 <li role="separator" class="divider"></li>
                                 <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
