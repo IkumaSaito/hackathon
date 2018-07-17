@@ -30,7 +30,11 @@
                 
                 <div class="row">
                 <div class="col-md-6"><figure class="main-img">
-                <img src='{{ file_exists('storage/avatar/') ? asset('storage/avatar/' . $user->avatar_filename) : Gravatar::src($user->email, 500) }}' class="img-circle" alt="avatar"/>
+                @if(file_exists('storage/avatar/'.Auth::user()->avatar_filename))
+                <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                @else
+                <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" />
+                @endif
                 </figure>
                 <!--avatat\r編集ボタン-->
                  <div id="avatarbtn">
