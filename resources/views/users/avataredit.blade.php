@@ -6,11 +6,12 @@
 <body>
     <div class="container">
     <div class="row">
-    <div class="edit col-lg-offset-3 col-log-6 col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+    <div class="edit col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
         <div class="title">
             <h1>Hi {{ $user->name }}!!<br> You Can Upload Your Avatar.</h1>
         </div>
         
+        <div class="text">
         {!! Form::open(['url' => 'users/upload', 'method' => 'post', 'files' => true]) !!}
         {!! Form::label('file', 'Avater Upload', ['class' => 'control-label']) !!}
 
@@ -50,5 +51,6 @@
     </div>
     </div>
     </body>
+    </div>
 
 @endsection

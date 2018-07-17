@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+ <link rel="stylesheet" href="{{asset('css/dm2.css') }}">
+
     <div class="row">
         <aside class="col-xs-3">
             <div class="panel panel-default">
@@ -13,8 +16,10 @@
         <!--ここからタブ-->
         <div class="col-xs-8">
             <ul class="nav nav-tabs nav-justified">
-                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}">Direct Message 
+                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><h1>Direct Message</h1> 
             </ul>
+            <br>
+            <br>
         <!--ここまで-->
             <!--ここからDM-->
             
