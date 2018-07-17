@@ -1,5 +1,7 @@
 <ul class="media-list">
 <link rel="stylesheet" href="{{ asset('css/directmessages.css') }}">
+
+<div class="DM">
 @foreach ($directmessages as $directmessage)
         <?php $user = $directmessage->user; ?>
         <?php $id = $directmessage->receiver_id; ?>
@@ -38,7 +40,11 @@
                 </div>
                 </div>
             </div>
+                    <br>
+        <br>
         </li>
+
 @endforeach
 </ul>
+</div>
 {!! $directmessages->render() !!}
