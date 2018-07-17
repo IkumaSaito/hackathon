@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+ <link rel="stylesheet" href="{{asset('css/dm2.css') }}">
+
     <div class="row">
-        <aside class="col-xs-4">
+        <aside class="col-xs-3">
             <div class="panel panel-default">
 
 <!--これでユーザーリストを呼び出してます-->
@@ -13,8 +16,10 @@
         <!--ここからタブ-->
         <div class="col-xs-8">
             <ul class="nav nav-tabs nav-justified">
-                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}">Direct Message 
+                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><h1>Direct Message</h1> 
             </ul>
+            <br>
+            <br>
         <!--ここまで-->
             <!--ここからDM-->
             
@@ -22,6 +27,7 @@
                 <!--<?php echo "To(user_id): " . $id . PHP_EOL; ?>-->
                 <!--<?php echo "From: " . $user->name . PHP_EOL; ?>-->
                 <!--<?php echo "id" . $user->id . PHP_EOL; ?>-->
+                <?php echo $to_user->name . "さんへのメッセージを作成" . PHP_EOL; ?>
             <!--ここまで    -->
             <!--ここから入力フォーム-->
                 {!! Form::open(['route' => 'directmessages.store']) !!}
@@ -31,6 +37,8 @@
                           {!! Form::submit('Send', ['class' => 'btn btn-primary btn-block']) !!}
                       </div>
                   {!! Form::close() !!}
+                  <br>
+                  <br>
             <!--ここまで-->
             <!--ここからDM呼び出し-->
             @if (count($directmessages) > 0)
