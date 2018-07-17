@@ -1,0 +1,245 @@
+  .header{
+    display: block;
+    font-family: "poller one";
+    text-align: center;
+    color:white;
+    /*text-shadow: 0 -1px 1px #FFF, -1px 0 1px #FFF, 2px 0 1px #000; */
+    font-size:74px;
+    margin-top:  -30px;
+    
+    background-image: url("images/top.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+header nav ul {
+  height: 60px;
+  margin-top: 0;
+}
+.header-list {
+  height: 60px;
+  float: left;
+  list-style: none;
+  text-align: right;
+}
+
+.header{
+  margin-left: 60px;
+  margin-right:60px;
+  margin-bottom: 35px;
+  
+}
+
+  .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  body {
+    background-image: 'images/top.jpg';
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+
+.a{
+    padding:0em 0 3em;
+    background: linear-gradient(-135deg, #43C6AC,  #F8FFAE);
+    background: rgba(30,40,40,0.5);
+    width:58%;
+    margin:10px auto;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    /*opacity: 0.8;*/
+    color:gray;
+    font-family: 'Galada', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Cormorant SC', serif;
+}
+
+h1{ 
+  margin: 0px;
+  padding: 0px;
+  font-size: 50px;
+  color: gray;
+}
+
+.concept {
+  
+  margin-top : 0px;
+  padding: 0px;
+  font-size: 150px;
+  color: gray;
+  
+}
+
+.senpai {
+  margin: 0px;
+  padding: 0px;
+  font-size: 38px;
+  color: white;
+   padding-top: 100px;
+  font-family: "Rounded Mplus 1c";
+  /*opacity: 0.6;*/
+  
+  
+}
+
+.message{
+  color: white;
+  font-weight:normal;
+  font-weight:bolder;
+  font-size: 30px;
+ 
+  font-family: "Rounded Mplus 1c";
+  margin: 40px;
+  padding: 15px;
+ }
+
+
+
+
+
+
+
+
+
+
+ h2{
+  font-family: 'Galada', cursive;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Cormorant SC', serif;
+  font-family: 'Harmattan', sans-serif;
+  font-family: 'Petit Formal Script', cursive;
+  color:white; 
+  margin: 0;
+  font-size:19px;
+}
+
+p.c {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  padding: 0px;
+  font-weight:bolder;
+  font-size: 14px;
+  /*font-family: 'Galada', cursive;*/
+  
+  
+}
+
+
+ br{
+  font-size: 2px;
+  font-family: "Rounded Mplus 1c";
+  margin: 0px;
+  padding: 0px;
+ }
+ 
+ 
+/*.container_h1  {*/
+/*   font-size: 64px;*/
+/*   text-align: center;*/
+/*   margin-top: 100px;*/
+/*   margin-bottom: 50px;*/
+/*    font-family: "Rounded Mplus 1c";*/
+   /*font-family: 'Gaegu', cursive;*/
+   
+/* }*/
+ 
+ 
+ .row{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:40px;
+  margin-top: 0px;
+   font-family: "Rounded Mplus 1c";
+  /*font-family: 'Gaegu', cursive;*/
+  /*font-family: "Nico Moji";*/
+  /*opacity: 0.9;*/
+ 
+ }
+ 
+
+.img-circle_lm {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}  
+  
+  .btn{
+     text-align: center;
+      font-size: 50px;
+  }
+  
+  /*.img{*/
+    /*float:left;*/
+  /*}*/
+  
+  /*.img1{*/
+  /*  max-height: 10px;*/
+  /*  margin-top:40%;*/
+  /*  float:left;*/
+  /*　margin-right:50%;*/
+  /*}*/
+  
+  /*.img2{*/
+    /*float:right;*/
+  /*  margin-right:0%;*/
+  /*}*/
+  
+  /*.img3{*/
+  /*  float:right;*/
+  /*  margin-top:0%;*/
+  /*}*/
+  
+  .img4{
+    /*float:left;*/
+  }
+  
+  /*.images{*/
+  /*  width:1000px;*/
+  /*  float:left;*/
+  /*}*/
+  
+  /*.images{*/
+  /*  font-size: 20px;*/
+    
+    
+  /*}*/
+  
+  .buttom{
+    margin-top: 70px;
+    padding: 10px 30px;
+     text-align: center;
+    
+  }
+  
+  @media screen and (max-width: 480px) {
+    
+    .message{
+      font-size:5px;
+    }
+    
+    
+  }
+ 
+  
+  
+  
+
+  
+   
+   
+   
+   
+   
