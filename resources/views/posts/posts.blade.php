@@ -7,7 +7,7 @@
     <?php $user = $post->user; ?>
     <br>
     <br>
-    <div class="panel panel-primary">
+    <div class="panel panel-info">
         
             <li class="media">
                 <div class="media-body">

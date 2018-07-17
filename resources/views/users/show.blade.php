@@ -28,20 +28,36 @@
             </h1>
 
 
+
             <h2 class="main">
             
-                <div class="member">
-                <!--<div class="clearfix">-->
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
-                            </figure>
-                            <!--avatar\編集ボタン-->
-                            <div id="avatarbtn">
-                            {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
-                            </div>
-                        </div>
+            <div class="ngt48-member">
+            <div class="clearfix">
+                
+                <!--Avatar-->
+                <div class="row">
+                <div class="col-md-6"><figure class="main-img">
+                @if(file_exists('storage/avatar/'.Auth::user()->avatar_filename))
+                <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                @else
+                <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" />
+                @endif
+                </figure>
+                <!--avatat\r編集ボタン-->
+                 <div id="avatarbtn">
+                        {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                </div>
+                </div>
+                
+                <div class="prof col-md-6">
+
+
+               
+
+                    
+                      
+
                     
                     
                         <div class="prof col-md-6">
@@ -76,6 +92,7 @@
                         </div>
                     </div>
             
+
             
                     
                     <div class="right">
