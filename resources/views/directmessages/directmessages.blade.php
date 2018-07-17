@@ -17,8 +17,8 @@
             <div class="media-left">
 
 
-                <!--<figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />-->
-                <!--</figure>-->
+                <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                
             </div>
             <div class="media-body">
                 <div>
@@ -40,8 +40,6 @@
                 </div>
                 </div>
             </div>
-                    <br>
-        <br>
         </li>
 
 @endforeach

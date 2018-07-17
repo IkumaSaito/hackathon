@@ -4,7 +4,7 @@
 
  <link rel="stylesheet" href="{{asset('css/dm2.css') }}">
 
-    <div class="row">
+   
         <aside class="col-xs-3">
             <div class="panel panel-default">
 
