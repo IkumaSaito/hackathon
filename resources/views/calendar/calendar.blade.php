@@ -89,6 +89,13 @@ function getNthDay($year, $month, $day, $n) {
     {!! link_to_route('calendar.edit', 'edit', ['user' => $user],['class' => 'btn btn-info btn-sm']) !!}
 @endif
 
+
+@foreach ($plans as $plan)
+
+    <?php $plandate = substr($plan->date, -2, 2); ?>
+
+@endforeach
+
 <table class="cal">
     <tr>
         <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>
@@ -109,25 +116,59 @@ function getNthDay($year, $month, $day, $n) {
     </tr>
     
     <tr>
+
+<?php $year_month_day = getSunday(); 
+    $mon = substr($year_month_day,  -2, 2);
+        
+    for ($i = 0; $i < 7; $i++)
+        $wkday = $mon + $i;
+        echo $wkday;
+        
+    ;?>
+  
+    </tr>
+    
+    <tr>    
         <td>
+            <?php echo $t-6; ?>
             
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+            <?php echo $t-5; ?>
+        </td>
+        <td>
+            @if ($t-4 == $plandate)
+                {{ $plan->freetime }}
+            @endif
+        </td>
+        <td>
+            <?php echo $t-3; ?>
+        </td>
+        <td>
+            <?php echo $t-2; ?>
+        </td>
+        <td>
+            <?php echo $t-1; ?>
+        </td>
+        <td>
+            <?php echo $t; ?>
+        </td>
     </tr>
+    
+    
+    
 </table>
 
 
+
+{!! link_to_route('users.show', "戻る", ['id' => $user->id]) !!}
 
 <style type="text/css">
 table {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
+    border-style: none;
 }
 table th {
     background: #EEEEEE;

@@ -104,8 +104,7 @@ function getNthDay($year, $month, $day, $n) {
         <?php echo $table; ?>
     </tr>
     
-    
-    {{Form::open()}}
+{!! Form::open(['route' => 'plans.store']) !!}    
     <tr>
             <td>
                 {{Form::select('sun', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
@@ -129,26 +128,11 @@ function getNthDay($year, $month, $day, $n) {
                 {{Form::select('sat', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
             </td>
     </tr>
-
-      
-
-    <tr>
-        <td>
-            
-        </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
 </table>
-
-<center>
         {{Form::submit()}}
         {{Form::close()}}
-</center>      
+
+
 
 
 
@@ -157,6 +141,7 @@ table {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
+    border-style:;    
 }
 table th {
     background: #EEEEEE;
@@ -165,7 +150,7 @@ table th {
 }
 table td {
     width: 50px;
-    /*border: 1px solid #CCCCCC;*/
+    border: 1px solid #CCCCCC;
     text-align: center;
     padding: 5px;
 }

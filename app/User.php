@@ -29,4 +29,9 @@ class User extends Authenticatable
         return $this->hasMany(Directmessage::class);
     }
     
+    public function plans()
+    {
+        return $this->hasMany(Plans::class);
+    }
+    
 }

@@ -19,7 +19,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('directmessages', 'DirectmessagesController@directmessages')->name('users.directmessages');
         Route::get('directmessages/users', 'DirectmessagesController@users')->name('directmessages.users');
         Route::get('calendar/edit', 'PlansController@edit')->name('calendar.edit');
-        Route::get('calendar/calendar', 'PlansController@index'); //不明
+        Route::get('calendar/calendar', 'PlansController@index')->name('calendar.calendar'); //不明
         
     });
     Route::resource('posts', 'PostsController', ['only' => ['index', 'store', 'destroy']]);

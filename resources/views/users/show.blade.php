@@ -91,6 +91,8 @@
                     </div>
             </div>
             
+            {!! link_to_route('calendar.calendar',"こっちがカレンダーです",['id' => $user->id]) !!}
+            
            @include('calendar.calendar')
             
                     <div class="right">
