@@ -14,6 +14,7 @@
     position: relative;
     z-index: 2;
     font-size: 3vmin;
+    padding-bottom: 40px; 
 }
 
 .top{
@@ -24,7 +25,15 @@
 header nav ul {
   height: 60px;
   margin-top: 0;
+  
 }
+
+/*body{*/
+/*    padding: 0px;*/
+/*    margin: 0px;*/
+/*}*/
+
+
 .header-list {
   height: 60px;
   float: left;
@@ -49,7 +58,7 @@ header nav ul {
 .img-responsive{
   position:absolute; 
   z-index: 1; 
-  width: 100%
+  width: 100%;
 }
 
 .a{
