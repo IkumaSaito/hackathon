@@ -12,7 +12,7 @@ class RegisterController extends Controller
 
     use RegistersUsers;
     
-    protected $redirectTo = 'users/';
+    protected $redirectTo = 'explain/';
 
     public function __construct()
     {
@@ -33,5 +33,9 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+    
+    public function explain(){
+        return view ('users.explain');
     }
 }

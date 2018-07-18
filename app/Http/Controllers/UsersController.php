@@ -138,5 +138,9 @@ class UsersController extends Controller
         return view ('users.introja');
     }
     
+     public function explain(){
+        return view ('users.explain');
+    }
+    
 }
 
