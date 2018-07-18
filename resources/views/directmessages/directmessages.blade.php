@@ -14,17 +14,17 @@
     <?php endif; ?>        
         
         <li class="media">
-            <div class="media-left">
+            <!--<div class="media-left">-->
 
 
-                <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+            <!--    <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />-->
                 
-            </div>
+            <!--</div>-->
             <div class="media-body">
                 <div>
                     
                     <!--<?php echo $auth_id; ?>-->
-                        {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $directmessage->created_at }}</span>
+                        {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">　{{ $directmessage->created_at }}</span>
                     <!--<?php echo $id; ?> -->
                     
                 </div>
