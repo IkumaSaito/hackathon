@@ -57,9 +57,9 @@ dl dt{
     font-size: 2rem;
 }
         
-.right{
-    margin-left: 75%;
-}
+/*.right{*/
+/*    margin-left: 75%;*/
+/*}*/
     
    
 h1{
@@ -166,4 +166,6 @@ h1:first-letter {
     font-family: "bookman old";
     padding: 2px 10px;
     border-radius: 25px;
+    color: #FFF;
+    background-color: #75A9FF;
 }
