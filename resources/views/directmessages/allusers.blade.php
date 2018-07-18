@@ -11,7 +11,7 @@
     <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" />
 
                 {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}  :
-                <?php echo count($unseens->where('user_id', $sender->id)); ?>件    
+                <?php echo count($unseens->where('user_id', $sender->id)); ?>    
                 
              <dl>
                                 <div class="under">

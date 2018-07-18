@@ -5,9 +5,7 @@
 @section('content')
 
 <div class="title">
-    <?php echo $user->name . "さんのDM受信リスト" . PHP_EOL; ?>
-
-        未読が {{ count($unseens) }} 件あります
+        Direct Messages (Unread:{{ count($unseens) }})
 </div>
 <br>
 
