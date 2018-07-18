@@ -4,7 +4,7 @@
 <html lang="utf-8">
     <head>
         <meta charset="utf-8">
-        <title>hackathon</title>
+        <title>Introduction</title>
         <!--Lunch menter-->
         <link href="https://fonts.googleapis.com/css?family=Arvo|Galada|Lobster|Londrina+Outline|Pacifico|Playfair+Display|Roboto|Sigmar+One|Varela+Round" rel="stylesheet">
         <!--consept-->
@@ -114,15 +114,14 @@
     <div class="row">
         <div class="col-md-3 col-sm-offset-1">
                 
-                <img src="images/image1.jpg" width="240px" height="500px">
+                <img src="images/&2.jpg" width="240px" height="500px">
                 <br>
-               First of all, 
-               <br>let's register.
+               Make a profile.
                 </div>
         
                 →
         <div class="col-md-3">
-            <img src="images/image1.jpg" width="240px" height="500px"><br>
+            <img src="images/&3.jpg" width="240px" height="500px"><br>
                   Find a person.
              </div>
         
@@ -130,7 +129,7 @@
         →
         <div class="col-md-3">
  
-           <img src="images/image1.jpg"width="240px" height="500px"><br>
+           <img src="images/&4.jpg"width="240px" height="500px"><br>
                 Send a message.
          </div>
         
