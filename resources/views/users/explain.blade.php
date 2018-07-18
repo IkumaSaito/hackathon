@@ -70,10 +70,11 @@
 </div>
 </div>
 </div>
-
-
- {!! link_to_route('users.show', "Let's get started!!",['class' => 'btn btn-default']) !!}
-
+<br>
+<div class="botan col-md-offset-4 col-md-4 col-xs-offset-4 col-xs-4">
+  
+ {!! link_to_route('users.show', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-default']) !!}
+</div>
 
 </body>
 </html>
