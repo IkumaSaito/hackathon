@@ -66,7 +66,7 @@
                 alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>①簡単登録</p>
+                       <p>①簡単登録！</p>
                </div>
             </div>
             
@@ -75,7 +75,7 @@
             <div class="row">
 
                <div class="col-md-4 col-sm-offset-2">    
-                       <p>②本名ではなく<br>ニックネーム登録できる！</p>
+                       <p>②ニックネーム登録で<br>実名はでません！</p>
 
                </div>
                <div class="col-md-6">
@@ -89,7 +89,7 @@
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>③ネイティブと<br>喋ろう
+                       <p>③ネイティブと<br>喋ろう！
                        </p>
                </div>
             </div>
@@ -123,7 +123,7 @@
                 →
         <div class="col-md-3">
             <img src="images/&3.jpg" width="240px" height="500px"><br>
-                  送りたい人を見つけましょう。
+                  ランチしたい人を見つけましょう。
              </div>
         
         

@@ -75,7 +75,7 @@
             <div class="row">
 
                <div class="col-md-4 col-sm-offset-2">    
-                       <p>②You can use nickname</p>
+                       <p>②You can use nickname!</p>
                        
                </div>
                <div class="col-md-6">
@@ -89,7 +89,7 @@
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>③You can talk with forigners<br>
+                       <p>③You can talk with forigners!<br>
                        </p>
                </div>
             </div>
