@@ -53,7 +53,9 @@
                 </figure>
                 <!--avatat\編集ボタン-->
                  <div id="avatarbtn">
-                        {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                            @if (Auth::id() == $user->id)
+                            {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                            @endif
                 </div>
                 </div>
                 
@@ -64,6 +66,11 @@
                             @if (Auth::id() == $user->id)
                             {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-info btn-sm']) !!}
                             @endif
+                            <!--DMbutton-->           
+                            @if (Auth::id() != $user->id)
+                            {!! link_to_route('users.directmessages', "DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
+                            @endif
+                         
                             </h3>
     
                             <dl>
@@ -93,10 +100,6 @@
 
             
                     
-                    <div class="right">
-                    @if (Auth::id() != $user->id)
-                        {!! link_to_route('users.directmessages', "DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
-                    @endif
                     </div>
                 </div>
             </h2>
