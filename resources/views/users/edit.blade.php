@@ -20,7 +20,7 @@
             {!! Form::text('name',null, ['class' => 'form-control'])!!}
             <br>
             {!! Form::label('gender', 'gender: ') !!}
-            {!! Form::text('gender',null, ['class' => 'form-control']) !!}
+            {!! Form::text('gender',null,  ['class' => 'form-control']) !!}
         </div>
         <br>
         <div class="second col-md-6">
