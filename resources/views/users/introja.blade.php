@@ -89,7 +89,7 @@
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>③ネイティブと<br>喋ろう！
+                       <p>③ネイティブスピーカーと<br>喋ろう！
                        </p>
                </div>
             </div>
@@ -120,14 +120,15 @@
                プロフィールを作りましょう。
                 </div>
         
-                →
+                <img src="images/yazirushi.jpg" width="100" height="60">
+
         <div class="col-md-3">
             <img src="images/&3.jpg" width="240px" height="500px"><br>
                   ランチしたい人を見つけましょう。
              </div>
         
-        
-        →
+                <img src="images/yazirushi.jpg" width="100" height="60">
+
         <div class="col-md-3">
  
            <img src="images/&4.jpg"width="240px" height="500px"><br>

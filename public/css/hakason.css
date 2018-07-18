@@ -7,6 +7,14 @@
     }
 }
 
+.container-fluied{
+    /*padding: 0px;*/
+    margin: 0px;
+    font-size:0;
+    display:inline-block;
+}
+
+
 .concept{
     text-align: center;
     color: white;
@@ -15,9 +23,6 @@
     position: relative;
     z-index: 2;
     font-size: 3vmin;
-
-    
-
     padding-bottom: 40px; 
 
 }
@@ -25,7 +30,6 @@
 .top{
     z-index: 2;
     position: relative;
-
 }
   
 header nav ul {
@@ -35,10 +39,10 @@ header nav ul {
  
 }
 
-/*body{*/
-/*    padding: 0px;*/
-/*    margin: 0px;*/
-/*}*/
+body{
+    /*padding: 0px;*/
+    margin: 0px;
+}
 
 
 .header-list {
@@ -66,14 +70,16 @@ header nav ul {
 
 .img-responsive{
   position:absolute; 
-  z-index: 1; 
+  /*z-index: 1; */
 
-  width: 100%
-  
-
-  
-
+  /*width: 100%*/
 }
+
+.img-responsive img{
+    width: 120%;
+}
+
+
 
 .a{
     padding:0em 0 3em;
@@ -176,11 +182,3 @@ h1{
  
 }
   
-  
-
-  
-   
-   
-   
-   
-   

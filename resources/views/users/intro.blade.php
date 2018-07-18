@@ -41,10 +41,10 @@
                         
                         <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
-                                <p>Don’t you feel a little lonely having lunch alone and wanna ask someone to have lunch with you?</p>
-                                <p>Don’t you wanna learn a foreign language from a native or experience cross-cultural exchange?</p>
+                                <p>Don’t you feel a little lonely having lunch alone and want to ask someone to have lunch with you?</p>
+                                <p>Would you like to learn a foreign language from a native or experience cross-cultural exchange?</p>
                                 <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
-                                <p>We offer you unknown language and new chance!!</p>
+                                <p>We offer you a new chance!!</p>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
             <div class="row">
 
                <div class="col-md-4 col-sm-offset-2">    
-                       <p>②You can use nickname!</p>
+                       <p>②Please enter your nickname!</p>
                        
                </div>
                <div class="col-md-6">
@@ -113,23 +113,20 @@
    
     <div class="row">
         <div class="col-md-3 col-sm-offset-1">
-                
                 <img src="images/&2.jpg" width="240px" height="500px">
                 <br>
                Make a profile.
                 </div>
+                <img src="images/yazirushi.jpg" width="100" height="60">
         
-                →
         <div class="col-md-3">
             <img src="images/&3.jpg" width="240px" height="500px"><br>
                   Find a person.
              </div>
-        
-        
-        →
+             <img src="images/yazirushi.jpg" width="100" height="60">
+
         <div class="col-md-3">
- 
-           <img src="images/&4.jpg"width="240px" height="500px"><br>
+             <img src="images/&4.jpg"width="240px" height="500px"><br>
                 Send a message.
          </div>
         
