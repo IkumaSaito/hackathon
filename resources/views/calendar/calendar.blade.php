@@ -86,7 +86,7 @@ function getNthDay($year, $month, $day, $n) {
 ?>
 
     
-Please select your free time.
+	
 <table class="cal">
     <tr>
         <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>
