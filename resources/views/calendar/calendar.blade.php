@@ -85,8 +85,10 @@ function getNthDay($year, $month, $day, $n) {
 	
 ?>
 
-    
-	
+@if (Auth::id() == $user->id)
+    {!! link_to_route('calendar.edit', 'edit', ['user' => $user],['class' => 'btn btn-info btn-sm']) !!}
+@endif
+
 <table class="cal">
     <tr>
         <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>
@@ -106,35 +108,6 @@ function getNthDay($year, $month, $day, $n) {
         <?php echo $table; ?>
     </tr>
     
-    @if (Auth::id() == $user->id)
-    
-    {{Form::open()}}
-    <tr>
-            <td>
-                {{Form::select('sun', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('mon', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('tue', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('wed', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('thu', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('fri', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('sat', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-    </tr>
-
-      
-
     <tr>
         <td>
             
@@ -147,12 +120,6 @@ function getNthDay($year, $month, $day, $n) {
         <td></td>
     </tr>
 </table>
-
-<center>
-        {{Form::submit()}}
-        {{Form::close()}}
-</center>      
-@endif
 
 
 
@@ -175,5 +142,4 @@ table td {
 }
 </style>
 
-<br>
 <br>

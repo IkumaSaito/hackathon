@@ -91,11 +91,8 @@
                     </div>
             </div>
             
-           @include('users.calendar')
+           @include('calendar.calendar')
             
-
-            
-                    
                     <div class="right">
                     @if (Auth::id() != $user->id)
                         {!! link_to_route('users.directmessages', "DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}

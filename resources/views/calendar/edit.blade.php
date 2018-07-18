@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 //今日を取得
 function getToday($date = 'Y-m-d') {
     $today = new DateTime();
@@ -23,41 +22,6 @@ function getSunday() {
     
     if ($w == 0) {
         $d = 6;
-=======
- 
-// 現在の年月を取得
-$year = date('Y');
-$month = date('n');
-$day = date('d');
-
-//週の最初の日を取得（日曜日）
-$first_day = date('w', mktime(0, 0, 0, date('m'), 1, date('y')));
-
-// 月末日を取得
-$last_day = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
- 
-$calendar = array();
-$j = 0;
- 
-// 月末日までループ
-for ($i = 1; $i < $last_day + 1; $i++) {
- 
-    // 曜日を取得
-    $week = date('w', mktime(0, 0, 0, $month, $i, $year));
- 
-    // 1日の場合
-    if ($i == 1) {
- 
-        // 1日目の曜日までをループ
-        for ($s = 1; $s <= $week; $s++) {
- 
-            // 前半に空文字をセット
-            $calendar[$j]['day'] = '';
-            $j++;
- 
-        }
- 
->>>>>>> b9f487b88f66235d9b0eb642d2c9088bdaf0d668
     }
     else {
         $d = $w - 1;
@@ -121,8 +85,6 @@ function getNthDay($year, $month, $day, $n) {
 	
 ?>
 
-    
-Please select your free time.
 <table class="cal">
     <tr>
         <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>
@@ -142,7 +104,6 @@ Please select your free time.
         <?php echo $table; ?>
     </tr>
     
-    @if (Auth::id() == $user->id)
     
     {{Form::open()}}
     <tr>
@@ -188,7 +149,6 @@ Please select your free time.
         {{Form::submit()}}
         {{Form::close()}}
 </center>      
-@endif
 
 
 
@@ -205,11 +165,10 @@ table th {
 }
 table td {
     width: 50px;
-    border: 1px solid #CCCCCC;
+    /*border: 1px solid #CCCCCC;*/
     text-align: center;
     padding: 5px;
 }
 </style>
 
-<br>
 <br>
