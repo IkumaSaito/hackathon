@@ -29,4 +29,5 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('intro', 'UsersController@intro')->name('users.intro');
 Route::get('introja', 'UsersController@introja')->name('users.introja');
-    
+
+Route::get('explain', 'UsersController@explain')->name('users.explain');    
