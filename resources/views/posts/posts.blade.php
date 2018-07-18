@@ -13,7 +13,11 @@
                 <div class="media-body">
                     <div>
                 <figure class="main-img">
+                    @if(file_exists('storage/avatar/' .$user->avatar_filename))
                     <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-responsive img-circle" alt="avatar" />
+                    @else
+                    <img src="{{ Gravatar::src($user->name, 500) }}" class="img-responsive img-circle" alt="avatar" />
+                    @endif
                 </figure>
                         {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $post->created_at }}</span>
                     </div>
@@ -38,4 +42,3 @@
     </div>
 @endforeach
 </ul>
-{!! $posts->render() !!}

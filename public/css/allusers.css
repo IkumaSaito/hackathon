@@ -25,3 +25,15 @@ ul {
 .panel{
     margin-left:15px;
 }
+
+.img-circle{
+    max-width: 40px;
+}
+
+.name{
+    font-size: 20px;
+}
+
+.under{
+    margin-bottom: 10px;
+}

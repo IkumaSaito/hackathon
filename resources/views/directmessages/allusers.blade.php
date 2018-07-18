@@ -8,10 +8,32 @@
         <div class="media-body">
             <div>
 
+    <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" /><br>
+
+            <div class="name">
                 {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}  :
-                <?php echo count($unseens->where('user_id', $sender->id)); ?>件    
-
-
+                <?php echo count($unseens->where('user_id', $sender->id)); ?>    
+            </div>
+            <br>
+             <dl>
+                                <div class="under col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-5">
+                                   <dt>gender</dt>
+                                   <td>{{ $sender->gender }}</td>
+                                </div>
+                                <div class="under col-md-5 col-sm-5">
+                                    <dt>hobby</dt>
+                                    <td>{{ $sender->hobby }}</td>
+                                </div><br>
+                                
+                                <div class="under col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-5">
+                                    <dt>language</dt>
+                                    <td>{{ $sender->language }}</td>
+                                </div>
+                            
+                                <div class="under col-md-5 col-xs-5">
+                                    <dt>intro</dt>
+                                    <td>{{ $sender->intro }}</td>
+                                </div>
    
             </div>
         </div>

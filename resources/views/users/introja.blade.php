@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="utf-8">
     <head>
@@ -41,10 +39,12 @@
                         
                         <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
-                                <p>Don’t you feel a little lonely having lunch alone and wanna ask someone to have lunch with you?</p>
-                                <p>Don’t you wanna learn a foreign language from a native or experience cross-cultural exchange?</p>
-                                <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
-                                <p>We offer you unknown language and new chance!!</p>
+<p>「1人で過ごすランチタイムはちょっと寂しい」「気軽にランチに誘いたい」という思いと、
+「生の外国語を勉強したい」「気軽に異文化交流をしてみたい」という思い。
+この2つの願いを叶えられるアプリが“LUNCH MEETER”です。
+        コンセプトは"LUNCH×MEET"。 
+        知らない言葉、新しい出会いを提供します。
+</p>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                     <img class="img-responsive" src="images/top.jpg"> 
             </div>
 
-            <h1 class="container_h1">LunchMeeter's point</h1>
+            <h1 class="container_h1">LUNCH MEETERのポイント</h1>
             <br>
             <br>
             <br>
@@ -66,7 +66,7 @@
                 alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>①Easy to register!</p>
+                       <p>①簡単登録！</p>
                </div>
             </div>
             
@@ -75,8 +75,8 @@
             <div class="row">
 
                <div class="col-md-4 col-sm-offset-2">    
-                       <p>②You can use nickname!</p>
-                       
+                       <p>②ニックネーム登録で<br>実名はでません！</p>
+
                </div>
                <div class="col-md-6">
                        <img src="images/nickname.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
@@ -89,14 +89,14 @@
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>③You can talk with forigners!<br>
+                       <p>③ネイティブと<br>喋ろう！
                        </p>
                </div>
             </div>
             
             
             
-            <h1 class="container_h1">How to use</h1>
+            <h1 class="container_h1">使い方</h1>
             <br>
             <br>
             <br>
@@ -116,13 +116,14 @@
                 
                 <img src="images/&2.jpg" width="240px" height="500px">
                 <br>
-               Make a profile.
+               
+               プロフィールを作りましょう。
                 </div>
         
                 →
         <div class="col-md-3">
             <img src="images/&3.jpg" width="240px" height="500px"><br>
-                  Find a person.
+                  ランチしたい人を見つけましょう。
              </div>
         
         
@@ -130,7 +131,7 @@
         <div class="col-md-3">
  
            <img src="images/&4.jpg"width="240px" height="500px"><br>
-                Send a message.
+                メッセージを送りましょう。
          </div>
         
         

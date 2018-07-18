@@ -9,7 +9,9 @@
             <div class="panel panel-default">
 
 <!--これでユーザーリストを呼び出してます-->
-@include('directmessages.allusers', ['senders' => $senders])
+
+@include('users.direct', ['senders' => $senders])
+
 <!--ここまで-->
             </div>
         </aside>

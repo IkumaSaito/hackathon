@@ -45,15 +45,17 @@
                 <div class="row">
                 <div class="col-md-6">
                     <figure class="main-img">
-                @if(file_exists('storage/avatar/'.Auth::user()->avatar_filename))
+                @if(file_exists('storage/avatar/'.$user->avatar_filename))
                 <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                 @else
-                <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" />
+                <img src="{{ Gravatar::src($user->name, 500) }}" class="img-circle" alt="avatar" />
                 @endif
                 </figure>
                 <!--avatat\編集ボタン-->
                  <div id="avatarbtn">
-                        {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                            @if (Auth::id() == $user->id)
+                            {!! link_to_route('users.avataredit', 'avatar upload', ['id' => Auth::id()],['class' => 'btn btn-warning btn-sm']) !!}
+                            @endif
                 </div>
                 </div>
                 
@@ -64,6 +66,11 @@
                             @if (Auth::id() == $user->id)
                             {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-info btn-sm']) !!}
                             @endif
+                            <!--DMbutton-->           
+                            @if (Auth::id() != $user->id)
+                            {!! link_to_route('users.directmessages', "Send a DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
+                            @endif
+                         
                             </h3>
     
                             <dl>
