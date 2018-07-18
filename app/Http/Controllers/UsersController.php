@@ -128,5 +128,10 @@ class UsersController extends Controller
                  ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
         }
     }
+    
+    public function intro(){
+        return view ('users.intro');
+    }
+    
 }
 

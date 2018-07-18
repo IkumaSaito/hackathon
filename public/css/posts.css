@@ -2,10 +2,11 @@
  
     color:white;
     outline-color: white;
-    font-family: "bookman old";
+    /*font-family: "century gothic";*/
     padding: 2px 10px;
 	border-radius: 25px;
 	font-weight: bold;
+	background-color:#33CC99;
 }
 
 .btn-success:hover{
@@ -13,9 +14,9 @@
 }
 
 .btn-danger{
-
+    background-color:#FF5192;
     color: white;
-    font-family: "bookman old";
+    /*font-family: "century gothic";*/
     padding: 2px 10px;
     border-radius: 25px;
     font-weight: bold;
@@ -36,4 +37,9 @@
 .main-img{
  max-height:50px;
  max-width:50px;
+}
+
+textarea {
+ width: 100%;
+ resize: none;
 }

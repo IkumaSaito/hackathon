@@ -1,0 +1,157 @@
+
+@media screen and (min-width: 1200px) {
+    .top {
+        margin-top:0px;  
+        margin-bottom: 400px;
+    }
+}
+
+.concept{
+    text-align: center;
+    color: white;
+    background-color: rgba(40,40,40,0.7);
+    font-family: serif;
+    position: relative;
+    z-index: 2;
+    font-size: 3vmin;
+}
+
+.top{
+    z-index: 2;
+    position: relative;
+}
+  
+header nav ul {
+  height: 60px;
+  margin-top: 0;
+}
+.header-list {
+  height: 60px;
+  float: left;
+  list-style: none;
+  text-align: right;
+}
+
+.header{
+  margin-left: 60px;
+  margin-right:60px;
+  margin-bottom: 35px;
+  
+}
+
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.img-responsive{
+  position:absolute; 
+  z-index: 1; 
+  width: 100%
+}
+
+.a{
+    padding:0em 0 3em;
+    width:58%;
+    margin:10px auto;
+    padding-top: 0px;
+    padding-bottom: 10px;
+   
+}
+
+.senpai {
+  margin: 0px;
+  padding: 0px;
+  font-size: 38px;
+  color: white;
+   padding-top: 100px;
+  font-family: "Rounded Mplus 1c";
+  /*opacity: 0.6;*/
+  
+  
+}
+
+.message{
+  color: white;
+  font-size: 25px;
+  font-family: "century gothic";
+  margin: 40px;
+  padding: 15px;
+ }
+
+
+ h2{
+  font-family: 'Galada', cursive;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Cormorant SC', serif;
+  font-family: 'Harmattan', sans-serif;
+  font-family: 'Petit Formal Script', cursive;
+  color:white; 
+  margin: 0;
+  font-size:19px;
+}
+
+
+
+ br{
+  font-size: 2px;
+  font-family: "Rounded Mplus 1c";
+  margin: 0px;
+  padding: 0px;
+ }
+ 
+ 
+ .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:40px;
+  font-family: "Rounded Mplus 1c";
+ }
+ 
+
+.img-circle_lm {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}  
+  
+  .btn{
+     text-align: center;
+      font-size: 50px;
+  }
+  
+ 
+  .buttom{
+    margin-top: 70px;
+    padding: 10px 30px;
+     text-align: center;
+    
+  }
+  
+  @media screen and (max-width: 480px) {
+    
+    .message{
+      font-size:5px;
+    }
+    
+    
+  }
+ 
+h1{
+  padding-top: 50px;
+}
+  
+  
+
+  
+   
+   
+   
+   
+   
