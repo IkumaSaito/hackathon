@@ -2,7 +2,7 @@
 <html lang="utf-8">
     <head>
         <meta charset="utf-8">
-        <title>hackathon</title>
+        <title>Introduction</title>
         <!--Lunch menter-->
         <link href="https://fonts.googleapis.com/css?family=Arvo|Galada|Lobster|Londrina+Outline|Pacifico|Playfair+Display|Roboto|Sigmar+One|Varela+Round" rel="stylesheet">
         <!--consept-->
@@ -39,11 +39,11 @@
                         
                         <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
-                                <p>ランチミーターとはなんだと思いますか？</p>
-<p>あなたは一人で昼食を取っている人が少し寂しく感じていたり、誰かと一緒にご飯食べたいと思ったことはありませんか？</p>
-<p>そして異文化間の交流を体験して、外国語を学びたいと思いませんか？</p>
-<p>あなたの答えが "はい"の場合、このアプリ "LUNCH MEETER"でこれらの願いを実現することができます!!!</p>
-<p>私たちはあなたに未知の言語と新しいチャンスを提供します！
+<p>「1人で過ごすランチタイムはちょっと寂しい」「気軽にランチに誘いたい」という思いと、
+「生の外国語を勉強したい」「気軽に異文化交流をしてみたい」という思い。
+この2つの願いを叶えられるアプリが“LUNCH MEETER”です。
+        コンセプトは"LUNCH×MEET"。 
+        知らない言葉、新しい出会いを提供します。
 </p>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                     <img class="img-responsive" src="images/top.jpg"> 
             </div>
 
-            <h1 class="container_h1">ランチミーターのポイントt</h1>
+            <h1 class="container_h1">LUNCH MEETERのポイント</h1>
             <br>
             <br>
             <br>
@@ -66,7 +66,7 @@
                 alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>①登録が簡単！!</p>
+                       <p>①簡単登録！</p>
                </div>
             </div>
             
@@ -75,11 +75,11 @@
             <div class="row">
 
                <div class="col-md-4 col-sm-offset-2">    
-                       <p>②本名ではなく、ニックネームが使えます。</p>
+                       <p>②本名ではなく<br>ニックネーム登録できる！</p>
                        
                </div>
                <div class="col-md-6">
-                       <img src="images/hakason3.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
+                       <img src="images/nickname.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
             </div>
             
@@ -89,7 +89,7 @@
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>③英語がネイティブの人と喋ることが出来ます。<br>
+                       <p>③ネイティブと<br>喋ろう
                        </p>
                </div>
             </div>
@@ -114,7 +114,7 @@
     <div class="row">
         <div class="col-md-3 col-sm-offset-1">
                 
-                <img src="images/image1.jpg" width="240px" height="500px">
+                <img src="images/&2.jpg" width="240px" height="500px">
                 <br>
                
                プロフィールを作りましょう。
@@ -122,7 +122,7 @@
         
                 →
         <div class="col-md-3">
-            <img src="images/image1.jpg" width="240px" height="500px"><br>
+            <img src="images/&3.jpg" width="240px" height="500px"><br>
                   送りたい人を見つけましょう。
              </div>
         
@@ -130,8 +130,8 @@
         →
         <div class="col-md-3">
  
-           <img src="images/image1.jpg"width="240px" height="500px"><br>
-                そしてメッセージを送りましょ
+           <img src="images/&4.jpg"width="240px" height="500px"><br>
+                メッセージを送りましょう。
          </div>
         
         
