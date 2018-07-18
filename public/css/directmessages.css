@@ -98,3 +98,7 @@
 .btn{
      float: right;
 }
+
+aside.col-xs-3{
+  padding: 0;
+}
