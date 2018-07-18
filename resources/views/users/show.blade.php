@@ -48,7 +48,7 @@
                 @if(file_exists('storage/avatar/'.$user->avatar_filename))
                 <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                 @else
-                <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" />
+                <img src="{{ Gravatar::src($user->name, 500) }}" class="img-circle" alt="avatar" />
                 @endif
                 </figure>
                 <!--avatat\編集ボタン-->
