@@ -133,5 +133,10 @@ class UsersController extends Controller
         return view ('users.intro');
     }
     
+
+     public function introja(){
+        return view ('users.introja');
+    }
+    
 }
 
