@@ -3,6 +3,7 @@
     .top {
         margin-top:0px;  
         margin-bottom: 400px;
+        
     }
 }
 
@@ -14,28 +15,33 @@
     position: relative;
     z-index: 2;
     font-size: 3vmin;
+    
 }
 
 .top{
     z-index: 2;
     position: relative;
+
 }
   
 header nav ul {
   height: 60px;
   margin-top: 0;
+ 
 }
 .header-list {
   height: 60px;
   float: left;
   list-style: none;
   text-align: right;
+  
 }
 
 .header{
   margin-left: 60px;
   margin-right:60px;
   margin-bottom: 35px;
+  
   
 }
 
@@ -50,6 +56,7 @@ header nav ul {
   position:absolute; 
   z-index: 1; 
   width: 100%
+  
 }
 
 .a{
@@ -71,6 +78,7 @@ header nav ul {
   /*opacity: 0.6;*/
   
   
+  
 }
 
 .message{
@@ -79,6 +87,7 @@ header nav ul {
   font-family: "century gothic";
   margin: 40px;
   padding: 15px;
+ 
  }
 
 
@@ -94,6 +103,7 @@ header nav ul {
   color:white; 
   margin: 0;
   font-size:19px;
+  
 }
 
 
@@ -124,6 +134,7 @@ header nav ul {
   .btn{
      text-align: center;
       font-size: 50px;
+      
   }
   
  
@@ -131,6 +142,7 @@ header nav ul {
     margin-top: 70px;
     padding: 10px 30px;
      text-align: center;
+     
     
   }
   
@@ -145,6 +157,7 @@ header nav ul {
  
 h1{
   padding-top: 50px;
+ 
 }
   
   
