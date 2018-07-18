@@ -1,10 +1,8 @@
-
-
 <!DOCTYPE html>
 <html lang="utf-8">
     <head>
         <meta charset="utf-8">
-        <title>Introduction</title>
+        <title>hackathon</title>
         <!--Lunch menter-->
         <link href="https://fonts.googleapis.com/css?family=Arvo|Galada|Lobster|Londrina+Outline|Pacifico|Playfair+Display|Roboto|Sigmar+One|Varela+Round" rel="stylesheet">
         <!--consept-->
@@ -41,10 +39,12 @@
                         
                         <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
-                                <p>Don’t you feel a little lonely having lunch alone and wanna ask someone to have lunch with you?</p>
-                                <p>Don’t you wanna learn a foreign language from a native or experience cross-cultural exchange?</p>
-                                <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
-                                <p>We offer you unknown language and new chance!!</p>
+                                <p>ランチミーターとはなんだと思いますか？</p>
+<p>あなたは一人で昼食を取っている人が少し寂しく感じていたり、誰かと一緒にご飯食べたいと思ったことはありませんか？</p>
+<p>そして異文化間の交流を体験して、外国語を学びたいと思いませんか？</p>
+<p>あなたの答えが "はい"の場合、このアプリ "LUNCH MEETER"でこれらの願いを実現することができます!!!</p>
+<p>私たちはあなたに未知の言語と新しいチャンスを提供します！
+</p>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                     <img class="img-responsive" src="images/top.jpg"> 
             </div>
 
-            <h1 class="container_h1">LunchMeeter's point</h1>
+            <h1 class="container_h1">ランチミーターのポイントt</h1>
             <br>
             <br>
             <br>
@@ -66,7 +66,7 @@
                 alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>①Easy to register!</p>
+                       <p>①登録が簡単！!</p>
                </div>
             </div>
             
@@ -75,11 +75,11 @@
             <div class="row">
 
                <div class="col-md-4 col-sm-offset-2">    
-                       <p>②You can use nickname</p>
+                       <p>②本名ではなく、ニックネームが使えます。</p>
                        
                </div>
                <div class="col-md-6">
-                       <img src="images/nickname.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
+                       <img src="images/hakason3.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
             </div>
             
@@ -89,14 +89,14 @@
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>③You can talk with forigners<br>
+                       <p>③英語がネイティブの人と喋ることが出来ます。<br>
                        </p>
                </div>
             </div>
             
             
             
-            <h1 class="container_h1">How to use</h1>
+            <h1 class="container_h1">使い方</h1>
             <br>
             <br>
             <br>
@@ -114,23 +114,24 @@
     <div class="row">
         <div class="col-md-3 col-sm-offset-1">
                 
-                <img src="images/&2.jpg" width="240px" height="500px">
+                <img src="images/image1.jpg" width="240px" height="500px">
                 <br>
-               Make a profile.
+               
+               プロフィールを作りましょう。
                 </div>
         
                 →
         <div class="col-md-3">
-            <img src="images/&3.jpg" width="240px" height="500px"><br>
-                  Find a person.
+            <img src="images/image1.jpg" width="240px" height="500px"><br>
+                  送りたい人を見つけましょう。
              </div>
         
         
         →
         <div class="col-md-3">
  
-           <img src="images/&4.jpg"width="240px" height="500px"><br>
-                Send a message.
+           <img src="images/image1.jpg"width="240px" height="500px"><br>
+                そしてメッセージを送りましょ
          </div>
         
         

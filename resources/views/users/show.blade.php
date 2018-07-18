@@ -68,7 +68,7 @@
                             @endif
                             <!--DMbutton-->           
                             @if (Auth::id() != $user->id)
-                            {!! link_to_route('users.directmessages', "DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
+                            {!! link_to_route('users.directmessages', "Send a DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
                             @endif
                          
                             </h3>
