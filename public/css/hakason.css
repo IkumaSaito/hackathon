@@ -15,7 +15,11 @@
     position: relative;
     z-index: 2;
     font-size: 3vmin;
+<<<<<<< HEAD
     
+=======
+    padding-bottom: 40px; 
+>>>>>>> e85253242cb1eab5fc16963ae04ab8373b1268a8
 }
 
 .top{
@@ -27,8 +31,19 @@
 header nav ul {
   height: 60px;
   margin-top: 0;
+<<<<<<< HEAD
  
+=======
+  
+>>>>>>> e85253242cb1eab5fc16963ae04ab8373b1268a8
 }
+
+/*body{*/
+/*    padding: 0px;*/
+/*    margin: 0px;*/
+/*}*/
+
+
 .header-list {
   height: 60px;
   float: left;
@@ -55,8 +70,12 @@ header nav ul {
 .img-responsive{
   position:absolute; 
   z-index: 1; 
+<<<<<<< HEAD
   width: 100%
   
+=======
+  width: 100%;
+>>>>>>> e85253242cb1eab5fc16963ae04ab8373b1268a8
 }
 
 .a{
