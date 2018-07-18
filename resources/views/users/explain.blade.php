@@ -19,24 +19,25 @@
 </head>
 
 <body>
+
 <!--紹介ページのトップ部分-->
 
-<h1>For the first time users</h1>
 <br>
 <br>
+
+  <div class="name">
+    For the first time users
+  </div>
+
+<br>
+<br>
+
+<div id="main">
 <div class="top">
-  <div class="row">
+ 
    <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10 ">
      
 <div id="carousel-example" class="carousel slide" data-ride="carousel">
- <!-- インジケーターの設置。下部の○●ボタン。 -->
-  <!--<ol class="carousel-indicators">-->
-  <!--  <li data-target="#carousel-example" data-slide-to="0" class="active"></li>-->
-  <!--  <li data-target="#carousel-example" data-slide-to="1"></li>-->
-  <!--  <li data-target="#carousel-example" data-slide-to="2"></li>-->
-  <!--  <li data-target="#carousel-example" data-slide-to="3"></li>-->
-  <!--</ol>-->
- 
   <!-- スライドの内容 -->
   <div class="carousel-inner">
     <div class="item active">
@@ -66,15 +67,19 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
   </a>
 </div>
+</div>
+
 
 </div>
 </div>
-</div>
+
 <br>
-<div class="botan col-md-offset-4 col-md-4 col-xs-offset-4 col-xs-4">
-  
- {!! link_to_route('users.show', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-default']) !!}
-</div>
+<br>
 
+
+<div id="botan" class="col-md-offset-5 col-md-2 col-xs-offset-4 col-xs-4">
+  
+ {!! link_to_route('users.show', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-info']) !!}
+</div>
 </body>
 </html>
