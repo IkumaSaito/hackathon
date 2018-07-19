@@ -1,18 +1,18 @@
 
-@media screen and (min-width: 1200px) {
-    .top {
-        margin-top:0px;  
-        margin-bottom: 400px;
+/*@media screen and (min-width: 1200px) {*/
+/*    .top {*/
+/*        margin-top:0px;  */
+/*        margin-bottom: 400px;*/
         
-    }
-}
-
-/*.container-fluied{*/
-    /*padding: 0px;*/
-/*    margin: 0px;*/
-/*    font-size:0;*/
-/*    display:inline-block;*/
+/*    }*/
 /*}*/
+
+.container-fluied{
+    padding: 0px;
+    margin: 0px;
+    font-size:0;
+    display:inline-block;
+}
 
 
 .concept{
@@ -27,11 +27,12 @@
 
 }
 
-.top{
-    z-index: 2;
-    position: relative;
-}
-  
+/*.top{*/
+    /*z-index: 2;*/
+    /*position: relative;*/
+    /*display: flex;*/
+/*}*/
+ 
 header nav ul {
   height: 60px;
   margin-top: 0;
@@ -71,12 +72,10 @@ body{
 .img-responsive{
   position:absolute; 
   /*z-index: 1; */
-
-  /*width: 100%*/
 }
 
 .img-responsive img{
-    width: 120%;
+    width: 100%;
 }
 
 
@@ -137,9 +136,12 @@ body{
   padding: 0px;
  }
  
- 
+  
  .row{
-  display: flex;
+   display: flex;   
+   /*上これがキー*/
+   
+   /*これが下部分のcss*/
   justify-content: center;
   align-items: center;
   font-size:40px;
@@ -183,9 +185,9 @@ h1{
  
 }
 
-div.row{
-    padding: 0px;
-}
+/*div.row{*/
+/*    padding: 0px;*/
+/*}*/
 
 .navbar{
     margin-top: -20px;
