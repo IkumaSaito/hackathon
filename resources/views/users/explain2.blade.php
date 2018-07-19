@@ -17,16 +17,12 @@
 
 <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
 </head>
-
+  @include('commons.navbar')
 <body>
 
 <!--紹介ページのトップ部分-->
-
-<br>
-<br>
-
   <div class="name">
-    For the first time users
+   How to use 
   </div>
 
 
@@ -75,9 +71,6 @@
 <br>
 
 
-<div id="botan" class="col-md-offset-5 col-md-2 col-xs-offset-4 col-xs-4">
-  
- {!! link_to_route('users.show', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-info']) !!}
-</div>
+
 </body>
 </html>
