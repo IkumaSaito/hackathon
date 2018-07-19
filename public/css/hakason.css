@@ -1,17 +1,18 @@
 
 @media screen and (min-width: 1200px) {
-    .img1 {
+    .top {
         margin-top:0px;  
         margin-bottom: 400px;
-        }
+        
+    }
 }
 
-.container-fluied{
-    padding: 0px;
-    margin: 0px;
-    font-size:0;
-    display:inline-block;
-}
+/*.container-fluied{*/
+    /*padding: 0px;*/
+/*    margin: 0px;*/
+/*    font-size:0;*/
+/*    display:inline-block;*/
+/*}*/
 
 
 .concept{
@@ -26,6 +27,10 @@
 
 }
 
+.top{
+    z-index: 2;
+    position: relative;
+}
   
 header nav ul {
   height: 60px;
@@ -35,7 +40,7 @@ header nav ul {
 }
 
 body{
-    padding: 0px;
+    /*padding: 0px;*/
     margin: 0px;
 }
 
@@ -63,26 +68,27 @@ body{
   clear: both;
 }
 
-.img1{
+.img-responsive{
   position:absolute; 
-  z-index: 1; 
-  display: flex;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+  /*z-index: 1; */
+
+  /*width: 100%*/
+}
+
+.img-responsive img{
+    width: 120%;
 }
 
 
 
-
 .a{
-    padding:0em 0 3em;
+  
     width:58%;
     margin:10px auto;
     padding-top: 0px;
     padding-bottom: 10px;
- }
+   
+}
 
 .senpai {
   margin: 0px;
@@ -131,6 +137,15 @@ body{
   padding: 0px;
  }
  
+ 
+ .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:40px;
+  font-family: "Rounded Mplus 1c";
+ }
+ 
 
 .img-circle_lm {
     border-radius: 50%;
@@ -153,41 +168,20 @@ body{
     
   }
   
-  @media screen and (min-width: 480px) {
-     
-     .senpai{
-      font-size:80px;
-    }
-     
-     .message{
-      font-size:40px;
-     }
-     
-     .img1{
-          height: 1000px;
-     }
-      
-  }
-
   @media screen and (max-width: 480px) {
-
-     .senpai{
-      font-size:80px;
-    }
-     
-     .message{
-      font-size:3px;
-     }
-      
-     .img1{
-          height: 30;
-     }
-  }
-
-
     
+    .message{
+      font-size:5px;
+    }
+    
+    
+  }
  
 h1{
   padding-top: 50px;
  
+}
+
+div.row{
+    padding: 0px;
 }
