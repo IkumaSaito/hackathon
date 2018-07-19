@@ -22,4 +22,36 @@ h1:after{
     height: 8px;
     background: linear-gradient(to right, #003366,transparent); 
 }
-  
+ 
+ .footer > p  {
+
+    color: #808080; /* 文字の色　#336666 */
+
+    font-size: 20px; /* 文字の大きさ　10px */
+
+    text-align: center; /* 文字の中央揃え */
+    
+    background-color:#F2F2F2;
+    
+    padding:0;
+    
+    margin-top:70px;
+    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   
+    
+}
+
+footera {
+
+    color: pink; /* 文字の色　#336666 */
+
+    font-size: 50px; /* 文字の大きさ　10px */
+    
+    background-color: grey;
+
+}
+
