@@ -27,30 +27,36 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/hakason15.css">
     </head>
-     
-    
+     <!--ヘッドここまで-->
+      
       
       
     <body>
-        <div class="container-fluied">
+    
+        <!--コンセプトここから-->
+        <!--<div class="container-fluied">-->
             <div class='row'>
                 <div class="top">
                     <div class ="a">
                         <div class='concept'>
                         
-                        <div class="senpai">What is LUNCH MEETER?</div>
+                            <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
                                 <p>Don’t you feel a little lonely having lunch alone and want to ask someone to have lunch with you?</p>
                                 <p>Would you like to learn a foreign language from a native or experience cross-cultural exchange?</p>
                                 <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
                                 <p>We offer you a new chance!!</p>
                             </div>
+                        
                         </div>
                     </div>
-
-                 </div>
+                </div>
                     <img class="img-responsive" src="images/top.jpg"> 
             </div>
+        </div>    
+        コンセプトここまで
+
+
 
             <h1 class="container_h1">LunchMeeter's point</h1>
             <br>
@@ -134,13 +140,12 @@
         
    
    
-    </div>
+        </div>
             
             <div class=buttom>
              <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-info']) !!}</br>
-                
+                </div>
             
         </footer>
     </body>
-    
 </html>
