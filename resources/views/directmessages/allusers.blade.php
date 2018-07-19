@@ -7,7 +7,7 @@
     <li class="main">
         <div class="media-body col-md-4 panel panel-info">
             <div>
-                
+                <br>
                 <img src="{{ Gravatar::src($sender->name, 500) }}" class="img-circle" alt="avatar" />
     
             <div class="name2">
