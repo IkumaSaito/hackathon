@@ -21,7 +21,7 @@
     
                         ?>
                         <li class="dropdown">
-
+                                <li>{!! link_to_route('users.intro', 'Concept', ['id' => Auth::id()]) !!}</li>
                                 <li>{!! link_to_route('users.explain2', 'How to use', ['id' => Auth::id()]) !!}</li>
                                 <li>{!! link_to_route('users.show', 'My profile', ['id' => Auth::id()]) !!}</li>
                                 <li>{!! link_to_route('posts.index', 'Timeline') !!}</li>
