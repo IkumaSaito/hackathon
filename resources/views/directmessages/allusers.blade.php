@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="{{ secure_asset('/css/allusers.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('/css/allusers.css') }}">
  
 @if (count($senders) > 0)
 <div class="aside">
@@ -7,8 +7,11 @@
     <li>
         <div class="media-body col-md-4 panel panel-info">
             <div>
-                <br>
-    <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" /><br>
+                
+            <br><img src="{{ Gravatar::src($sender->name, 500) }}" class="img-circle" alt="avatar" /><br>
+    
+      {{ $user->name }}
+    
 
             <div class="name2">
                 {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}  :

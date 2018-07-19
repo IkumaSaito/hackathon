@@ -35,7 +35,12 @@
         <div class="form-group">
                 @if ($user->avatar_filename)
                     <p>
-                        <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                        <figure class="main-img">
+                            @if(file_exists('storage/avatar/'.$user->avatar_filename))
+                            <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
+                            @else
+                            <img src="{{ Gravatar::src($user->name, 500) }}" class="img-circle" alt="avatar" />
+                            @endif
                         </figure>
                     </p>
                 @endif
