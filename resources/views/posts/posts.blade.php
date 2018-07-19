@@ -25,7 +25,12 @@
                     <p>{!! nl2br(e($post->content)) !!}</p>
                 </div>
                 <div>
-                    @if (Auth::id() == $post->user_id)
+
+                    @if (Auth::id(1))
+                        {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                        {!! Form::close() !!}
+                    @elseif (Auth::id() == $post->user_id)
                         {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                         {!! Form::close() !!}
