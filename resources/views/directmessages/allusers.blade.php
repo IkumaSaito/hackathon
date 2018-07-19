@@ -7,12 +7,9 @@
     <li class="main">
         <div class="media-body col-md-4 panel panel-info">
             <div>
-
-            <br>@if(file_exists('storage/avatar/'.$user->avatar_filename))
-                <img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
-                @else
-                <img src="{{ Gravatar::src($user->name, 500) }}" class="img-circle" alt="avatar" />
-                @endif<br>
+                
+                <img src="{{ Gravatar::src($sender->name, 500) }}" class="img-circle" alt="avatar" />
+    
             <div class="name2">
                 {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}  :
                 <?php echo count($unseens->where('user_id', $sender->id)); ?>    
