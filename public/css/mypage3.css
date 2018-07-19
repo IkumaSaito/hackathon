@@ -42,6 +42,7 @@ h3{
     font-family: "century gothic";
     font-size: 4rem;
     line-height: 1.4;
+    margin-top:0px;
 }
      
      
@@ -65,6 +66,7 @@ dl dt{
 h1{
     position: relative;
     padding: .3em;
+    margin:0px;
 }
 
 
@@ -108,7 +110,7 @@ h1:first-letter {
     
     .main-img img{
         width: 200px;
-        height: 250px;
+        height: 200px;
     }
         
     h3{
