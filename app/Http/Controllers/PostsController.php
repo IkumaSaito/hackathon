@@ -47,7 +47,7 @@ class PostsController extends Controller
     {
         $post = \App\Post::find($id);
 
-        if (\Auth::id(1)) {
+        if (\Auth::id() === 1) {
             $post->delete();
         }
         elseif(\Auth::id() === $post->user_id){
