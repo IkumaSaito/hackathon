@@ -4,7 +4,7 @@
 <div class="aside">
 <ul>
 @foreach ($senders as $key => $sender)
-    <li>
+    <li class="main">
         <div class="media-body col-md-4 panel panel-info">
             <div>
                 
@@ -44,6 +44,7 @@
         
     </li>
 @endforeach
+
 </ul>
 </div>
 

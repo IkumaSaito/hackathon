@@ -16,7 +16,7 @@
     <div class="text">
         <div class="first col-md-6">
             <br>
-            {!! Form::label('name', 'name: ') !!}
+            {!! Form::label('name', 'User name: ') !!}
             {!! Form::text('name',null, ['class' => 'form-control'])!!}
             <br>
             {!! Form::label('gender', 'gender: ') !!}

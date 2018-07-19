@@ -25,7 +25,12 @@
                     <p>{!! nl2br(e($post->content)) !!}</p>
                 </div>
                 <div>
+<<<<<<< HEAD
                     @if (Auth::id() == 1)
+=======
+
+                    @if (Auth::id(1))
+>>>>>>> 154392b63343be2cd1a9756d6e6cb4ff1f426e11
                         {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                         {!! Form::close() !!}
