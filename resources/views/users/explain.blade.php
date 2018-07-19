@@ -29,8 +29,6 @@
     For the first time users
   </div>
 
-<br>
-<br>
 
 <div id="main">
 <div class="top">
