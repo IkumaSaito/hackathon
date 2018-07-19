@@ -16,11 +16,11 @@
     <div class="text">
         <div class="first col-md-6">
             <br>
-            {!! Form::label('name', 'name: ') !!}
+            {!! Form::label('name', 'User name: ') !!}
             {!! Form::text('name',null, ['class' => 'form-control'])!!}
             <br>
             {!! Form::label('gender', 'gender: ') !!}
-            {!! Form::text('gender',null, ['class' => 'form-control']) !!}
+            {!! Form::text('gender',null,  ['class' => 'form-control']) !!}
         </div>
         <br>
         <div class="second col-md-6">

@@ -42,6 +42,7 @@ h3{
     font-family: "century gothic";
     font-size: 4rem;
     line-height: 1.4;
+    margin-top:0px;
 }
      
      
@@ -57,14 +58,15 @@ dl dt{
     font-size: 2rem;
 }
         
-.right{
-    margin-left: 75%;
-}
+/*.right{*/
+/*    margin-left: 75%;*/
+/*}*/
     
    
 h1{
     position: relative;
     padding: .3em;
+    margin:0px;
 }
 
 
@@ -108,7 +110,7 @@ h1:first-letter {
     
     .main-img img{
         width: 200px;
-        height: 250px;
+        height: 200px;
     }
         
     h3{
@@ -139,6 +141,7 @@ h1:first-letter {
     font-family: "bookman old";
     padding: 2px 10px;
     border-radius: 25px;
+    width: 100px;
 }
 
 
@@ -166,4 +169,6 @@ h1:first-letter {
     font-family: "bookman old";
     padding: 2px 10px;
     border-radius: 25px;
+    color: #FFF;
+    background-color: #75A9FF;
 }

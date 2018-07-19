@@ -33,7 +33,7 @@
                 {!! Form::open(['route' => 'signup.post']) !!}
                     <!--Required-->
                     <div class="form-group">
-                        {!! Form::label('name', 'Name') !!}
+                        {!! Form::label('name', 'User name') !!}
                         {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
                     <!--Required-->

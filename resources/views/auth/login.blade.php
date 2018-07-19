@@ -33,7 +33,7 @@
         <div class="login">
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">
-                    {!! Form::label('name', 'Name') !!}
+                    {!! Form::label('name', 'User name') !!}
                     {!! Form::text('name', old('name'), ['class' => 'form-control input-sm']) !!}
                 </div>
 

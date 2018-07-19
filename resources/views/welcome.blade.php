@@ -56,7 +56,9 @@
    
    <div class="col-md-5" id="right">
    <img class="img-responsive" src="images/welcome1.jpg">
-       <br type="submit">  {!! link_to_route('signup.get', 'ランチミーターとは',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
+       <br type="submit">  {!! link_to_route('users.introja', 'ランチミーターとは',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
+       
+       
    </div>
 </div>
 </div>

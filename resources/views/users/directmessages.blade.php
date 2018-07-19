@@ -4,12 +4,14 @@
 
  <link rel="stylesheet" href="{{asset('css/dm2.css') }}">
 
-    <div class="row">
+   
         <aside class="col-xs-3">
             <div class="panel panel-default">
 
 <!--これでユーザーリストを呼び出してます-->
-@include('directmessages.allusers', ['senders' => $senders])
+
+@include('users.direct', ['senders' => $senders])
+
 <!--ここまで-->
             </div>
         </aside>
@@ -33,7 +35,7 @@
                 {!! Form::open(['route' => 'directmessages.store']) !!}
                       <div class="form-group">
                           {!! Form::hidden('receiver_id', $id) !!}
-                          {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '5']) !!}
+                          {!! Form::textarea('content', old('content'), ["placeholder"=>"ex) Let's have a lunch from 12 PM to 13 PM today!"], ['class' => 'form-control', 'rows' => '5']) !!}
                           {!! Form::submit('Send', ['class' => 'btn btn-primary btn-block']) !!}
                       </div>
                   {!! Form::close() !!}

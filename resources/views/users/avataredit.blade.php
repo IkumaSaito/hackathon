@@ -41,6 +41,7 @@
                         @else
                         <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" />
                         @endif
+
                         </figure>
                     </p>
                 @endif

@@ -13,7 +13,7 @@
                 <div class="media-body">   
                     <div>
                 <figure class="main-img">
-                    @if(\Auth::user()->avatar_filename)
+                        @if(\Auth::user()->avatar_filename)
                         <img src="{{ $user->avatar_filename }}" class="img-responsive class="img-circle" alt="avatar" />
                         @else
                         <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" />
@@ -25,7 +25,12 @@
                     <p>{!! nl2br(e($post->content)) !!}</p>
                 </div>
                 <div>
-                    @if (Auth::id() == $post->user_id)
+                    
+                    @if (Auth::id() == 1)
+                        {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                        {!! Form::close() !!}
+                    @elseif (Auth::id() == $post->user_id)
                         {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                         {!! Form::close() !!}
@@ -42,4 +47,3 @@
     </div>
 @endforeach
 </ul>
-{!! $posts->render() !!}

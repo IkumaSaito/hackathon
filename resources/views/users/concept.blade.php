@@ -27,7 +27,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/hakason15.css">
     </head>
-     
+      @include('commons.navbar')
     
       
       
@@ -135,10 +135,7 @@
    
    
     </div>
-            
-            <div class=buttom>
-             <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-info']) !!}</br>
-                
+           
             
         </footer>
     </body>
