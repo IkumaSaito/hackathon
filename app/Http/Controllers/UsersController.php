@@ -10,6 +10,8 @@ use App\User;
 
 use App\Post;
 
+use JD\Cloudder\Facades\Cloudder;
+
 class UsersController extends Controller
 {
    public function index()
@@ -106,7 +108,7 @@ class UsersController extends Controller
     
     public function upload(Request $request)
     {
-       
+        $user =\Auth::user();
         $this->validate($request, [
              'file' => [ 
                 'required','file',
@@ -114,9 +116,9 @@ class UsersController extends Controller
             ]);
         if ($request->file('file')->isValid([])) {
             
-            $filename = $request->file->store('public/avatar');
-            $user = User::find(auth()->id());
-            $user->avatar_filename = basename($filename);
+            Cloudder::upload($request->file('file'));
+            $url = Cloudder::getResult()['url'];
+            $user->avatar_filename = $url;
             $user->save();
 
             return redirect('/');
