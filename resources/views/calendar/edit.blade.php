@@ -90,8 +90,6 @@ function getNthDay($year, $month, $day, $n) {
         
                 
                 <!--{{ $default = "N/A" }}-->
-                    {{ Form::open(['url' => '/plans']) }}
-                    {{ Form::hidden('user_id', Auth::id() )}}
 <?php
     $s = getSunday();
     $ye = substr($s, 0, 4);
@@ -99,13 +97,6 @@ function getNthDay($year, $month, $day, $n) {
     $da = substr($s, 6, 2);
     $pday = $ye . "-" . $mo . "-" . $da;
 ?>
-
-
-
-
-
-
-    
 
 
 <table class="cal">
