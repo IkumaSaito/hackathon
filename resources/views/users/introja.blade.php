@@ -31,7 +31,7 @@
       
       
     <body>
-        <div class="container-fluied">
+        <!--<div class="container-fluied">-->
             <div class='row'>
                 <div class="top">
                     <div class ="a">
@@ -52,6 +52,7 @@
                  </div>
                     <img class="img-responsive" src="images/top.jpg"> 
             </div>
+        </div>
 
             <h1 class="container_h1">LUNCH MEETERのポイント</h1>
             <br>
@@ -112,7 +113,7 @@
  
    
     <div class="row">
-        <div class="col-md-3 col-sm-offset-1">
+        <div class="col-md-3 col-md-offset-1 col-xs-4">
                 
                 <img src="images/&2.jpg" width="240px" height="500px">
                 <br>
