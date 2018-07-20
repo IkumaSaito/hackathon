@@ -45,7 +45,7 @@
                 <div class="row">
                 <div class="col-md-6">
                 <figure class="main-img">
-                @if(\Auth::user()->avatar_filename)
+                @if($user->avatar_filename)
                 <img src="{{ $user->avatar_filename }}" class="img-circle" alt="avatar" />
                 @else
                 <img src="{{ Gravatar::src($user->name, 500) }}" class="img-circle" alt="avatar" />
