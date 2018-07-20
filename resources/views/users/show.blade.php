@@ -96,10 +96,18 @@
                             </dl>
                         </div>
                     </div>
-            
+            </div>
 
+@if (Auth::id() == $user->id)
+    {!! link_to_route('calendar.edit', 'register your plan', ['user' => $user],['class' => 'btn btn-info btn-sm']) !!}
+@endif
+
+            @include('calendar.calendar')
             
-                    
+                    <div class="right">
+                    @if (Auth::id() != $user->id)
+                        {!! link_to_route('users.directmessages', "DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
+                    @endif
                     </div>
                 </div>
             </h2>
