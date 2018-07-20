@@ -121,16 +121,16 @@
                プロフィールを作りましょう。
                 </div>
         
-                <img src="images/yazirushi.jpg" width="100" height="60">
+                <img src="images/yazirushi.jpg" width="50" height="30">
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-4">
             <img src="images/&3.jpg" width="240px" height="500px"><br>
                   ランチしたい人を見つけましょう。
              </div>
         
-                <img src="images/yazirushi.jpg" width="100" height="60">
+                <img src="images/yazirushi.jpg" width="50" height="30">
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-4">
  
            <img src="images/&4.jpg"width="240px" height="500px"><br>
                 メッセージを送りましょう。
