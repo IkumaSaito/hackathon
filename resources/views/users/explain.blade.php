@@ -77,7 +77,7 @@
 
 <div id="botan" class="col-md-offset-5 col-md-2 col-xs-offset-4 col-xs-4">
   
- {!! link_to_route('users.show', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-info']) !!}
+ {!! link_to_route('users.edit', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-info']) !!}
 </div>
 </body>
 </html>
