@@ -19,8 +19,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        @include('commons.navbar')
-        @include('commons.error_messages')
-        @yield('content')
+       
+        
+        @if (strpos(Request::url(),'intro')=== false) 
+            @include('commons.navbar')
+            @include('commons.error_messages')
+        @endif
+       
+        @yield('content') 
     </body>
 </html>
