@@ -41,7 +41,7 @@
         </section>
      
       
-      <h2>⇩This is slideshow. Please take a look to the end⇩</h2><br>
+     
 <div id="carousel-example" class="carousel slide" data-ride="carousel">
   <!-- スライドの内容 -->
   <div class="carousel-inner">
