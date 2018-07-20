@@ -27,11 +27,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/hakason15.css">
     </head>
+      @include('commons.navbar')
     
       
       
     <body>
-        <!--<div class="container-fluied">-->
+        <div class="container-fluied">
             <div class='row'>
                 <div class="top">
                     <div class ="a">
@@ -39,12 +40,10 @@
                         
                         <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
-<p>「1人で過ごすランチタイムはちょっと寂しい」「気軽にランチに誘いたい」という思いと、
-「生の外国語を勉強したい」「気軽に異文化交流をしてみたい」という思い。
-この2つの願いを叶えられるアプリが“LUNCH MEETER”です。
-        コンセプトは"LUNCH×MEET"。 
-        知らない言葉、新しい出会いを提供します。
-</p>
+                                <p>Don’t you feel a little lonely having lunch alone and want to ask someone to have lunch with you?</p>
+                                <p>Would you like to learn a foreign language from a native or experience cross-cultural exchange?</p>
+                                <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
+                                <p>We offer you a new chance!!</p>
                             </div>
                         </div>
                     </div>
@@ -52,9 +51,8 @@
                  </div>
                     <img class="img-responsive" src="images/top.jpg"> 
             </div>
-        </div>
 
-            <h1 class="container_h1">LUNCH MEETERのポイント</h1>
+            <h1 class="container_h1">LunchMeeter's point</h1>
             <br>
             <br>
             <br>
@@ -62,12 +60,12 @@
             
             
             <div class="row">
-               <div class="col-md-4 col-sm-offset-2">
+               <div class="col-md-4 col-md-offset-2">
                        <img src="images/hakason2.jpg" class="img-circle_lm" 
                 alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>①簡単登録！</p>
+                       <p>①Easy to register!</p>
                </div>
             </div>
             
@@ -75,9 +73,9 @@
             
             <div class="row">
 
-               <div class="col-md-4 col-sm-offset-2">    
-                       <p>②ニックネーム登録で<br>実名はでません！</p>
-
+               <div class="col-md-4 col-md-offset-2">    
+                       <p>②Please enter your nickname!</p>
+                       
                </div>
                <div class="col-md-6">
                        <img src="images/nickname.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
@@ -86,18 +84,18 @@
             
             
             <div class="row">
-               <div class="col-md-4 col-sm-offset-2">
+               <div class="col-md-4 col-md-offset-2">
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
-                       <p>③ネイティブスピーカーと<br>喋ろう！
+                       <p>③You can talk with forigners!<br>
                        </p>
                </div>
             </div>
             
             
             
-            <h1 class="container_h1">使い方</h1>
+            <h1 class="container_h1">How to use</h1>
             <br>
             <br>
             <br>
@@ -113,27 +111,23 @@
  
    
     <div class="row">
+    
         <div class="col-md-3 col-md-offset-1 col-xs-4">
-                
                 <img src="images/&2.jpg" width="240px" height="500px">
                 <br>
-               
-               プロフィールを作りましょう。
+               Make a profile.
                 </div>
         
                 <img src="images/yazirushi.jpg" width="50" height="30">
-
+        
         <div class="col-md-3 col-xs-4">
             <img src="images/&3.jpg" width="240px" height="500px"><br>
-                  ランチしたい人を見つけましょう。
+                  Find a person.
              </div>
-        
-                <img src="images/yazirushi.jpg" width="50" height="30">
-
+             <img src="images/yazirushi.jpg" width="50" height="30">
         <div class="col-md-3 col-xs-4">
- 
-           <img src="images/&4.jpg"width="240px" height="500px"><br>
-                メッセージを送りましょう。
+             <img src="images/&4.jpg"width="240px" height="500px"><br>
+                Send a message.
          </div>
         
         
@@ -141,22 +135,9 @@
    
    
     </div>
-            
-            <div class=buttom>
-             <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-info']) !!}</br>
-                
+           
             
         </footer>
-        <br>
-        <br>
-        <br>
-        <div class="footer">
-           <p>Copyright © 2018  Amigos.　
-
-</p> 
-            
-            </div>
-   
     </body>
     
 </html>

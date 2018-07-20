@@ -30,10 +30,30 @@ ul {
     max-width: 40px;
 }
 
+@media screen and (max-width:415px){
 .name{
-    font-size: 20px;
+    font-size: 10px;
+}
+
+.main {
+    margin-bottom: 10px;
+}
 }
 
 .under{
     margin-bottom: 10px;
+}
+
+@media screen and (min-width: 900px) {  
+.media-body{
+    max-width: 32%;
+}
+}
+
+.name2{
+    font-size: 20px;
+}
+
+.media-body{
+    min-height: 250px;
 }

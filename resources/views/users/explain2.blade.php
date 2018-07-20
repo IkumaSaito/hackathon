@@ -14,19 +14,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Bootstrap JavaScript-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        
 
 <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
 </head>
-
+  @include('commons.navbar')
 <body>
 
 <!--紹介ページのトップ部分-->
-
-<br>
-<br>
-
   <div class="name">
-    For the first time users
+   How to use 
   </div>
 
 
@@ -34,7 +32,16 @@
 <div class="top">
  
    <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10 ">
-     <h2>↓This is slideshow.Please take a look to the end↓</h2>
+     <div id="slideshow">
+      <div class="slideContents">
+        <section id="slide01">
+          <div class="contents">
+            <h1><span>※SUPER IMPORTANT※</span></h1>
+          </div>
+        </section>
+     
+      
+      <h2>⇩This is slideshow. Please take a look to the end⇩</h2><br>
 <div id="carousel-example" class="carousel slide" data-ride="carousel">
   <!-- スライドの内容 -->
   <div class="carousel-inner">
@@ -65,19 +72,18 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
   </a>
 </div>
-</div>
-
-
-</div>
-</div>
-
 <br>
 <br>
-
-
-<div id="botan" class="col-md-offset-5 col-md-2 col-xs-offset-4 col-xs-4">
-  
- {!! link_to_route('users.edit', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-info']) !!}
 </div>
+
+
+</div>
+</div>
+
+
+
+
+
 </body>
+
 </html>

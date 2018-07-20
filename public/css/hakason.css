@@ -1,11 +1,19 @@
 
-@media screen and (min-width: 1200px) {
-    .top {
-        margin-top:0px;  
-        margin-bottom: 400px;
+/*@media screen and (min-width: 1200px) {*/
+/*    .top {*/
+/*        margin-top:0px;  */
+/*        margin-bottom: 400px;*/
         
-    }
+/*    }*/
+/*}*/
+
+.container-fluied{
+    padding: 0px;
+    margin: 0px;
+    font-size:0;
+    display:inline-block;
 }
+
 
 .concept{
     text-align: center;
@@ -15,19 +23,16 @@
     position: relative;
     z-index: 2;
     font-size: 3vmin;
-
-    
-
     padding-bottom: 40px; 
 
 }
 
-.top{
-    z-index: 2;
-    position: relative;
-
-}
-  
+/*.top{*/
+    /*z-index: 2;*/
+    /*position: relative;*/
+    /*display: flex;*/
+/*}*/
+ 
 header nav ul {
   height: 60px;
   margin-top: 0;
@@ -35,10 +40,10 @@ header nav ul {
  
 }
 
-/*body{*/
-/*    padding: 0px;*/
-/*    margin: 0px;*/
-/*}*/
+body{
+    /*padding: 0px;*/
+    margin: 0px;
+}
 
 
 .header-list {
@@ -66,17 +71,17 @@ header nav ul {
 
 .img-responsive{
   position:absolute; 
-  z-index: 1; 
-
-  width: 100%
-  
-
-  
-
+  /*z-index: 1; */
 }
 
+.img-responsive img{
+    width: 100%;
+}
+
+
+
 .a{
-    padding:0em 0 3em;
+  
     width:58%;
     margin:10px auto;
     padding-top: 0px;
@@ -131,9 +136,12 @@ header nav ul {
   padding: 0px;
  }
  
- 
+  
  .row{
-  display: flex;
+   display: flex;   
+   /*上これがキー*/
+   
+   /*これが下部分のcss*/
   justify-content: center;
   align-items: center;
   font-size:40px;
@@ -145,6 +153,7 @@ header nav ul {
     border-radius: 50%;
     width: 250px;
     height: 250px;
+    text-align: center;
 }  
   
   .btn{
@@ -175,12 +184,11 @@ h1{
   padding-top: 50px;
  
 }
-  
-  
 
-  
-   
-   
-   
-   
-   
+/*div.row{*/
+/*    padding: 0px;*/
+/*}*/
+
+.navbar{
+    margin-top: -20px;
+}

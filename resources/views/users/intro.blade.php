@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="utf-8">
     <head>
@@ -29,29 +27,36 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/hakason15.css">
     </head>
-    
+     <!--ヘッドここまで-->
+      
       
       
     <body>
-        <div class="container-fluied">
+    
+        <!--コンセプトここから-->
+        <!--<div class="container-fluied">-->
             <div class='row'>
                 <div class="top">
                     <div class ="a">
                         <div class='concept'>
                         
-                        <div class="senpai">What is LUNCH MEETER?</div>
+                            <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
-                                <p>Don’t you feel a little lonely having lunch alone and wanna ask someone to have lunch with you?</p>
-                                <p>Don’t you wanna learn a foreign language from a native or experience cross-cultural exchange?</p>
+                                <p>Don’t you feel a little lonely having lunch alone and want to ask someone to have lunch with you?</p>
+                                <p>Would you like to learn a foreign language from a native or experience cross-cultural exchange?</p>
                                 <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
-                                <p>We offer you unknown language and new chance!!</p>
+                                <p>We offer you a new chance!!</p>
                             </div>
+                        
                         </div>
                     </div>
-
-                 </div>
+                </div>
                     <img class="img-responsive" src="images/top.jpg"> 
             </div>
+        </div>    
+        <!--コンセプトここまで-->
+
+
 
             <h1 class="container_h1">LunchMeeter's point</h1>
             <br>
@@ -61,7 +66,7 @@
             
             
             <div class="row">
-               <div class="col-md-4 col-sm-offset-2">
+               <div class="col-md-4 col-md-offset-2">
                        <img src="images/hakason2.jpg" class="img-circle_lm" 
                 alt="Cinque Terre" width="100%">
                </div>
@@ -74,8 +79,8 @@
             
             <div class="row">
 
-               <div class="col-md-4 col-sm-offset-2">    
-                       <p>②You can use nickname!</p>
+               <div class="col-md-4 col-md-offset-2">    
+                       <p>②Please enter your nickname!</p>
                        
                </div>
                <div class="col-md-6">
@@ -85,7 +90,7 @@
             
             
             <div class="row">
-               <div class="col-md-4 col-sm-offset-2">
+               <div class="col-md-4 col-md-offset-2">
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="col-md-6">    
@@ -112,24 +117,22 @@
  
    
     <div class="row">
-        <div class="col-md-3 col-sm-offset-1">
-                
+    
+        <div class="col-md-3 col-md-offset-1 col-xs-4">
                 <img src="images/&2.jpg" width="240px" height="500px">
                 <br>
                Make a profile.
                 </div>
         
-                →
-        <div class="col-md-3">
+                <img src="images/yazirushi.jpg" width="50" height="30">
+        
+        <div class="col-md-3 col-xs-4">
             <img src="images/&3.jpg" width="240px" height="500px"><br>
                   Find a person.
              </div>
-        
-        
-        →
-        <div class="col-md-3">
- 
-           <img src="images/&4.jpg"width="240px" height="500px"><br>
+             <img src="images/yazirushi.jpg" width="50" height="30">
+        <div class="col-md-3 col-xs-4">
+             <img src="images/&4.jpg"width="240px" height="500px"><br>
                 Send a message.
          </div>
         
@@ -137,13 +140,12 @@
         
    
    
-    </div>
+        </div>
             
             <div class=buttom>
              <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-info']) !!}</br>
-                
+                </div>
             
         </footer>
     </body>
-    
 </html>

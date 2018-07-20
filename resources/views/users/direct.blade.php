@@ -6,16 +6,19 @@
 @foreach ($senders as $key => $sender)
     <li>
         <div class="media-body">
-            <div>
 
-    <img src="{{ Gravatar::src($user->email, 500) }}" class="img-circle" alt="avatar" /><br>
-
+                    @if($user->avatar_filename)
+                    <img src="{{ $sender->avatar_filename }}" class="img-responsive img-circle" alt="avatar" />
+                    @else
+                    <img src="{{ Gravatar::src($sender->name, 500) }}" class="img-responsive img-circle" alt="avatar" />
+                    @endif
+ 
             <div class="name">
                 {!! link_to_route('users.directmessages', $sender->name, ['id' => $sender->id]) !!}  :
                 <?php echo count($unseens->where('user_id', $sender->id)); ?>    
             </div>
             
-            </div>
+           
         </div>
     </li>
 @endforeach
