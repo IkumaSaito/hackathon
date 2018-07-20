@@ -22,11 +22,8 @@
 
 <!--紹介ページのトップ部分-->
 
-<br>
-<br>
-
-  <div class="name">
-    For the first time users
+ <div class="name">
+   How to use 
   </div>
 
 
@@ -34,7 +31,14 @@
 <div class="top">
  
    <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10 ">
-     <h2>↓This is slideshow.Please take a look to the end↓</h2>
+     <div id="slideshow">
+      <div class="slideContents">
+        <section id="slide01">
+          <div class="contents">
+            <h1><span>※SUPER IMPORTANT※</span></h1>
+          </div>
+        </section>
+     
 <div id="carousel-example" class="carousel slide" data-ride="carousel">
   <!-- スライドの内容 -->
   <div class="carousel-inner">
