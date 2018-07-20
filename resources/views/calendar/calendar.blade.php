@@ -1,11 +1,9 @@
 <?php
-
 //今日を取得
 function getToday($date = 'Y-m-d') {
     $today = new DateTime();
     return $today->format($date);
 }
-
 //本日かどうかチェック
 function isToday($year, $month, $day) {
 	
@@ -16,7 +14,6 @@ function isToday($year, $month, $day) {
 	}
 	return false;
 }
-
 // 今週の日曜日の日付を返す
 function getSunday() {
     $today = new DateTime();
@@ -34,7 +31,6 @@ function getSunday() {
     $next_prev->modify("-{$d} day");
     return $next_prev->format('Ymd');
 }
-
 //N日（週）+か-する関数
 function getNthDay($year, $month, $day, $n) {
  
@@ -85,9 +81,8 @@ function getNthDay($year, $month, $day, $n) {
  
 			}
 		}
-	
 ?>
-	
+
 <table class="cal">
     <tr>
         <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>
@@ -107,45 +102,32 @@ function getNthDay($year, $month, $day, $n) {
         <?php echo $table; ?>
     </tr>
     <tr>
-            <td>
-                {{Form::select('sun', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('mon', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('tue', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('wed', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('thu', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('fri', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('sat', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-    </tr>
-
-            <center>
-                {{Form::submit()}}
-                {{Form::close()}}
-            </center>
-
-    <tr>
-        <td>
+        @for ($i = 0; $i < 7; $i++)
+            <?php
+                $s = getSunday();
+                $ye = substr($s, 0, 4);
+                $mo = substr($s, 4, 2);
+                $da = substr($s, 6, 2) + $i;
+                $pday = $ye . "-" . $mo . "-" . $da;
+            ?>
             
-        </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+            <td>
+            @foreach ($plans as $plan)
+                
+                @if ($pday == $plan->date)
+                    {{ $plan->freetime }}
+                        
+                    {!! Form::open(['route' => ['plans.destroy', $plan->id], 'method' => 'delete']) !!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                    {!! Form::close() !!}
+                    
+                @endif
+                
+            @endforeach
+            </td>
+        @endfor
     </tr>
+    
 </table>
 
 
@@ -154,6 +136,7 @@ table {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
+    border-style: none;
 }
 table th {
     background: #EEEEEE;
@@ -168,5 +151,4 @@ table td {
 }
 </style>
 
-<br>
-<br>
+

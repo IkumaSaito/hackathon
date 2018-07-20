@@ -38,7 +38,6 @@ class DirectmessagesController extends Controller
             'content' => $request->content,
         ]);
         
-        // echo "Your message had been successfully sent.";
         return redirect()->back();
     }
     
