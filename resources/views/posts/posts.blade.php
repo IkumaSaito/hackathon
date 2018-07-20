@@ -14,7 +14,7 @@
                     <div>
                 <figure class="main-img">
                         @if(\Auth::user()->avatar_filename)
-                        <img src="{{ $user->avatar_filename }}" class="img-responsive class="img-circle" alt="avatar" />
+                        <img src="{{ $user->avatar_filename }}" class="img-responsive img-circle" alt="avatar" />
                         @else
                         <img src="{{ Gravatar::src($user->name, 500) }}" class="img-responsive img-circle" alt="avatar" />
                         @endif
