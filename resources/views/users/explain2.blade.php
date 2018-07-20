@@ -14,6 +14,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Bootstrap JavaScript-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        
 
 <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
 </head>
@@ -30,7 +32,16 @@
 <div class="top">
  
    <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10 ">
-      <h2>↓This is slideshow. Please take a look to the end↓</h2><br>
+     <div id="slideshow">
+      <div class="slideContents">
+        <section id="slide01">
+          <div class="contents">
+            <h1><span>※SUPER IMPORTANT※</span></h1>
+          </div>
+        </section>
+     
+      
+      <h2>⇩This is slideshow. Please take a look to the end⇩</h2><br>
 <div id="carousel-example" class="carousel slide" data-ride="carousel">
   <!-- スライドの内容 -->
   <div class="carousel-inner">
