@@ -14,7 +14,12 @@ class CreatePlansTable extends Migration
             $table->date('date');
             $table->string('freetime');
             $table->timestamps();
+            
+            $table->unique(['user_id', 'date']);
         });
+        
+        
+        
     }
 
     public function down()

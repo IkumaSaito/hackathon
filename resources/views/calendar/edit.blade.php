@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <?php
 //今日を取得
 function getToday($date = 'Y-m-d') {
@@ -81,9 +85,28 @@ function getNthDay($year, $month, $day, $n) {
  
 			}
 		}
-	
-	
 ?>
+
+        
+                
+                <!--{{ $default = "N/A" }}-->
+                    {{ Form::open(['url' => '/plans']) }}
+                    {{ Form::hidden('user_id', Auth::id() )}}
+<?php
+    $s = getSunday();
+    $ye = substr($s, 0, 4);
+    $mo = substr($s, 4, 2);
+    $da = substr($s, 6, 2);
+    $pday = $ye . "-" . $mo . "-" . $da;
+?>
+
+
+
+
+
+
+    
+
 
 <table class="cal">
     <tr>
@@ -103,37 +126,71 @@ function getNthDay($year, $month, $day, $n) {
     <tr>
         <?php echo $table; ?>
     </tr>
-    
-{!! Form::open(['route' => 'plans.store']) !!}    
     <tr>
+        @for ($i = 0; $i < 7; $i++)
+            <?php
+                $s = getSunday();
+                $ye = substr($s, 0, 4);
+                $mo = substr($s, 4, 2);
+                $da = substr($s, 6, 2) + $i;
+                $pday = $ye . "-" . $mo . "-" . $da;
+            ?>
+            
             <td>
-                {{Form::select('sun', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
+            @if ($plans)
+                <?php $planCount = 0 ?>
+                @foreach ($plans as $plan)
+                    @if ($pday == $plan->date)
+                        <?php $planCount = $planCount+1 ?>
+                        
+                        {{ $plan->freetime }}
+                            
+                        {!! Form::open(['route' => ['plans.destroy', $plan->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                        {!! Form::close() !!}
+                        
+                        <!--{{ $default = "N/A" }}-->
+                        
+                        {!! Form::open(['route' => ['plans.update', $plan->id], 'method' => 'put']) !!}
+                        {{ Form::hidden('user_id', Auth::id() )}}
+                        {{ Form::hidden('date', $pday )}}
+                                
+                        {{ Form::select('freetime', [
+                            'N/A' => 'N/A',
+                            '11:00-12:00' => '11:00-12:00',
+                            '12:00-13:00' => '12:00-13:00',
+                            '13:00-14:00' => '13:00-14:00']
+                            ,$default)}}
+    
+                        {!! Form::submit('Update', ['class' => 'btn btn-primary btn-xs']) !!}
+                        {!! Form::close() !!}
+    
+                    @endif
+                                            
+                @endforeach
+                @if ($planCount==0)
+                        {{ Form::open(['url' => '/plans']) }}
+                        {{ Form::hidden('user_id', Auth::id() )}}
+                        {{ Form::hidden('date', $pday )}}
+                            
+                        {{ Form::select('freetime', [
+                            'N/A' => 'N/A',
+                            '11:00-12:00' => '11:00-12:00',
+                            '12:00-13:00' => '12:00-13:00',
+                            '13:00-14:00' => '13:00-14:00']
+                            ,$default)}}
+                        {!! Form::submit() !!}    
+                        {!! Form::close() !!}
+                @endif
+                {{ $pday++ }}
+            @else
+                    フォーム
+            @endif
             </td>
-            <td>
-                {{Form::select('mon', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('tue', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('wed', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('thu', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('fri', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
-            <td>
-                {{Form::select('sat', ['11:00-12:00', '12:00-13:00', '13:00-14:00'])}}
-            </td>
+        @endfor
     </tr>
+    
 </table>
-        {{Form::submit()}}
-        {{Form::close()}}
-
-
-
 
 
 <style type="text/css">
@@ -141,7 +198,7 @@ table {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-    border-style:;    
+    border-style: none;
 }
 table th {
     background: #EEEEEE;
@@ -156,4 +213,6 @@ table td {
 }
 </style>
 
-<br>
+{!! link_to_route('users.show', "戻る", ['id' => Auth::id()]) !!}
+
+@endsection

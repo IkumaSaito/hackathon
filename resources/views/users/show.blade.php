@@ -97,10 +97,12 @@
                         </div>
                     </div>
             </div>
-            
-            {!! link_to_route('calendar.calendar',"こっちがカレンダーです",['id' => $user->id]) !!}
-            
-           @include('calendar.calendar')
+
+@if (Auth::id() == $user->id)
+    {!! link_to_route('calendar.edit', 'register your plan', ['user' => $user],['class' => 'btn btn-info btn-sm']) !!}
+@endif
+
+            @include('calendar.calendar')
             
                     <div class="right">
                     @if (Auth::id() != $user->id)

@@ -10,6 +10,8 @@ use App\User;
 
 use App\Post;
 
+use App\Plan;
+
 class UsersController extends Controller
 {
    public function index()
@@ -17,10 +19,13 @@ class UsersController extends Controller
     if (\Auth::check()){
         $user = \Auth::user();
         $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-
+        $id = $user->id;
+        $plans = Plan::where('user_id', $id)->get();
+        
         $data = [
             'user' => $user,
             'posts' => $posts,
+            'plans' => $plans,
         ];
 
         
@@ -39,11 +44,14 @@ class UsersController extends Controller
          if (\Auth::check()){    
         $user = User::find($id);
         $posts = Post::orderBy('id','desc')->paginate(10);
+        $plans = Plan::where('user_id', $id)->get();
+        
                  
         $data = [
             'user' => $user,
             'posts' => $posts,
-        ];
+            'plans' => $plans,
+         ];
 
         $data += $this->counts($user);
         

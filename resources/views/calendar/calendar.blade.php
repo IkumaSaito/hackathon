@@ -81,20 +81,7 @@ function getNthDay($year, $month, $day, $n) {
  
 			}
 		}
-	
-	
 ?>
-
-@if (Auth::id() == $user->id)
-    {!! link_to_route('calendar.edit', 'edit', ['user' => $user],['class' => 'btn btn-info btn-sm']) !!}
-@endif
-
-
-@foreach ($plans as $plan)
-
-    <?php $plandate = substr($plan->date, -2, 2); ?>
-
-@endforeach
 
 <table class="cal">
     <tr>
@@ -114,54 +101,35 @@ function getNthDay($year, $month, $day, $n) {
     <tr>
         <?php echo $table; ?>
     </tr>
-    
     <tr>
-
-<?php $year_month_day = getSunday(); 
-    $mon = substr($year_month_day,  -2, 2);
-        
-    for ($i = 0; $i < 7; $i++)
-        $wkday = $mon + $i;
-        echo $wkday;
-        
-    ;?>
-  
-    </tr>
-    
-    <tr>    
-        <td>
-            <?php echo $t-6; ?>
+        @for ($i = 0; $i < 7; $i++)
+            <?php
+                $s = getSunday();
+                $ye = substr($s, 0, 4);
+                $mo = substr($s, 4, 2);
+                $da = substr($s, 6, 2) + $i;
+                $pday = $ye . "-" . $mo . "-" . $da;
+            ?>
             
-        </td>
-        <td>
-            <?php echo $t-5; ?>
-        </td>
-        <td>
-            @if ($t-4 == $plandate)
-                {{ $plan->freetime }}
-            @endif
-        </td>
-        <td>
-            <?php echo $t-3; ?>
-        </td>
-        <td>
-            <?php echo $t-2; ?>
-        </td>
-        <td>
-            <?php echo $t-1; ?>
-        </td>
-        <td>
-            <?php echo $t; ?>
-        </td>
+            <td>
+            @foreach ($plans as $plan)
+                
+                @if ($pday == $plan->date)
+                    {{ $plan->freetime }}
+                        
+                    {!! Form::open(['route' => ['plans.destroy', $plan->id], 'method' => 'delete']) !!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                    {!! Form::close() !!}
+                    
+                @endif
+                
+            @endforeach
+            </td>
+        @endfor
     </tr>
-    
-    
     
 </table>
 
-
-
-{!! link_to_route('users.show', "戻る", ['id' => $user->id]) !!}
 
 <style type="text/css">
 table {
@@ -183,4 +151,4 @@ table td {
 }
 </style>
 
-<br>
+

@@ -31,7 +31,7 @@ class User extends Authenticatable
     
     public function plans()
     {
-        return $this->hasMany(Plans::class);
+        return $this->hasMany(Plan::class);
     }
     
 }
