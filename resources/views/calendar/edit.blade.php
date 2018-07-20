@@ -182,7 +182,7 @@ function getNthDay($year, $month, $day, $n) {
                         {!! Form::submit() !!}    
                         {!! Form::close() !!}
                 @endif
-                {{ $pday++ }}
+                <!--{{ $pday++ }}-->
             @else
                     フォーム
             @endif
