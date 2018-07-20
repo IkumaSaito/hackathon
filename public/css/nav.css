@@ -13,6 +13,7 @@
 
 .navbar-default .navbar-nav>li>a.logout:link,
 .navbar-default .navbar-nav>li>a.logout:active,
+.navbar-default .navbar-nav>li>a.logout:hover,
 .navbar-default .navbar-nav>li>a.logout:visited  {
     color: #FF0066;
     font-weight: bold;

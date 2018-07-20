@@ -14,24 +14,46 @@
     display:inline-block;
 }
 
+.top {
+    position: relative;
+}
 
 .concept{
+    position: absolute;
+    top:40%;
+    left:50%;
     text-align: center;
     color: white;
     background-color: rgba(40,40,40,0.7);
     font-family: serif;
-    position: relative;
     z-index: 2;
     font-size: 3vmin;
     padding-bottom: 40px; 
-
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
 }
 
-/*.top{*/
-    /*z-index: 2;*/
-    /*position: relative;*/
-    /*display: flex;*/
-/*}*/
+.img-respons{
+    width: 100%;
+    max-height:auto;
+    position:relative;
+}
+
+
+
+.a{
+  
+    width:58%;
+    margin:10px auto;
+    padding-top: 0px;
+    padding-bottom: 10px;
+   
+}
+
+
  
 header nav ul {
   height: 60px;
@@ -69,25 +91,6 @@ body{
   clear: both;
 }
 
-.img-responsive{
-  position:absolute; 
-  /*z-index: 1; */
-}
-
-.img-responsive img{
-    width: 100%;
-}
-
-
-
-.a{
-  
-    width:58%;
-    margin:10px auto;
-    padding-top: 0px;
-    padding-bottom: 10px;
-   
-}
 
 .senpai {
   margin: 0px;
@@ -174,21 +177,68 @@ body{
   @media screen and (max-width: 480px) {
     
     .message{
-      font-size:5px;
+      font-size:10px;
+      margin: 0px;
+     
     }
     
+    .concept{
+        margin-top: 20px;
+    }
+    .senpai{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    .container_h1{
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
     
+    .img-circle_lm{
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    .naiyou{
+        font-size: 20px;
+    }
+    
+    .uri{
+        margin-top: 0px;
+    }
+    
+    .sanko{
+        max-width: 60px;
+        max-height: 120px;
+    }
+   
+   .niko{
+       max-height: 15px;
+       max-width:  25px;     
   }
- 
-h1{
-  padding-top: 50px;
- 
+  
+  .saigo{
+      font-size: 10px;
+      
+  }
+  
 }
 
-/*div.row{*/
-/*    padding: 0px;*/
-/*}*/
-
-.navbar{
-    margin-top: -20px;
+@media screen and (min-width: 900px) {
+h4{
+    font-size: 30px;
 }
+}
+
+div.row{
+    padding: 0px;
+}
+
+
+@media screen and (max-width: 480px) {
+
+.sita{
+    font-size: 10px;
+    
+}
+}    
