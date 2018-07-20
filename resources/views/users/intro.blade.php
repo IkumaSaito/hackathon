@@ -1,60 +1,29 @@
-<!DOCTYPE html>
-<html lang="utf-8">
-    <head>
-        <meta charset="utf-8">
-        <title>Introduction</title>
-        <!--Lunch menter-->
-        <link href="https://fonts.googleapis.com/css?family=Arvo|Galada|Lobster|Londrina+Outline|Pacifico|Playfair+Display|Roboto|Sigmar+One|Varela+Round" rel="stylesheet">
-        <!--consept-->
-        <link href="https://fonts.googleapis.com/css?family=Cormorant+SC|Galada|Harmattan|Pacifico|Playfair+Display|Roboto|Roboto+Mono" rel="stylesheet">
-        <!--meet *people-->
-        <link href="https://fonts.googleapis.com/css?family=Cormorant+SC|Galada|Harmattan|Pacifico|Petit+Formal+Script|Playfair+Display|Roboto|Roboto+Mono" rel="stylesheet">
-        　　　<!--コンセプト-->
-        　　　　<link href="https://fonts.googleapis.com/css?family=Cormorant+SC|Galada|Harmattan|Pacifico|Petit+Formal+Script|Playfair+Display|Roboto|Roboto+Mono|Shrikhand" rel="stylesheet">
-        <!--p-->
-        <link href="https://fonts.googleapis.com/css?family=Cormorant+SC|Galada|Harmattan|Pacifico|Petit+Formal+Script|Playfair+Display|Roboto|Roboto+Mono|Shrikhand" rel="stylesheet">
-        <link rel="stylesheet" href="css/hakason.css">
-   
-        <!--jpfont-->
-        <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
-        <!--日本語-->
-        <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
-        <!--簡単登録無料のところ-->
-        <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/hakason15.css">
-    </head>
-     <!--ヘッドここまで-->
-      
-      
-      
-    <body>
-    
-        <!--コンセプトここから-->
-        <!--<div class="container-fluied">-->
+@extends('layouts.app')
+
+@section('content')
+        <div class="container-fluid">
             <div class='row'>
-                <div class="top">
-                    <div class ="a">
-                        <div class='concept'>
+                <div class="col-md-12 col-xs-12">
+                    <div class="top">
                         
+                        <img class="img-respons" src="images/top.jpg"> 
+                        
+                        <div class='concept col-md-10 col-xs-12'>
                             <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
                                 <p>Don’t you feel a little lonely having lunch alone and want to ask someone to have lunch with you?</p>
                                 <p>Would you like to learn a foreign language from a native or experience cross-cultural exchange?</p>
                                 <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
                                 <p>We offer you a new chance!!</p>
+                                
+                               
+                                <p><div class="sita">⇩⇩</div></p>
+                                 <p>Go to down</p>
                             </div>
-                        
                         </div>
                     </div>
                 </div>
-                    <img class="img-responsive" src="images/top.jpg"> 
             </div>
-        </div>    
-        <!--コンセプトここまで-->
 
 
 
@@ -66,38 +35,35 @@
             
             
             <div class="row">
-               <div class="col-md-4 col-md-offset-2">
-                       <img src="images/hakason2.jpg" class="img-circle_lm" 
-                alt="Cinque Terre" width="100%">
+               <div class="col-md-4 col-md-offset-2 col-xs-offset-1 col-xs-4">
+                       <img src="images/hakason2.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
-               <div class="col-md-6">    
+               <div class="naiyou col-md-6 col-xs-7">    
                        <p>①Easy to register!</p>
                </div>
             </div>
             
             
-            
             <div class="row">
-
-               <div class="col-md-4 col-md-offset-2">    
+               <div class="naiyou col-md-4 col-md-offset-2 col-xs-offset-1 col-xs-6">    
                        <p>②Please enter your nickname!</p>
-                       
                </div>
-               <div class="col-md-6">
+               <div class="col-md-7 col-xs-5">
                        <img src="images/nickname.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
             </div>
             
             
             <div class="row">
-               <div class="col-md-4 col-md-offset-2">
+               <div class="col-md-4 col-md-offset-2 col-xs-offset-1 col-xs-4">
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
-               <div class="col-md-6">    
+               <div class="naiyou col-md-7">    
                        <p>③You can talk with forigners!<br>
                        </p>
                </div>
             </div>
+      
             
             
             
@@ -110,42 +76,60 @@
             
 
         
-        <footer>
+
             
-            </div>
+           
             
  
    
     <div class="row">
     
-        <div class="col-md-3 col-md-offset-1 col-xs-4">
-                <img src="images/&2.jpg" width="240px" height="500px">
+        <div class="col-md-3 col-md-offset-1 col-xs-3">
+                <img class="sanko" src="images/&2.jpg" width="240px" height="500px">
                 <br>
+                <h4>
                Make a profile.
+               </h4>
                 </div>
         
-                <img src="images/yazirushi.jpg" width="50" height="30">
+        <div class="col-xs-1">
+                <img class="niko" src="images/yazirushi.jpg" width="50" height="30">
+        </div>
         
-        <div class="col-md-3 col-xs-4">
-            <img src="images/&3.jpg" width="240px" height="500px"><br>
+        <div class="col-md-3 col-xs-3">
+            <img class="sanko" src="images/&3.jpg" width="240px" height="500px"><br>
+                 <h4>
                   Find a person.
+                  </h4>
              </div>
-             <img src="images/yazirushi.jpg" width="50" height="30">
-        <div class="col-md-3 col-xs-4">
-             <img src="images/&4.jpg"width="240px" height="500px"><br>
+             
+        <div class="col-xs-1">
+             <img class="niko" src="images/yazirushi.jpg" width="50" height="30">
+        </div> 
+            
+        <div class="col-md-3 col-xs-3">
+             <img class="sanko" src="images/&4.jpg"width="240px" height="500px"><br>
+                <h4>
                 Send a message.
+                </h4>
          </div>
         
         
         
    
    
+    </div>
+           
+            
+         </div>
+         <div class=buttom>
+             <br type="submit">  {!! link_to_route('signup.get', 'Signup!!',['button type' => 'submit'],['class' => 'btn btn-info btn-lg']) !!}</br>
+                </div>
+                <div class="footer">
+           <p>Copyright © 2018  Amigos.</p> 
         </div>
             
-            <div class=buttom>
-             <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-info']) !!}</br>
-                </div>
+@endsection
+
             
-        </footer>
-    </body>
-</html>
+     

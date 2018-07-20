@@ -1,4 +1,4 @@
-
+@extends('layouts.app')
        <link rel="stylesheet" href="{{ secure_asset('/css/posts.css') }}">
      
 
