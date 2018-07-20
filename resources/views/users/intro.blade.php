@@ -54,7 +54,7 @@
                     <img class="img-responsive" src="images/top.jpg"> 
             </div>
         </div>    
-        コンセプトここまで
+        <!--コンセプトここまで-->
 
 
 
