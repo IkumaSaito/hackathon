@@ -110,9 +110,9 @@ function getNthDay($year, $month, $day, $n) {
 
 <table class="cal">
     <tr>
-        <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>
-        <th colspan="3"><?php echo $year;?> / <?php echo $month;?></td>
-        <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>
+        <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>-->
+        <th><?php echo $year;?> / <?php echo $month;?></td>
+        <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>-->
     </tr>
     <tr>
         <td>Sun</td>
