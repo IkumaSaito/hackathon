@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<title>Lunch Meter</title>
+<title>Edit page | Lunch Meeter</title>
 <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
 <body>
     <div class="container">

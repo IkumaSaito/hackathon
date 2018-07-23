@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+        <title>Concept | Lunch Meeter</title>
         <div class="container-fluid">
             <div class='row'>
                 <div class="col-md-12 col-xs-12">

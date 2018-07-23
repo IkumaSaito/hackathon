@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Lunch Meeter</title>
+        <title>How to use | Lunch Meeter</title>
         <link rel="stylesheet" href="css/explain.css">
          <link rel="stylesheet" href="css/hakason15.css">
    
