@@ -9,7 +9,8 @@
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        
+
+         <link rel="stylesheet" href="css/explain.css">
          <link rel="stylesheet" href="css/hakason.css">
         <link rel="stylesheet" href="css/hakason15.css">
    

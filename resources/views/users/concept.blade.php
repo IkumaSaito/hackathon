@@ -28,7 +28,7 @@
 
 
 
-            <h1 class="container_h1">LunchMeeter's point</h1>
+            <h1 class="container_h1 name">LunchMeeter's point</h1>
             <br>
             <br>
             <br>
@@ -68,7 +68,7 @@
             
             
             
-            <h1 class="container_h1">How to use</h1>
+            <h1 class="container_h1 name">How to use</h1>
             <br>
             <br>
             <br>
