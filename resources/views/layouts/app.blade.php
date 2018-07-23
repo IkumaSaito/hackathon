@@ -9,20 +9,23 @@
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-         <link rel="stylesheet" href="{{ asset('css/mypage3.css') }}">
+        
+         <link rel="stylesheet" href="css/hakason.css">
+        <link rel="stylesheet" href="css/hakason15.css">
+   
+   
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
     </head>
     <body>
-        @include('commons.navbar')
-
-
-            @include('commons.error_messages')
-
-            @yield('content')
        
+        
+        @if (strpos(Request::url(),'intro')=== false) 
+            @include('commons.navbar')
+            @include('commons.error_messages')
+        @endif
+       
+        @yield('content') 
     </body>
 </html>

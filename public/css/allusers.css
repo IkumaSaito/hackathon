@@ -1,0 +1,59 @@
+ul {
+  list-style: none;
+  text-align:center;
+  padding:0px;
+}
+
+.aside{
+    padding-top:20px;
+}
+
+.title:after{
+      content: "";
+        display: block;
+        height: 8px;
+        background: linear-gradient(to right,#003366, transparent);
+}
+
+.title{
+   font-size: 4vmin;
+    margin:30px;
+    font-family:"century gothic";
+    margin-bottom:0px;
+}
+
+.panel{
+    margin-left:15px;
+}
+
+.img-circle{
+    max-width: 40px;
+}
+
+@media screen and (max-width:415px){
+.name{
+    font-size: 10px;
+}
+
+.main {
+    margin-bottom: 10px;
+}
+}
+
+.under{
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 900px) {  
+.media-body{
+    max-width: 32%;
+}
+}
+
+.name2{
+    font-size: 20px;
+}
+
+.media-body{
+    min-height: 250px;
+}

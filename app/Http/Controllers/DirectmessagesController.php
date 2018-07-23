@@ -1,17 +1,12 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Controllers\Controller;
-
 use App\User;
-
 use App\Directmessage;
-
 class DirectmessagesController extends Controller
 {
+//使われてない？
     public function index($id)
     {
         $data = [];
@@ -19,7 +14,6 @@ class DirectmessagesController extends Controller
             $user = \Auth::user();
             $receiver = User::find($id); 
             $directmessages = $user->directmessages()->orderBy('created_at', 'desc')->paginate(10);
-
             $data = [
                 'user' => $user,
                 'receiver' => $receiver,
@@ -44,39 +38,51 @@ class DirectmessagesController extends Controller
             'content' => $request->content,
         ]);
         
-        // echo "Your message had successfully sent.";
         return redirect()->back();
     }
     
     public function destroy($id)
     {
-        $directmessage = \App\directmessage::find($id);
-
+        $directmessage = \App\Directmessage::find($id);
         if (\Auth::id() === $directmessage->user_id) {
             $directmessage->delete();
         }
-
         return redirect()->back();
     }
     
     public function directmessages(Request $request)
     {
-    //     print '<pre>';
-    // return print $request;
         $data = [];
         if (\Auth::check()) {
                 $auth_id = \Auth::id(); //user_id
                 $id = $request->id;     //receiver_id
+                $a = Directmessage::where('receiver_id', $auth_id)
+                            ->where('user_id', $id)
+                            ->where('seen', 0)->get();
+                            
+                    foreach ($a as $b) {
+                        $b->seen = 1;
+                        $b->save();
+                    }
+                
                     $user = \Auth::user();
-                    // $directmessages = $user->directmessages()->where('receiver_id', $id)->orderBy('created_at', 'desc')->paginate(10);
                     $directmessages = Directmessage::where('user_id', $auth_id)->where('receiver_id', $id)
-                                        ->orwhere('user_id', $id)->where('receiver_id', $auth_id)->orderBy('created_at', 'desc')->paginate(10);
-
+                                        ->orWhere('user_id', $id)->where('receiver_id', $auth_id)->orderBy('created_at', 'desc')->paginate(10);
+                $sender_ids = Directmessage::where('receiver_id', $auth_id)->pluck('user_id')->all();
+                    $senders = User::whereIn('id', $sender_ids)->get();
+                    $unseens = Directmessage::where('receiver_id', $auth_id)
+                            ->where('seen', 0)->get();
+                $to_user = User::find($id);
+            
             $data = [
                 'user' => $user,
                 'id' => $id,
                 'directmessages' => $directmessages,
                 'auth_id' => $auth_id,
+                'sender_ids' => $sender_ids,
+                'senders' => $senders,
+                'unseens' => $unseens,
+                'to_user' => $to_user,
             ];
             $data += $this->counts($user);
             
@@ -88,11 +94,27 @@ class DirectmessagesController extends Controller
     
     public function users()
     {
+        $data = [];
         if (\Auth::check()) {   
-            return view('directmessages.users');
+            $user = \Auth::user();
+            $auth_id = \Auth::id();
+            $sender_ids = Directmessage::where('receiver_id', $auth_id)->pluck('user_id')->all();
+                $senders = User::whereIn('id', $sender_ids)->get();
+                $unseens = Directmessage::where('receiver_id', $auth_id)
+                            ->where('seen', 0)->get();
+ 
+            $data = [
+                'user' => $user,
+                'auth_id' => $auth_id,
+                'sender_ids' => $sender_ids,
+                'senders' => $senders,
+                'unseens' => $unseens,
+                ];
+                
+                $data += $this->counts($user);
+            return view('directmessages.users', $data);
         }else {
             return view('welcome');
         }
     }
-
 }

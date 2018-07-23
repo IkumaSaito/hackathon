@@ -1,0 +1,246 @@
+
+/*@media screen and (min-width: 1200px) {*/
+/*    .top {*/
+/*        margin-top:0px;  */
+/*        margin-bottom: 400px;*/
+        
+/*    }*/
+/*}*/
+
+.container-fluied{
+    padding: 0px;
+    margin: 0px;
+    font-size:0;
+    display:inline-block;
+}
+
+.top {
+    position: relative;
+}
+
+.concept{
+    position: absolute;
+    top:40%;
+    left:50%;
+    text-align: center;
+    color: white;
+    background-color: rgba(40,40,40,0.7);
+    font-family: serif;
+    z-index: 2;
+    font-size: 3vmin;
+    padding-bottom: 40px; 
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+}
+
+.img-respons{
+    width: 100%;
+    max-height:auto;
+    position:relative;
+}
+
+
+
+.a{
+  
+    width:58%;
+    margin:10px auto;
+    padding-top: 0px;
+    padding-bottom: 10px;
+   
+}
+
+
+ 
+header nav ul {
+  height: 60px;
+  margin-top: 0;
+
+ 
+}
+
+body{
+    /*padding: 0px;*/
+    margin: 0px;
+}
+
+
+.header-list {
+  height: 60px;
+  float: left;
+  list-style: none;
+  text-align: right;
+  
+}
+
+.header{
+  margin-left: 60px;
+  margin-right:60px;
+  margin-bottom: 35px;
+  
+  
+}
+
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.senpai {
+  margin: 0px;
+  padding: 0px;
+  font-size: 38px;
+  color: white;
+   padding-top: 100px;
+  font-family: "Rounded Mplus 1c";
+  /*opacity: 0.6;*/
+  
+  
+  
+}
+
+.message{
+  color: white;
+  font-size: 25px;
+  font-family: "century gothic";
+  margin: 40px;
+  padding: 15px;
+ 
+ }
+
+
+ h2{
+  font-family: 'Galada', cursive;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Cormorant SC', serif;
+  font-family: 'Harmattan', sans-serif;
+  font-family: 'Petit Formal Script', cursive;
+  color:white; 
+  margin: 0;
+  font-size:19px;
+  
+}
+
+
+
+ br{
+  font-size: 2px;
+  font-family: "Rounded Mplus 1c";
+  margin: 0px;
+  padding: 0px;
+ }
+ 
+  
+ .row{
+   display: flex;   
+   /*上これがキー*/
+   
+   /*これが下部分のcss*/
+  justify-content: center;
+  align-items: center;
+  font-size:40px;
+  font-family: "Rounded Mplus 1c";
+ }
+ 
+
+.img-circle_lm {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}  
+  
+
+  
+ 
+  .buttom{
+    margin-top: 70px;
+    padding: 10px 30px;
+     text-align: center;
+     
+    
+  }
+  
+  @media screen and (max-width: 480px) {
+    
+    .message{
+      font-size:10px;
+      margin: 0px;
+     
+    }
+    
+    .concept{
+        margin-top: 20px;
+    }
+    .senpai{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    .container_h1{
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+    
+    .img-circle_lm{
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    .naiyou{
+        font-size: 20px;
+    }
+    
+    .uri{
+        margin-top: 0px;
+    }
+    
+    .sanko{
+        max-width: 60px;
+        max-height: 120px;
+    }
+   
+   .niko{
+       max-height: 15px;
+       max-width:  25px;     
+  }
+  
+  .saigo{
+      font-size: 10px;
+      
+  }
+  
+
+}
+
+@media screen and (min-width: 900px) {
+h4{
+    font-size: 30px;
+}
+}
+
+div.row{
+    padding: 0px;
+}
+
+
+@media screen and (max-width: 480px) {
+
+.sita{
+    font-size: 10px;
+    
+}
+}    
+
+.btn-info2{
+        background-color: #BBBBBB;
+        color: #FFFFFF;
+}

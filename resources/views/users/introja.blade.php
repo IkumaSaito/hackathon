@@ -127,7 +127,6 @@
          <div class=buttom>
              <br type="submit">  
              {!! link_to_route('signup.get', 'Signup now',['button type' => 'submit'],['class' => 'btn btn-info btn-lg']) !!}</br>
-             <br type="submit">
              {!! link_to_route('views.welcome', 'HOME',['button type' => 'submit'],['class' => 'btn btn-info2']) !!}</br>
                 </div>
                 <div class="footer">

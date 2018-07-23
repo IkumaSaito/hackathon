@@ -11,7 +11,7 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1">
        
-       <title>Lunch Meter</title>
+       <title>Lunch Meeter</title>
        
        <link rel="stylesheet" href="css/welcome.css">
        
@@ -31,7 +31,7 @@
 <div class="row">
    <div class="col-md-5" id="left">
        <img class="img-responsive" src="images/welcome.jpg">
-         <br type="submit">  {!! link_to_route('signup.get', 'What is Lunch Meter',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
+         <br type="submit">  {!! link_to_route('users.intro', 'What is Lunch Meeter',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
    </div>
    
    <div class="col-md-2">
@@ -40,6 +40,9 @@
        <br>
        <br>
        <div class="text">
+          <br type="submit">  {!! link_to_route('users.intro', 'Read first',['button type' => 'submit'],['class' => 'btn btn-default1']) !!}</br>
+           
+           
           <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
                 
                 
@@ -56,7 +59,9 @@
    
    <div class="col-md-5" id="right">
    <img class="img-responsive" src="images/welcome1.jpg">
-       <br type="submit">  {!! link_to_route('signup.get', 'ランチミーターとは',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
+       <br type="submit">  {!! link_to_route('users.introja', 'ランチミーターとは',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
+       
+       
    </div>
 </div>
 </div>

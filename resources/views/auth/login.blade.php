@@ -26,14 +26,14 @@
 
 <div class="row">
     <div class="loginbox col-xs-offset-3 col-xs-6">
+    <div class="text-center">
+        <h1>Log in</h1>
+    </div>
 
         <div class="login">
-        <div class="text-center">
-            <h1>Log in</h1>
-        </div>
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">
-                    {!! Form::label('name', 'Name') !!}
+                    {!! Form::label('name', 'User name') !!}
                     {!! Form::text('name', old('name'), ['class' => 'form-control input-sm']) !!}
                 </div>
 

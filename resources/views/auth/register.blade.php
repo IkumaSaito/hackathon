@@ -33,7 +33,7 @@
                 {!! Form::open(['route' => 'signup.post']) !!}
                     <!--Required-->
                     <div class="form-group">
-                        {!! Form::label('name', 'Name') !!}
+                        {!! Form::label('name', 'User name') !!}
                         {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                     </div>
                     <!--Required-->
@@ -47,8 +47,8 @@
                         {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                     </div>
                 
-                <div class="col-md-offset-10 col-md-2 col-sm-offset-6 col-sm-6 col-xs-offset-2 col-xs-8">
-                    {!! Form::submit('Sign up', ['class' => 'btn btn-info btn-block btn-sm ']) !!}
+                <div class="col-md-offset-9 col-md-3 col-sm-offset-6 col-sm-6 col-xs-offset-1 col-xs-10">
+                        {!! Form::submit('Sign up', ['class' => 'btn btn-info btn-block btn-sm ']) !!}
                 {!! Form::close() !!}
                 </div>
             </div>

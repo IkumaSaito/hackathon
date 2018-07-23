@@ -10,6 +10,9 @@ use App\User;
 
 use App\Post;
 
+use JD\Cloudder\Facades\Cloudder;
+use App\Plan;
+
 class UsersController extends Controller
 {
    public function index()
@@ -17,10 +20,13 @@ class UsersController extends Controller
     if (\Auth::check()){
         $user = \Auth::user();
         $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-
+        $id = $user->id;
+        $plans = Plan::where('user_id', $id)->get();
+        
         $data = [
             'user' => $user,
             'posts' => $posts,
+            'plans' => $plans,
         ];
 
         
@@ -33,16 +39,20 @@ class UsersController extends Controller
     }
     
 
+
     public function show($id)
     {
          if (\Auth::check()){    
         $user = User::find($id);
         $posts = Post::orderBy('id','desc')->paginate(10);
+        $plans = Plan::where('user_id', $id)->get();
+        
                  
         $data = [
             'user' => $user,
             'posts' => $posts,
-        ];
+            'plans' => $plans,
+         ];
 
         $data += $this->counts($user);
         
@@ -90,10 +100,22 @@ class UsersController extends Controller
         return redirect('/');
     }
 
+    public function avataredit($id)
+    {
+        $user = user::find($id);
+        
+        if (\Auth::id() === $user->id){ 
+
+        return view('users.avataredit', [
+            'user' => $user,
+        ]);
+    }
+        return redirect('/');
+    }
     
     public function upload(Request $request)
     {
-       
+        $user =\Auth::user();
         $this->validate($request, [
              'file' => [ 
                 'required','file',
@@ -101,14 +123,12 @@ class UsersController extends Controller
             ]);
         if ($request->file('file')->isValid([])) {
             
-            $filename = $request->file->store('public/avatar');
-            $user = User::find(auth()->id());
-            $user->avatar_filename = basename($filename);
+            Cloudder::upload($request->file('file'));
+            $url = Cloudder::getResult()['url'];
+            $user->avatar_filename = $url;
             $user->save();
 
-            return redirect()
-                 ->back()
-                 ->with('success', 'Upload succeed');
+            return redirect('/');
         } else {
             
             return redirect()
@@ -117,5 +137,31 @@ class UsersController extends Controller
                  ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
         }
     }
+    
+    public function intro(){
+        return view ('users.intro');
+    }
+    
+
+     public function introja(){
+        return view ('users.introja');
+    }
+    
+     public function explain(){
+        return view ('users.explain');
+    }
+    
+     public function explain2(){
+        return view ('users.explain2');
+    }
+    
+     public function concept(){
+        return view ('users.concept');
+    }
+    
+         public function welcome(){
+        return view ('welcome');
+    }
+    
 }
 
