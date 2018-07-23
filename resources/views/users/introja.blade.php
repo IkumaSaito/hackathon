@@ -125,7 +125,9 @@
             
          </div>
          <div class=buttom>
-             <br type="submit">  {!! link_to_route('signup.get', 'Signup!!!',['button type' => 'submit'],['class' => 'btn btn-info btn-lg']) !!}</br>
+             <br type="submit">  
+             {!! link_to_route('signup.get', 'Signup!!!',['button type' => 'submit'],['class' => 'btn btn-info btn-lg']) !!}</br>
+             {!! link_to_route('users.welcome', 'HOME',['button type' => 'submit'],['class' => 'btn btn-info btn-lg']) !!}</br>
                 </div>
                 <div class="footer">
            <p>Copyright © 2018  Amigos.</p> 

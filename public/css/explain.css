@@ -106,7 +106,7 @@ h1{
 }
 
 @media (min-width: 480px) {
- .h1 {
+ .h2 {
     font-size:20px;
   }
 }
@@ -118,7 +118,7 @@ h1{
 
 /* :::::: action mechanism :::::: */
 
-.slideContents section h1 {
+.slideContents section h2 {
 -webkit-perspective: 500px;
 perspective: 500px;
 -webkit-transform-origin: 50% 100%;
@@ -126,7 +126,7 @@ transform-origin: 50% 100%;
 -webkit-animation: jump .5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;
 animation: jump .5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;
 }
-.slideContents section h1 span {
+.slideContents section h2 span {
 display: block;
 -webkit-animation: rotate 2s infinite;
 animation: rotate 2s infinite;
