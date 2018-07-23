@@ -109,16 +109,7 @@ function getNthDay($year, $month, $day, $n) {
         <th><?php echo $year;?> / <?php echo $month;?></td>
         <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>-->
     </tr>
-    
-    <style>
-        tr.day_of_week td:first-child{
-            background:#ffb6c1;
-        }
-        tr.day_of_week td:last-child{
-            background:#add8e6;
-        }
-    </style>
-    
+
     <tr class="day_of_week">
         <td>Sun</td>
         <td>Mon</td>
@@ -163,7 +154,7 @@ function getNthDay($year, $month, $day, $n) {
 
 <style type="text/css">
 table {
-    max-width: 350px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
     border-style: none;
@@ -180,10 +171,19 @@ table td {
     padding: 5px;
 }
 
-tbody{
-    max-width:100%;
+@media screen and (min-width: 800px) { 
+    table{
+        width:700px;
+    }
+    
 }
 
+tr.day_of_week td:first-child{
+           background:#ffb6c1;
+       }
+tr.day_of_week td:last-child{
+           background:#add8e6;
+       } 
 </style>
 
 
