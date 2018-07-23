@@ -12,7 +12,7 @@
                             <div class="senpai">What is LUNCH MEETER?</div>
                             <div class='message'>
                                 <p>Don’t you feel a little lonely having lunch alone and want to ask someone to have lunch with you?</p>
-                                <p>Would you like to learn a foreign language from a native or experience cross-cultural exchange?</p>
+                                <p>Would you like to learn foreign languages from natives or experience cross-cultural exchange?</p>
                                 <p>If your answers are “YES”, you can make these wishes come true with this app “LUNCH MEETER”!!!.</p>
                                 <p>We offer you a new chance!!</p>
                                 
@@ -124,12 +124,10 @@
          </div>
          <div class=buttom>
              <br type="submit">  {!! link_to_route('signup.get', 'Signup!!',['button type' => 'submit'],['class' => 'btn btn-info btn-lg']) !!}</br>
+             <br type="submit">  {!! link_to_route('users.welcome', 'HOME',['button type' => 'submit'],['class' => 'btn btn-info btn-lg']) !!}</br>
                 </div>
                 <div class="footer">
            <p>Copyright © 2018  Amigos.</p> 
         </div>
             
 @endsection
-
-            
-     

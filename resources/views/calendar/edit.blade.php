@@ -209,7 +209,7 @@ function getNthDay($year, $month, $day, $n) {
 
 <style type="text/css">
 table {
-    width: 700px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
     border-style: none;
@@ -220,13 +220,59 @@ table th {
     padding: 5px;
 }
 table td {
-    width: 50px;
+    min-width: 50px;
     border: 1px solid #CCCCCC;
     text-align: center;
     padding: 5px;
 }
+
+.cal th  { width: 13%; }
+.cal td  { text-align: center; }
+.cal td:first-child  { text-align: left; }
+@media only screen and (max-width: 800px) { 
+  .cal { 
+    display: block; 
+    width: 100%; 
+    margin: 0 -10px;
+  }
+  .cal thead{ 
+    display: block; 
+    float: left;
+    overflow-x:scroll;
+  }
+  .cal tbody{ 
+    display: block; 
+    width: auto; 
+    overflow-x: auto; 
+    white-space: nowrap;
+  }
+  .cal th{ 
+    display: block;
+    width:auto;
+  }
+  .cal tbody tr{ 
+    display: inline-block; 
+    margin-left:10px;
+  }
+  .cal td{ 
+    display: block;
+  }
+  
+  .btn-success{
+    margin-top:20px;
+    margin-left:10px;
+}
+}
+
+@media only screen and (min-width:900px){
+    .btn-success{
+    margin-left:100px;
+}
+}
+
+
 </style>
 
-{!! link_to_route('users.show', "戻る", ['id' => Auth::id()]) !!}
+{!! link_to_route('users.show', "戻る", ['id' => Auth::id()],['class' => 'btn btn-success']) !!}
 
 @endsection
