@@ -16,6 +16,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
        
     <link rel="stylesheet" href="{{asset('css/mypage3.css') }}">
+     <link rel="stylesheet" href="{{asset('css/hakason15.css')}}">
+   
+    
 </head>
 
     
@@ -113,5 +116,8 @@
             </h2>
         </figure>
     </div>
+    <div class="footer col-md-12 col-xs-12">
+           <p>Copyright © 2018  Amigos.</p> 
+        </div>
 </body>
 </html>

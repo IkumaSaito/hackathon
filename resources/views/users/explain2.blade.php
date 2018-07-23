@@ -7,6 +7,8 @@
         
         <title>Lunch Meeter</title>
         <link rel="stylesheet" href="css/explain.css">
+         <link rel="stylesheet" href="css/hakason15.css">
+   
         
 <!-- Bootstrap CSS-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -36,7 +38,7 @@
       <div class="slideContents">
         <section id="slide01">
           <div class="contents">
-            <h1><span>※SUPER IMPORTANT※</span></h1>
+            <h2><span>※SUPER IMPORTANT※</span></h2>
           </div>
         </section>
      
@@ -82,7 +84,9 @@
 
 
 
-
+<div class="footer col-md-12 col-xs-12">
+           <p>Copyright © 2018  Amigos.</p> 
+        </div>
 
 </body>
 
