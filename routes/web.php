@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
     
 });
 
-Route::get('cincept', 'UsersController@concept')->name('users.concept');    
+Route::get('concept', 'UsersController@concept')->name('users.concept');    
 
 Route::get('intro', 'UsersController@intro')->name('users.intro');
 Route::get('introja', 'UsersController@introja')->name('users.introja');

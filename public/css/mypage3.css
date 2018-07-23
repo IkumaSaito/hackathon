@@ -62,14 +62,14 @@ dl dt{
 /*}*/
     
    
-h1{
+h2{
     position: relative;
     padding: .3em;
     margin:0px;
 }
 
 
-h1:after {
+h2:after {
     content: "";
     display: block;
     height: 8px;
@@ -77,7 +77,7 @@ h1:after {
 }
 
 
-h1:first-letter {
+h2:first-letter {
     font-size: 2em;
     color:#003366;
 }
@@ -141,6 +141,11 @@ h1:first-letter {
     padding: 2px 10px;
     border-radius: 25px;
     width: 100px;
+}
+
+.btn-success{
+    margin-bottom: 20px;
+    float: right;
 }
 
 

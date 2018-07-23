@@ -29,16 +29,16 @@
 
     <div class="content">
         <figure class="profile">
-            <h1 class="name">
+            <h2 class="name">
                 {{ $user->name }}
             <!--<div class="logo"</div>-->
             <!--<img class="logo" src="/images/logo.jpg"> -->
             <!--</div>-->
-            </h1>
+            </h2>
 
 
 
-            <h2 class="main">
+            <h4 class="main">
             
 
             <div class="member">
@@ -101,16 +101,18 @@
                     </div>
             </div>
 
-@if (Auth::id() == $user->id)
-    {!! link_to_route('calendar.edit', 'register your plan', ['user' => $user],['class' => 'btn btn-info btn-sm']) !!}
-@endif
-
-            @include('calendar.calendar')
+  @include('calendar.calendar')
             
                     <div class="right">
                     @if (Auth::id() != $user->id)
                         {!! link_to_route('users.directmessages', "DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
                     @endif
+
+@if (Auth::id() == $user->id)
+    {!! link_to_route('calendar.edit', 'Update schedule', ['user' => $user],['class' => 'btn btn-success btn-md']) !!}<br>
+@endif
+
+          
                     </div>
                 </div>
             </h2>

@@ -153,7 +153,7 @@ function getNthDay($year, $month, $day, $n) {
 
 <style type="text/css">
 table {
-    width: 700px;
+    max-width: 350px;
     margin-left: auto;
     margin-right: auto;
     border-style: none;
@@ -169,6 +169,11 @@ table td {
     text-align: center;
     padding: 5px;
 }
+
+tbody{
+    max-width:100%;
+}
+
 </style>
 
 

@@ -1,6 +1,6 @@
 <ul class="media-list">
-<link rel="stylesheet" href="{{ asset('css/directmessages.css') }}">
- <link rel="stylesheet" href="{{asset('css/hakason15.css')}}">
+<link rel="stylesheet" href="{{ asset('/css/directmessages.css') }}">
+ <link rel="stylesheet" href="{{asset('/css/hakason15.css')}}">
    
 
 <div class="DM">
