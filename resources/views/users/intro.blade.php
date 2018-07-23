@@ -18,7 +18,7 @@
                                 
                                
                                 <p><div class="sita">⇩⇩</div></p>
-                                 <p>Go to down</p>
+                                 <p>Scroll down</p>
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
 
 
 
-            <h1 class="container_h1">LunchMeeter's point</h1>
+            <h1 class="container_h1">Why use LUNCH MEETER?</h1>
             <br>
             <br>
             <br>
@@ -46,7 +46,7 @@
             
             <div class="row">
                <div class="naiyou col-md-4 col-md-offset-2 col-xs-offset-1 col-xs-6">    
-                       <p>②Please enter your nickname!</p>
+                       <p>②No personal information needed.</p>
                </div>
                <div class="col-md-7 col-xs-5">
                        <img src="images/nickname.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
@@ -59,7 +59,7 @@
                        <img src="images/hakason4.jpg" class="img-circle_lm" alt="Cinque Terre" width="100%">
                </div>
                <div class="naiyou col-md-7">    
-                       <p>③You can talk with forigners!<br>
+                       <p>③Chance to meet with<br>foreigners around the world.<br>
                        </p>
                </div>
             </div>
@@ -67,7 +67,7 @@
             
             
             
-            <h1 class="container_h1">How to use</h1>
+            <h1 class="container_h1">How to use LUNCH MEETER</h1>
             <br>
             <br>
             <br>
