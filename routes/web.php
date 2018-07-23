@@ -35,4 +35,6 @@ Route::get('intro', 'UsersController@intro')->name('users.intro');
 Route::get('introja', 'UsersController@introja')->name('users.introja');
 
 Route::get('explain', 'UsersController@explain')->name('users.explain');    
-Route::get('explain2', 'UsersController@explain2')->name('users.explain2');    
+Route::get('explain2', 'UsersController@explain2')->name('users.explain2');  
+
+Route::get('/', 'UsersController@welcome')->name('users.welcome');    
