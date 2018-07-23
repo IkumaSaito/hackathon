@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Lunch Meeter</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+       
+   
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+       
 <?php
 //今日を取得
 function getToday($date = 'Y-m-d') {
@@ -116,11 +136,11 @@ function getNthDay($year, $month, $day, $n) {
                 
                 @if ($pday == $plan->date)
                     {{ $plan->freetime }}
-                        
-                    {!! Form::open(['route' => ['plans.destroy', $plan->id], 'method' => 'delete']) !!}
-                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
-                    {!! Form::close() !!}
-                    
+                    @if ($user->id == Auth::id())    
+                        {!! Form::open(['route' => ['plans.destroy', $plan->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                        {!! Form::close() !!}
+                    @endif
                 @endif
                 
             @endforeach

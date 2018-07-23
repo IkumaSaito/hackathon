@@ -7,7 +7,7 @@
     <li>
         <div class="media-body">
 
-                    @if($sender->avatar_filename)
+                    @if($user->avatar_filename)
                     <img src="{{ $sender->avatar_filename }}" class="img-responsive img-circle" alt="avatar" />
                     @else
                     <img src="{{ Gravatar::src($sender->name, 500) }}" class="img-responsive img-circle" alt="avatar" />
