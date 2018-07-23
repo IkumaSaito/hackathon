@@ -6,7 +6,6 @@
     border-radius: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    
 }
 
 
@@ -149,6 +148,13 @@ h2:first-letter {
     float: right;
 }
 
+@media screen and (min-width: 800px) {
+    .btn-success{
+    margin-bottom: 20px;
+    float: right;
+    margin-right: 550px;
+}
+}
 
 /*.logo{*/
 /*    max-height:100px;*/
@@ -169,17 +175,20 @@ h2:first-letter {
    border-radius: 25px;
 }
 
-.btn-default{
-    margin-left: 10px;
-    font-family: "bookman old";
-    padding: 2px 10px;
-    border-radius: 25px;
-    color: #FFF;
-    background-color: #75A9FF;
-}
+/*.btn-default{*/
+/*    margin-left: 10px;*/
+/*    font-family: "bookman old";*/
+/*    padding: 2px 10px;*/
+/*    border-radius: 25px;*/
+/*    color: #FFF;*/
+/*    background-color: #75A9FF;*/
+/*}*/
 
 .btn-primary{
      float: right;
 }
 
-
+.btn-default1{
+     color: #FFF;
+     background-color: #75A9FF;
+}

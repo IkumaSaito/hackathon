@@ -70,9 +70,9 @@
                             {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-info btn-sm']) !!}
                             @endif
                             <!--DMbutton-->           
-                            @if (Auth::id() != $user->id)
-                            {!! link_to_route('users.directmessages', "Send a DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
-                            @endif
+                            <!--@if (Auth::id() != $user->id)-->
+                            <!--{!! link_to_route('users.directmessages', "Send a DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}-->
+                            <!--@endif-->
                          
                             </h3>
     
@@ -99,14 +99,19 @@
                             </dl>
                         </div>
                     </div>
+                    
+                    <div class="right">
+                    @if (Auth::id() != $user->id)
+                        {!! link_to_route('users.directmessages', "send a DM", ['id' => $user->id],['class' => 'btn btn-default1']) !!}
+                    @endif
             </div>
 
   @include('calendar.calendar')
             
-                    <div class="right">
-                    @if (Auth::id() != $user->id)
-                        {!! link_to_route('users.directmessages', "DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}
-                    @endif
+                    <!--<div class="right">-->
+                    <!--@if (Auth::id() != $user->id)-->
+                    <!--    {!! link_to_route('users.directmessages', "send a DM", ['id' => $user->id],['class' => 'btn btn-default']) !!}-->
+                    <!--@endif-->
 
 @if (Auth::id() == $user->id)
     {!! link_to_route('calendar.edit', 'Update schedule', ['user' => $user],['class' => 'btn btn-success btn-md']) !!}<br>
