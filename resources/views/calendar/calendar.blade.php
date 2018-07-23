@@ -136,11 +136,11 @@ function getNthDay($year, $month, $day, $n) {
                 
                 @if ($pday == $plan->date)
                     {{ $plan->freetime }}
-                        
-                    {!! Form::open(['route' => ['plans.destroy', $plan->id], 'method' => 'delete']) !!}
-                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
-                    {!! Form::close() !!}
-                    
+                    @if ($user->id == Auth::id())    
+                        {!! Form::open(['route' => ['plans.destroy', $plan->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                        {!! Form::close() !!}
+                    @endif
                 @endif
                 
             @endforeach

@@ -114,7 +114,8 @@ function getNthDay($year, $month, $day, $n) {
         <td>Fri</td>
         <td>Sat</td>
     </tr>
-    <tr>
+    
+    <tr class="day">
         <?php echo $table; ?>
     </tr>
     <tr>
