@@ -90,8 +90,6 @@ function getNthDay($year, $month, $day, $n) {
         
                 
                 <!--{{ $default = "N/A" }}-->
-                    {{ Form::open(['url' => '/plans']) }}
-                    {{ Form::hidden('user_id', Auth::id() )}}
 <?php
     $s = getSunday();
     $ye = substr($s, 0, 4);
@@ -101,18 +99,11 @@ function getNthDay($year, $month, $day, $n) {
 ?>
 
 
-
-
-
-
-    
-
-
 <table class="cal">
     <tr>
-        <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>
-        <th colspan="3"><?php echo $year;?> / <?php echo $month;?></td>
-        <th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>
+        <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>-->
+        <th><?php echo $year;?> / <?php echo $month;?></td>
+        <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>-->
     </tr>
     <tr>
         <td>Sun</td>
@@ -183,7 +174,7 @@ function getNthDay($year, $month, $day, $n) {
                         {!! Form::submit() !!}    
                         {!! Form::close() !!}
                 @endif
-                {{ $pday++ }}
+                <!--{{ $pday++ }}-->
             @else
                     フォーム
             @endif

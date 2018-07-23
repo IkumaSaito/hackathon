@@ -7,6 +7,8 @@
         
         <title>Lunch Meeter</title>
         <link rel="stylesheet" href="css/explain.css">
+         <link rel="stylesheet" href="css/hakason15.css">
+   
         
 <!-- Bootstrap CSS-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -36,12 +38,12 @@
       <div class="slideContents">
         <section id="slide01">
           <div class="contents">
-            <h1><span>※SUPER IMPORTANT※</span></h1>
+            <h2><span>※SUPER IMPORTANT※</span></h2>
           </div>
         </section>
      
       
-      <h2>⇩This is slideshow. Please take a look to the end⇩</h2><br>
+     
 <div id="carousel-example" class="carousel slide" data-ride="carousel">
   <!-- スライドの内容 -->
   <div class="carousel-inner">
@@ -82,7 +84,9 @@
 
 
 
-
+<div class="footer col-md-12 col-xs-12">
+           <p>Copyright © 2018  Amigos.</p> 
+        </div>
 
 </body>
 
