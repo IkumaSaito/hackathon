@@ -17,5 +17,7 @@
     </div>
     </div>
     <!--ここまで-->
-
+<div class="footer col-md-12 col-xs-12">
+           <p>Copyright © 2018  Amigos.</p> 
+        </div>
 @endsection
