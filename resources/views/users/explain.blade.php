@@ -35,7 +35,7 @@
       <div class="slideContents">
         <section id="slide01">
           <div class="contents">
-            <h1><span>※SUPER IMPORTANT※</span></h1>
+            <h2><span>※SUPER IMPORTANT※</span></h2>
           </div>
         </section>
      
