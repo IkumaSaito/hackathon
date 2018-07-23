@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <?php
 //今日を取得
 function getToday($date = 'Y-m-d') {
@@ -105,7 +107,17 @@ function getNthDay($year, $month, $day, $n) {
         <th><?php echo $year;?> / <?php echo $month;?></td>
         <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>-->
     </tr>
-    <tr>
+    
+    <style>
+        tr.day_of_week td:first-child{
+            background:#ffb6c1;
+        }
+        tr.day_of_week td:last-child{
+            background:#add8e6;
+        }
+    </style>
+    
+    <tr class="day_of_week">
         <td>Sun</td>
         <td>Mon</td>
         <td>Tue</td>
@@ -114,6 +126,16 @@ function getNthDay($year, $month, $day, $n) {
         <td>Fri</td>
         <td>Sat</td>
     </tr>
+    
+    <!--日付に色をつけたかったらこっち-->
+    /*<style>*/
+    /*    tr.day td:first-child{*/
+    /*        background:#ffb6c1;*/
+    /*    }*/
+    /*    tr.day td:last-child{*/
+    /*        background:#add8e6;*/
+    /*    }*/
+    /*</style>*/
     
     <tr class="day">
         <?php echo $table; ?>
