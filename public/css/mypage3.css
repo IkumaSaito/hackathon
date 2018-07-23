@@ -149,6 +149,13 @@ h2:first-letter {
     float: right;
 }
 
+@media screen and (min-width: 800px) {
+    .btn-success{
+    margin-bottom: 20px;
+    float: right;
+    margin-right: 550px;
+}
+}
 
 /*.logo{*/
 /*    max-height:100px;*/
