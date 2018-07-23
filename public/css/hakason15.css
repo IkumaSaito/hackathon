@@ -1,20 +1,4 @@
 
-  h1 {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 40px;
-  color: black;
-  text-align: center;
-  
-}
-
-h1:after{
-    content:"";
-    display: block;
-    height: 8px;
-    background: linear-gradient(to right, #003366,transparent); 
-}
- 
  .footer > p  {
 
     color: #808080; /* 文字の色　#336666 */
