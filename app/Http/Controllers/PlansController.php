@@ -48,7 +48,7 @@ class PlansController extends Controller
         if (Plan::where('user_id', $request->user())->where('date', $request->date)->get()->first()){
             return redirect()->back();
         }
-            
+            return print $request->date;
         $request->user()->plans()->create([
                 'user_id' => $request->user_id,
                 'date' => $request->date,

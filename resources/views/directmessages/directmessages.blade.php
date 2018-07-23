@@ -1,5 +1,5 @@
 <ul class="media-list">
-<link rel="stylesheet" href="{{ asset('css/directmessages.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/directmessages.css') }}">
 
 <div class="DM">
 @foreach ($directmessages as $directmessage)
