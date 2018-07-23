@@ -159,5 +159,9 @@ class UsersController extends Controller
         return view ('users.concept');
     }
     
+         public function welcome(){
+        return view ('users.welcome');
+    }
+    
 }
 

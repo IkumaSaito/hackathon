@@ -90,8 +90,6 @@ function getNthDay($year, $month, $day, $n) {
         
                 
                 <!--{{ $default = "N/A" }}-->
-                    {{ Form::open(['url' => '/plans']) }}
-                    {{ Form::hidden('user_id', Auth::id() )}}
 <?php
     $s = getSunday();
     $ye = substr($s, 0, 4);
@@ -101,20 +99,15 @@ function getNthDay($year, $month, $day, $n) {
 ?>
 
 
-
-
-
-
+  <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>-->
+        <h5 class="col-md-offset-2 col-md-8"><?php echo $year;?> / <?php echo $month;?></h5>
+        <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>-->
     
 
-
 <table class="cal">
-    <tr>
-        <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>-->
-        <th><?php echo $year;?> / <?php echo $month;?></td>
-        <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>-->
-    </tr>
-    <tr>
+    
+      
+    <tr class="day_of_week">
         <td>Sun</td>
         <td>Mon</td>
         <td>Tue</td>
@@ -123,7 +116,8 @@ function getNthDay($year, $month, $day, $n) {
         <td>Fri</td>
         <td>Sat</td>
     </tr>
-    <tr>
+    
+    <tr class="day">
         <?php echo $table; ?>
     </tr>
     <tr>
@@ -195,24 +189,79 @@ function getNthDay($year, $month, $day, $n) {
 
 <style type="text/css">
 table {
-    width: 700px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
     border-style: none;
 }
-table th {
+h5 {
     background: #EEEEEE;
     text-align: center;
     padding: 5px;
 }
 table td {
-    width: 50px;
+    min-width: 50px;
     border: 1px solid #CCCCCC;
     text-align: center;
     padding: 5px;
 }
+
+.cal td  { text-align: center; }
+
+tr.day_of_week td:first-child{
+           background:#ffb6c1;
+       }
+tr.day_of_week td:last-child{
+           background:#add8e6;
+       }
+
+@media only screen and (max-width: 800px) { 
+  .cal { 
+    display: block; 
+    width: 100%; 
+    margin: 0 -10px;
+  }
+  .cal thead{ 
+    display: block; 
+    float: left;
+    overflow-x:scroll;
+  }
+  .cal tbody{ 
+    display: block; 
+    width: auto; 
+    overflow-x: auto; 
+    white-space: nowrap;
+    margin-left:20px;
+    text-align:center;
+  }
+  .cal th{ 
+    display: block;
+    width:auto;
+  }
+  .cal tbody tr{ 
+    display: inline-block; 
+  
+  }
+  .cal td{ 
+    display: block;
+    height:75.2px;
+  }
+  
+  .btn-success{
+    margin-top:20px;
+    margin-left:10px;
+}
+}
+
+@media only screen and (min-width:900px){
+    .btn-success{
+    margin-left:100px;
+}
+}
+
+
 </style>
 
-{!! link_to_route('users.show', "戻る", ['id' => Auth::id()]) !!}
+{!! link_to_route('users.show', "戻る", ['id' => Auth::id()],['class' => 'btn btn-success']) !!}
 
 @endsection

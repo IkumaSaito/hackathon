@@ -1,5 +1,7 @@
 <ul class="media-list">
-<link rel="stylesheet" href="{{ asset('css/directmessages.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/directmessages.css') }}">
+ <link rel="stylesheet" href="{{asset('/css/hakason15.css')}}">
+   
 
 <div class="DM">
 @foreach ($directmessages as $directmessage)
@@ -14,12 +16,12 @@
     <?php endif; ?>        
         
         <li class="media">
-            <!--<div class="media-left">-->
+            <div class="media-left">
 
 
-            <!--    <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />-->
+                <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />
                 
-            <!--</div>-->
+            </div>
             <div class="media-body">
                 <div>
                     
@@ -46,3 +48,7 @@
 </ul>
 </div>
 {!! $directmessages->render() !!}
+
+<div class="footer col-md-12 col-xs-12">
+           <p>Copyright © 2018  Amigos.</p> 
+        </div>

@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="{{ secure_asset('/css/allusers.css') }}">
+ <link rel="stylesheet" href="{{asset('css/hakason15.css')}}">
+   
  
 @if (count($senders) > 0)
 <div class="aside">
@@ -8,10 +10,10 @@
         <div class="media-body col-md-4 panel panel-info">
             <div>
                 <br>
-                        @if($user->avatar_filename)
-                        <img src="{{ $sender->avatar_filename }}" class="img-responsive img-circle" alt="avatar" />
+                        @if($sender->avatar_filename)
+                        <img src="{{ $sender->avatar_filename }}" class="img-responsive img-circle center-block" alt="avatar" />
                         @else
-                        <img src="{{ Gravatar::src($sender->name, 500) }}" class="img-responsive img-circle" alt="avatar" />
+                        <img src="{{ Gravatar::src($sender->name, 500) }}" class="img-responsive img-circle center-block" alt="avatar" />
                         @endif
     
             <div class="name2">

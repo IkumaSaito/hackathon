@@ -2,7 +2,7 @@
 
 @section('content')
 
- <link rel="stylesheet" href="{{asset('css/dm2.css') }}">
+ <link rel="stylesheet" href="{{asset('/css/dm2.css') }}">
 
    
         <aside class="col-xs-3">
@@ -15,6 +15,8 @@
 <!--ここまで-->
             </div>
         </aside>
+        
+        
         <!--ここからタブ-->
         <div class="col-xs-8">
             <ul class="nav nav-tabs nav-justified">
@@ -50,6 +52,9 @@
             
         </div>
     </div>
+    
+
 @endsection
+
 
             
