@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <?php
 //今日を取得
 function getToday($date = 'Y-m-d') {

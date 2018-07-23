@@ -109,6 +109,7 @@ function getNthDay($year, $month, $day, $n) {
         <th><?php echo $year;?> / <?php echo $month;?></td>
         <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>-->
     </tr>
+
     <tr class="day_of_week">
         <td>Sun</td>
         <td>Mon</td>
