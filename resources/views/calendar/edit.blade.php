@@ -127,16 +127,6 @@ function getNthDay($year, $month, $day, $n) {
         <td>Sat</td>
     </tr>
     
-    <!--日付に色をつけたかったらこっち-->
-    /*<style>*/
-    /*    tr.day td:first-child{*/
-    /*        background:#ffb6c1;*/
-    /*    }*/
-    /*    tr.day td:last-child{*/
-    /*        background:#add8e6;*/
-    /*    }*/
-    /*</style>*/
-    
     <tr class="day">
         <?php echo $table; ?>
     </tr>
