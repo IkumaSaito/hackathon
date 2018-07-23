@@ -16,12 +16,17 @@
     <?php endif; ?>        
         
         <li class="media">
-            <!--<div class="media-left">-->
+            <div class="media-left">
 
 
-            <!--    <figure class="main-img"><img src="{{ asset('storage/avatar/' . $user->avatar_filename) }}" class="img-circle" alt="avatar" />-->
+                <figure class="main-img">
+                    @if($user->avatar_filename)
+                    <img src="{{ $user->avatar_filename }}" class="img-responsive img-circle" alt="avatar" />
+                    @else
+                    <img src="{{ Gravatar::src($user->name, 500) }}" class="img-responsive img-circle" alt="avatar" />
+                    @endif
                 
-            <!--</div>-->
+            </div>
             <div class="media-body">
                 <div>
                     

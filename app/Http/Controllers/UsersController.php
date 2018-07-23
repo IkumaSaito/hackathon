@@ -160,7 +160,7 @@ class UsersController extends Controller
     }
     
          public function welcome(){
-        return view ('users.welcome');
+        return view ('welcome');
     }
     
 }
