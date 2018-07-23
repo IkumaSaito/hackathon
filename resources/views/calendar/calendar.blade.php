@@ -103,7 +103,9 @@ function getNthDay($year, $month, $day, $n) {
 		}
 ?>
 
+
 <table class="cal">
+    
     <tr>
         <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>-->
         <th><?php echo $year;?> / <?php echo $month;?></td>
@@ -139,7 +141,7 @@ function getNthDay($year, $month, $day, $n) {
                     {{ $plan->freetime }}
                     @if ($user->id == Auth::id())    
                         {!! Form::open(['route' => ['plans.destroy', $plan->id], 'method' => 'delete']) !!}
-                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                            {!! Form::submit('Del', ['class' => 'btn btn-danger btn-xs']) !!}
                         {!! Form::close() !!}
                     @endif
                 @endif
@@ -165,16 +167,27 @@ table th {
     padding: 5px;
 }
 table td {
-    width: 50px;
+    width: 40px;
     border: 1px solid #CCCCCC;
     text-align: center;
-    padding: 5px;
+    font-size:10px;
+    padding:1px;
+}
+
+@media screen and (max-width:480px){
+    .cal{margin-left:-40px;
+    }
 }
 
 @media screen and (min-width: 800px) { 
     table{
         width:700px;
+    }    
+    
+    table td{
+        font-size:20px;
     }
+    
     
 }
 

@@ -115,6 +115,7 @@
                     <!--@endif-->
 
 @if (Auth::id() == $user->id)
+<br>
     {!! link_to_route('calendar.edit', 'Update schedule', ['user' => $user],['class' => 'btn btn-success btn-md']) !!}<br>
 @endif
 
