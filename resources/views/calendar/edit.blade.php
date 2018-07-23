@@ -99,13 +99,15 @@ function getNthDay($year, $month, $day, $n) {
 ?>
 
 
-<table class="cal">
-    <tr>
-        <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>-->
-        <th><?php echo $year;?> / <?php echo $month;?></td>
+  <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $pre_week;?>">&laquo; prev week</a></td>-->
+        <h5 class="col-md-offset-2 col-md-8"><?php echo $year;?> / <?php echo $month;?></h5>
         <!--<th colspan="2"><a href="<?php $_SERVER['SCRIPT_NAME'];?>?date=<?php echo $next_week;?>">next week &raquo;</a></td>-->
-    </tr>
-    <tr>
+    
+
+<table class="cal">
+    
+      
+    <tr class="day_of_week">
         <td>Sun</td>
         <td>Mon</td>
         <td>Tue</td>
@@ -192,7 +194,7 @@ table {
     margin-right: auto;
     border-style: none;
 }
-table th {
+h5 {
     background: #EEEEEE;
     text-align: center;
     padding: 5px;
@@ -204,9 +206,15 @@ table td {
     padding: 5px;
 }
 
-.cal th  { width: 13%; }
 .cal td  { text-align: center; }
-.cal td:first-child  { text-align: left; }
+
+tr.day_of_week td:first-child{
+           background:#ffb6c1;
+       }
+tr.day_of_week td:last-child{
+           background:#add8e6;
+       }
+
 @media only screen and (max-width: 800px) { 
   .cal { 
     display: block; 
@@ -223,6 +231,8 @@ table td {
     width: auto; 
     overflow-x: auto; 
     white-space: nowrap;
+    margin-left:20px;
+    text-align:center;
   }
   .cal th{ 
     display: block;
@@ -230,10 +240,11 @@ table td {
   }
   .cal tbody tr{ 
     display: inline-block; 
-    margin-left:10px;
+  
   }
   .cal td{ 
     display: block;
+    height:75.2px;
   }
   
   .btn-success{
