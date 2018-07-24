@@ -175,7 +175,7 @@ table td {
 }
 
 @media screen and (max-width:480px){
-    .cal{margin-left:-40px;
+    .cal{margin-left:-25px;
     }
 }
 
