@@ -186,6 +186,7 @@ table td {
     
     table td{
         font-size:20px;
+        width:141.6px;
     }
     
     
