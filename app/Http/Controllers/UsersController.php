@@ -150,70 +150,21 @@ class UsersController extends Controller
     
     
      public function explain(){
-            if (\Auth::check()){
-        $user = \Auth::user();
-        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-        $id = $user->id;
-        $plans = Plan::where('user_id', $id)->get();
-        
-        $data = [
-            'user' => $user,
-            'posts' => $posts,
-            'plans' => $plans,
-        ];
-
-        
-        $data += $this->counts($user);
-            return view('users.explain', $data);
-        } else {
-            return view('welcome');
-
-        }
+        return view ('users.explain');
     }
+    
     
      public function explain2(){
-        if (\Auth::check()){
-        $user = \Auth::user();
-        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-        $id = $user->id;
-        $plans = Plan::where('user_id', $id)->get();
-        
-        $data = [
-            'user' => $user,
-            'posts' => $posts,
-            'plans' => $plans,
-        ];
-
-        
-        $data += $this->counts($user);
-            return view('users.explain', $data);
-        } else {
-            return view('welcome');
-
-        }
+        return view ('users.explain2');
     }
+
+
+
     
      public function concept(){
-        if (\Auth::check()){
-        $user = \Auth::user();
-        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
-        $id = $user->id;
-        $plans = Plan::where('user_id', $id)->get();
-        
-        $data = [
-            'user' => $user,
-            'posts' => $posts,
-            'plans' => $plans,
-        ];
-
-        
-        $data += $this->counts($user);
-            return view('users.explain', $data);
-        } else {
-            return view('welcome');
-
-        }
+        return view ('users.concept');
     }
+    
     
     
          public function welcome(){
@@ -221,4 +172,3 @@ class UsersController extends Controller
     }
     
 }
-
