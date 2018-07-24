@@ -147,17 +147,74 @@ class UsersController extends Controller
         return view ('users.introja');
     }
     
+    
+    
      public function explain(){
-        return view ('users.explain');
+            if (\Auth::check()){
+        $user = \Auth::user();
+        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
+        $id = $user->id;
+        $plans = Plan::where('user_id', $id)->get();
+        
+        $data = [
+            'user' => $user,
+            'posts' => $posts,
+            'plans' => $plans,
+        ];
+
+        
+        $data += $this->counts($user);
+            return view('users.explain', $data);
+        } else {
+            return view('welcome');
+
+        }
     }
     
      public function explain2(){
-        return view ('users.explain2');
+        if (\Auth::check()){
+        $user = \Auth::user();
+        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
+        $id = $user->id;
+        $plans = Plan::where('user_id', $id)->get();
+        
+        $data = [
+            'user' => $user,
+            'posts' => $posts,
+            'plans' => $plans,
+        ];
+
+        
+        $data += $this->counts($user);
+            return view('users.explain', $data);
+        } else {
+            return view('welcome');
+
+        }
     }
     
      public function concept(){
-        return view ('users.concept');
+        if (\Auth::check()){
+        $user = \Auth::user();
+        $posts = $user->posts()->orderBy('created_at', 'desc')->paginate(10);
+        $id = $user->id;
+        $plans = Plan::where('user_id', $id)->get();
+        
+        $data = [
+            'user' => $user,
+            'posts' => $posts,
+            'plans' => $plans,
+        ];
+
+        
+        $data += $this->counts($user);
+            return view('users.explain', $data);
+        } else {
+            return view('welcome');
+
+        }
     }
+    
     
          public function welcome(){
         return view ('welcome');
