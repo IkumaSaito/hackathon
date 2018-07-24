@@ -27,6 +27,22 @@
         @include('commons.navbar')
         @include('commons.error_messages')
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js">
+    
+    Push.Permission.request();
+    
+    Push.create('こんにちは！', {
+　　body: '更新をお知らせします！',
+　　timeout: 8000, // 通知が消えるタイミング
+　　vibrate: [100, 100, 100], // モバイル端末でのバイブレーション秒数
+　　onClick: function() {
+　　　　// 通知がクリックされた場合の設定
+　　　　console.log(this);
+　　}
+});
+    
+</script>
+
     <div class="content">
         <figure class="profile">
             <h2 class="name">
