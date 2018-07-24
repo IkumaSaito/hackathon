@@ -2,10 +2,9 @@
 
 @section('content')
 
- <link rel="stylesheet" href="{{asset('/css/dm2.css') }}">
-<title>Dierct Message | Lunch Meeter</title>
 
-   
+<link rel="stylesheet" href="{{asset('/css/dm2.css') }}">
+
         <aside class="col-xs-3">
             <div class="panel panel-default">
 
@@ -57,5 +56,3 @@
 
 @endsection
 
-
-            
