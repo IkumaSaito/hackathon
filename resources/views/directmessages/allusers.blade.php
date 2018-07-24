@@ -35,12 +35,16 @@
                                     <dt>language</dt>
                                     <td>{{ $sender->language }}</td>
                                 </div>
-                            
+                                
+                                
                                 <div class="under col-md-5 col-xs-5">
                                     <dt>intro</dt>
-                                    <td>{{ $sender->intro }}</td>
+                                <?php
+                                     echo mb_strimwidth("$sender->intro ", 0, 25, "...");
+                                ?>
                                 </div>
-   
+                            
+
             </div>
         </div>
         
