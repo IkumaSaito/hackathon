@@ -40,11 +40,9 @@ function getSunday() {
     $w = $today->format('w');
     $ymd = $today->format('Y-m-d');
     
-    if ($w == 0) {
-        $d = 6;
-    }
-    else {
-        $d = $w - 1;
+    if ($w != 0) {
+        
+        $d = $w;
     }
     
     $next_prev = new DateTime($ymd);
@@ -68,7 +66,6 @@ function getNthDay($year, $month, $day, $n) {
 		else {
 			//今週日曜日取得
 			$year_month_day = getSunday();
- 
 		}
  
 		//年月日に変数で取得
@@ -152,6 +149,7 @@ function getNthDay($year, $month, $day, $n) {
     </tr>
     
 </table>
+
 
 
 <style type="text/css">

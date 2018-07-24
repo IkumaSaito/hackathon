@@ -26,12 +26,17 @@ function getSunday() {
     $w = $today->format('w');
     $ymd = $today->format('Y-m-d');
     
-    if ($w == 0) {
-        $d = 6;
-    }
-    else {
-        $d = $w - 1;
-    }
+        if ($w != 0) {
+            
+            $d = $w;
+        }
+
+    // if ($w == 0) {
+    //     $d = 6;
+    // }
+    // else {
+    //     $d = $w - 1;
+    // }
     
     $next_prev = new DateTime($ymd);
     $next_prev->modify("-{$d} day");
