@@ -28,6 +28,17 @@
 
                                 <li><a href="{{route('directmessages.users', ['id' => Auth::id()])}}">Direct Message {{ $dms > 0 ? '(' . $dms . ')' : '' }} </a></li>
 
+<script>
+    
+    var dms = "<?php echo $dms; ?>;";
+    console.log(dms);
+    
+    if (dms > 0) {
+        alert("You have new messages");
+    } 
+    
+</script>
+
                                 <li role="separator" class="divider"></li>
                                 
                                 <li>{!! link_to_route('logout.get', 'Logout', "", ['class' => 'logout']) !!}</li>
