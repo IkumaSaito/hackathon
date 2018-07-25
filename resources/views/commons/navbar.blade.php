@@ -21,13 +21,13 @@
     
                         ?>
                         <li class="dropdown">
-                                <li>{!! link_to_route('users.concept', 'Concept', ['id' => Auth::id()]) !!}</li>
-                                <li>{!! link_to_route('users.explain2', 'How to use', ['id' => Auth::id()]) !!}</li>
+                               
                                 <li>{!! link_to_route('users.show', 'My profile', ['id' => Auth::id()]) !!}</li>
                                 <li>{!! link_to_route('posts.index', 'MeetersBoard') !!}</li>
 
                                 <li><a href="{{route('directmessages.users', ['id' => Auth::id()])}}">Direct Message {{ $dms > 0 ? '(' . $dms . ')' : '' }} </a></li>
-
+                                <li>{!! link_to_route('users.concept', 'Concept', ['id' => Auth::id()]) !!}</li>
+                                <li>{!! link_to_route('users.explain2', 'How to use', ['id' => Auth::id()]) !!}</li>
                                 <li role="separator" class="divider"></li>
                                 
                                 <li>{!! link_to_route('logout.get', 'Logout', "", ['class' => 'logout']) !!}</li>
