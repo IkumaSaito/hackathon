@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -80,7 +79,8 @@
                 
                     
                         <div class="prof col-md-6">
-                            <h3 class="name2">{{ $user->name }}
+                            <h3 class="name2">
+                                <!--{{ $user->name }}-->
                             <!--編集ボタン-->
                             @if (Auth::id() == $user->id)
                             {!! link_to_route('users.edit', 'edit', ['id' => Auth::id()],['class' => 'btn btn-info btn-sm']) !!}
