@@ -44,11 +44,11 @@
      
       <img class="img-responsive"   src="images/ex2.jpg" alt="2">
       <br>
-      <p>⇩</p>
+      <div class="sita">⇩</div>
       <br>
       <img class="img-responsive"   src="images/ex3.jpg" alt="3">
       <br>
-      <p>⇩</p>  
+      <div class="sita">⇩</div>
       <br>
       <img class="img-responsive"   src="images/ex5.jpg" alt="5">
    
@@ -67,7 +67,10 @@
 <br>
 
 
-
+<div class="footer col-md-12 col-xs-12">
+           <p>Copyright © 2018  Amigos.</p> 
+        </div>           
+            
 <br>
 <br>
 </body>
