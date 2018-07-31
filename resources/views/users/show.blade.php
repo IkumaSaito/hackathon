@@ -10,7 +10,7 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
        
@@ -23,24 +23,12 @@
     
 
 <body>
+    
+    
+    
         @include('commons.navbar')
         @include('commons.error_messages')
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js">
-    
-    Push.Permission.request();
-    
-    Push.create('こんにちは！', {
-　　body: '更新をお知らせします！',
-　　timeout: 8000, // 通知が消えるタイミング
-　　vibrate: [100, 100, 100], // モバイル端末でのバイブレーション秒数
-　　onClick: function() {
-　　　　// 通知がクリックされた場合の設定
-　　　　console.log(this);
-　　}
-});
-    
-</script>
 
     <div class="content">
         <figure class="profile">

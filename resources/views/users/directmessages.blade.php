@@ -4,6 +4,7 @@
 
 
 
+
 <link rel="stylesheet" href="{{asset('/css/dm2.css') }}">
 
         <aside class="col-xs-3">
@@ -50,6 +51,7 @@
                     @include('directmessages.directmessages', ['directmessages' => $directmessages])
             @endif
             <!--ここまで-->
+            
             
         </div>
     </div>
