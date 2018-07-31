@@ -278,6 +278,6 @@ tr.day_of_week td:last-child{
 
 </style>
 
-{!! link_to_route('users.show', "戻る", ['id' => Auth::id()],['class' => 'btn btn-success']) !!}
+{!! link_to_route('users.show', "My page", ['id' => Auth::id()],['class' => 'btn btn-success']) !!}
 
 @endsection
