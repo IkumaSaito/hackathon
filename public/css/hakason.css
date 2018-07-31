@@ -55,12 +55,7 @@
 
 
  
-header nav ul {
-  height: 60px;
-  margin-top: 0;
 
- 
-}
 
 body{
     /*padding: 0px;*/
@@ -236,6 +231,10 @@ div.row{
 
 .sita{
     font-size: 10px;
+}
+
+h4{
+    font-size: 15px;
 }
 }    
 

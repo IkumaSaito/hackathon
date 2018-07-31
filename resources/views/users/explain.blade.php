@@ -31,57 +31,48 @@
 <div class="top">
  
    <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10 ">
-     <div id="slideshow">
-      <div class="slideContents">
-        <section id="slide01">
+    
           <div class="contents">
             <h2><span>※SUPER IMPORTANT※</span></h2>
           </div>
         </section>
      
-<div id="carousel-example" class="carousel slide" data-ride="carousel">
-  <!-- スライドの内容 -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="images/ex1.jpg" alt="1">
-      <!-- <div class="carousel-caption">-->
-      <!--</div>-->
-    </div>
-    <div class="item">
-      <img src="images/ex2.jpg" alt="2">
-    </div>
-    <div class="item">
-      <img src="images/ex3.jpg" alt="haritts">
-    </div>
-    <div class="item">
-      <img src="images/ex4.jpg" alt="katane">
-    </div>
-    <div class="item">
-      <img src="images/ex5.jpg" alt="katane">
-    </div>
-  </div>
+
+      
+     
+      
+      <img class="img-responsive"   src="images/ex2.jpg" alt="2">
+      <br>
+      <div class="sita">⇩</div>
+      <br>
+      <img class="img-responsive"   src="images/ex3.jpg" alt="3">
+      <br>
+      <div class="sita">⇩</div>
+      <br>
+      <img class="img-responsive"   src="images/ex5.jpg" alt="5">
+   
  
-  <!-- 左右の移動ボタン -->
-  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-  </a>
+
 </div>
 </div>
 
 
 </div>
-</div>
 
+
+<br>
+<br>
 <br>
 <br>
 
 
 <div id="botan" class="col-md-offset-5 col-md-2 col-xs-offset-4 col-xs-4">
   
- {!! link_to_route('users.edit', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-info']) !!}
+ {!! link_to_route('users.edit', "Let's get started!!",['id' => Auth::id()],['class' => 'btn btn-info btn-lg']) !!}
+ 
+ 
 </div>
+<br>
+<br>
 </body>
 </html>

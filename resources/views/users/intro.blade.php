@@ -85,7 +85,7 @@
     <div class="row">
     
         <div class="col-md-3 col-md-offset-1 col-xs-3">
-                <img class="sanko" src="images/&2.jpg" width="240px" height="500px">
+                <img class="sanko" src="images/12.jpg" width="240px" height="500px">
                 <br>
                 <h4>
                Make a profile.
@@ -97,7 +97,7 @@
         </div>
         
         <div class="col-md-3 col-xs-3">
-            <img class="sanko" src="images/timeline&2.jpg" width="240px" height="500px"><br>
+            <img class="sanko" src="images/new2.jpg" width="240px" height="500px"><br>
                  <h4>
                   Find a person.
                   </h4>
@@ -108,7 +108,7 @@
         </div> 
             
         <div class="col-md-3 col-xs-3">
-             <img class="sanko" src="images/dm&2.jpg"width="240px" height="500px"><br>
+             <img class="sanko" src="images/new.jpg"width="240px" height="500px"><br>
                 <h4>
                 Send a message.
                 </h4>
