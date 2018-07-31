@@ -134,8 +134,16 @@ function getNthDay($year, $month, $day, $n) {
                 $ye = substr($s, 0, 4);
                 $mo = substr($s, 4, 2);
                 $da = substr($s, 6, 2) + $i;
-                $pday = $ye . "-" . $mo . "-" . $da;
+                    if (31 < $da) {
+                        $da = $da - 31;
+                        $mo = $mo + 1;
+                        $pday = $ye . "-" . "0" . $mo . "-" . "0" . $da;
+                    }
+                    else {
+                        $pday = $ye . "-" . $mo . "-" . $da;
+                    }
             ?>
+            
             
             <td>
             @if ($plans)
@@ -184,6 +192,7 @@ function getNthDay($year, $month, $day, $n) {
                         {!! Form::close() !!}
                 @endif
                 <!--{{ $pday++ }}-->
+                
             @else
                     フォーム
             @endif
