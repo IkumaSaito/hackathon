@@ -40,7 +40,7 @@
        <br>
        <br>
        <div class="text">
-          <br type="submit">  {!! link_to_route('users.intro', 'Read first',['button type' => 'submit'],['class' => 'btn btn-default1']) !!}</br>
+          <br type="submit">  {!! link_to_route('users.intro', 'Concept',['button type' => 'submit'],['class' => 'btn btn-default1']) !!}</br>
            
            
           <br type="submit">  {!! link_to_route('signup.get', 'Signup',['button type' => 'submit'],['class' => 'btn btn-default']) !!}</br>
