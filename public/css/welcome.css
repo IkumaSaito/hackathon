@@ -85,6 +85,11 @@
  
  
     .btn-default1{
-       background-color: #BBBBBB;
+       background-color: red;
+       color: #FFFFFF;
+    }
+    
+    .btn btn-default2{
+       background-color: red;
        color: #FFFFFF;
     }
